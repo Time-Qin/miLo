@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <!--设置IE浏览器的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--设定网页视口大小，即网页宽度默认为设备宽度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>高端装备</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* position: relative; */
+            line-height: 1.5;
+            font-family: "微软雅黑", microsoft yahei;
+            color: #333;
+            background: #F4F4F4;
+        }
+
+        /* banner板块 */
+        .banner img {
+            max-width: 100%;
+        }
+
+        /* menu板块 */
+        /* menu板块 */
+        .w-container {
+            width: 100%;
+        }
+
+        .menu>.ulParent {
+            display: none;
+        }
+
+        .menu-in {
+            display: none;
+        }
+
+        .w-container .w-dropdown-menu {
+            width: 100%;
+            color: #666;
+            background-color: #F4F4F4;
+            border-bottom: 2px solid #2B3B62;
+            display: none;
+            cursor: pointer;
+        }
+
+        .w-container .w-dropdown-menu.open {
+            display: block;
+        }
+
+        .w-container .w-dropdown-menu>li {
+            border-bottom: 1px solid #fff;
+            padding: 0.7em 0.8em;
+            position: relative;
+        }
+
+        .w-container .w-dropdown-menu>li>a {
+            color: #666;
+        }
+
+        .w-dropdown-menu span {
+            position: absolute;
+            z-index: 1;
+            right: 1em;
+            top: 1em;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 1.2;
+            width: 1.2em;
+            color: #666;
+        }
+
+        .submenu {
+            display: none;
+        }
+
+        .submenu.open {
+            display: block;
+        }
+
+        .submenu ul {
+            background-color: #fafafa;
+        }
+
+        .submenu ul li {
+            padding: 0.7em 0.8em;
+            border-bottom: 1px solid #fff;
+        }
+
+        .submenu ul li a {
+            color: #666;
+        }
+        
+        .submenu ul li a:hover,
+        .w-container .w-dropdown-menu>li>a:hover {
+            text-decoration: none;
+            color: #2B3B62;
+        }
+
+        @media screen and (max-width:767px) {
+            .menu-in {
+                display: block;
+            }
+
+            .menu-in>.sys-title {
+                width: 100%;
+                background-color: #2B3B62;
+                color: #fff;
+                font-size: 125%;
+                padding: 0.5em;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .menu-in>.sys-title>span {
+                position: absolute;
+                z-index: 1;
+                right: 0.4em;
+                top: 0.5em;
+                display: inline-block;
+                font-size: 125%;
+                line-height: 1.2;
+                width: 1.2em;
+                color: #fff;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            .menu {
+                text-align: center;
+                background-color: #fff;
+                padding: 26px 0 16px 0;
+                border-bottom: 1px solid #DCDBDB;
+            }
+
+            .menu>.ulParent {
+                display: block;
+            }
+
+            .menu>.ulParent>.liParent {
+                display: inline-block;
+                margin: 0 2px;
+            }
+
+            .menu>.ulParent>.liParent>.divParent>a {
+                padding: 0 5px;
+                line-height: 34px;
+                border: 1px solid #898989;
+                display: block;
+                font-size: 16px;
+                color: #333;
+            }
+
+            .menu>.ulParent>.liParent>.divParent>a:hover {
+                text-decoration: none;
+                color: #fff;
+                background-color: #7271c8;
+                border-color: #2B3B62;
+            }
+        }
+
+        @media screen and (min-width:1201px) {
+            .menu>.ulParent>.liParent {
+                margin: 0 5px;
+            }
+
+            .menu>.ulParent>.liParent>.divParent>a {
+                padding: 0 12px;
+            }
+        }
+
+        /* menu-list板块 */
+        .menu-list {
+            max-width: 1200px;
+            margin: 1em auto;
+
+        }
+
+        .page-direction {
+            width: 100%;
+            line-height: 1.5;
+            padding: 0.2em 0 0.5em 0;
+            border-bottom: 1px solid #D2D2D2;
+            margin-bottom: 1em;
+        }
+
+        .page-direction>a {
+            color: #333;
+        }
+
+        .prd .prd-list {
+            margin-bottom: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .prd .imgBox {
+            height: 162px;
+            overflow: hidden;
+        }
+
+        .prd .img {
+            height: 162px;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.4s ease-in-out;
+            z-index: 0;
+        }
+
+        .prd .img[title='仓储机器人'] {
+            background-image: url("../images/cangchujiqiren.png");
+        }
+
+        .prd .img[title='穿梭机器人'] {
+            background-image: url("../images/chuansuojiqiren.png");
+        }
+
+        .prd .prd-list:hover .prd-msg {
+            color: #fff;
+            background-color: #7271c8;
+        }
+
+        .prd .img:hover {
+            transform: scale(1.1);
+        }
+
+        .prd h2 {
+            font-size: 18px;
+            text-align: center;
+            height: 57px;
+            line-height: 57px;
+            color: #333;
+            background-color: #E0E0E0;
+            margin: 0;
+        }
+    </style>
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- banner板块 -->
+    <section class="bannerBox">
+        <div class="banner">
+            <img src='../images/chanpinzhongxin.jpg' />
+        </div>
+    </section>
+    <!-- menu板块 -->
+    <div class="w-container">
+        <div class="menu-in">
+            <div class="sys-title w-dropdown-toggle">
+                <div>产品中心</div>
+                <span class="iconfont icon-xiangxiazhankai"></span>
+            </div>
+            <ul class="w-dropdown-menu ">
+                <li class="submenu-dropdown-toggle"><a href="#">智能软件产品</a><span
+                        class="glyphicon glyphicon-menu-down submenu-dropdown-toggle"></span></li>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">MES制造执行系统</a></li>
+                        <li><a href="#">MILO-WMS仓储管理系统</a></li>
+                        <li><a href="#">MILO-VMS可视化管理系统</a></li>
+                        <li><a href="#">MILO-SIM及时化管理系统</a></li>
+                        <li><a href="#">MILO-POM生产运维管理系统</a></li>
+                    </ul>
+                </div>
+                <li class="submenu-dropdown-toggle"><a href="#">高端装备</a><span
+                        class="glyphicon glyphicon-menu-down"></span></li>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">STOROBOT仓储机器人</a></li>
+                        <li><a href="#">RAILROBOT穿梭机器人</a></li>
+                    </ul>
+                </div>
+                <li class="submenu-dropdown-toggle"><a href="">系统产品</a><span
+                        class="glyphicon glyphicon-menu-down submenu-dropdown-toggle"></span></li>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">自动仓储系统</a></li>
+                        <li><a href="#">机器换人系统</a></li>
+                        <li><a href="#">输送系统</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <div class="menu">
+            <ul class="ulParent">
+                <li class="liParent">
+                    <div class="divParent"><a href="#">智能软件产品</a></div>
+                </li>
+                <li class="liParent">
+                    <div class="divParent"><a href="#">高端装备</a></div>
+                </li>
+                <li class="liParent">
+                    <div class="divParent"><a href="#">系统产品</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- menu-list板块 -->
+    <div class="w-container">
+        <div class="menu-list">
+            <div class="page-direction">您当前的位置：<a href="#">产品中心</a> &gt; 高端装备</div>
+            <div class="prd row clearfix">
+                <a class="prd-target" href="#">
+                    <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
+                        <div class="imgBox">
+                            <div class="img" title="仓储机器人"></div>
+                        </div>
+                        <h2 class="prd-msg" title="仓储机器人">仓储机器人</h2>
+                    </div>
+                </a>
+                <a class="prd-target" href="#">
+                    <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
+                        <div class="imgBox">
+                            <div class="img" title="穿梭机器人"></div>
+                        </div>
+                        <h2 class="prd-msg" title="穿梭机器人">穿梭机器人</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../node_modules/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+            // 关闭menu
+            function closeMenu() {
+                $('.w-dropdown-menu').removeClass('open');
+                $('.w-dropdown-toggle>span').css({
+                    'transform': "rotate(0deg)"
+                })
+                // 检查submenu中是否打开，如果打开就关闭
+                if ($('.submenu.open')) {
+                    closeSubmenu();
+                }
+            }
+
+            // 关闭submenu
+            function closeSubmenu() {
+                $('.submenu.open').prev().children('span').css({
+                    'transform': "rotate(0deg)"
+                }).end().end().removeClass('open');
+            }
+
+            $('.w-dropdown-toggle').click(function () {
+                // 如果已经打开，则关闭
+                if ($('.w-dropdown-menu').hasClass('open')) {
+                    closeMenu();
+                } else {
+                    $('.w-dropdown-menu').addClass('open');
+                    $('.w-dropdown-toggle>span').css({
+                        'transform': "rotate(180deg)"
+                    })
+                }
+            })
+
+            $('.submenu-dropdown-toggle').click(function () {
+                // 如果已经打开，则关闭
+                if ($(this).next().hasClass('open')) {
+                    $(this).next().removeClass('open');
+                    $(this).children('span').css({
+                        'transform': "rotate(0deg)"
+                    })
+                } else {
+                    // 检查是否有其他的submenu打开，如果有就关闭
+                    if ($('.submenu.open')) {
+                        closeSubmenu();
+                    }
+                    $(this).next().addClass('open');
+                    $(this).children('span').css({
+                        'transform': "rotate(180deg)"
+                    })
+                }
+            })
+
+            // 监听浏览器窗口大小
+            $(window).resize(function () {
+                if ($(window).width() > 767) {
+                    //当浏览器大小大于767时，如果dropdown-menu打开则关闭所有
+                    closeMenu();
+                };
+            });
+        })
+    </script>
+</body>
+
+</html>

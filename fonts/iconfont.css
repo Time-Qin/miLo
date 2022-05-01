@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3370990 */
+  src:url('iconfont.ttf?t=1651383578522') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiangxiazhankai:before {
+  content: "\e609";
+}
+
