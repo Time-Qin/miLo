@@ -8,7 +8,7 @@
     <!--设定网页视口大小，即网页宽度默认为设备宽度-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>产品中心</title>
+    <title>高端装备</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../node_modules/bootstrap/css/bootstrap.min.css" />
@@ -27,15 +27,12 @@
             background: #F4F4F4;
         }
 
-        a {
-            color: #333;
-        }
-
         /* banner板块 */
         .banner img {
             max-width: 100%;
         }
 
+        /* menu板块 */
         /* menu板块 */
         .w-container {
             width: 100%;
@@ -104,7 +101,7 @@
         .submenu ul li a {
             color: #666;
         }
-
+        
         .submenu ul li a:hover,
         .w-container .w-dropdown-menu>li>a:hover {
             text-decoration: none;
@@ -162,7 +159,7 @@
                 border: 1px solid #898989;
                 display: block;
                 font-size: 16px;
-                /* color: #333; */
+                color: #333;
             }
 
             .menu>.ulParent>.liParent>.divParent>a:hover {
@@ -198,6 +195,10 @@
             margin-bottom: 1em;
         }
 
+        .page-direction>a {
+            color: #333;
+        }
+
         .prd .prd-list {
             margin-bottom: 30px;
             overflow: hidden;
@@ -217,26 +218,6 @@
             z-index: 0;
         }
 
-        .prd .img[title='制造执行系统'] {
-            background-image: url("../images/zhizaozhixingxitong.png");
-        }
-
-        .prd .img[title='仓储管理系统'] {
-            background-image: url("../images/cangchuguanlixitong.png");
-        }
-
-        .prd .img[title='可视化管理系统'] {
-            background-image: url("../images/keshihuaguanlixitong.png");
-        }
-
-        .prd .img[title='及时化管理系统'] {
-            background-image: url("../images/jishihuaguanlixitong.png");
-        }
-
-        .prd .img[title='生产运维管理系统'] {
-            background-image: url("../images/shengchanyunweiguanlixitong.png");
-        }
-
         .prd .img[title='仓储机器人'] {
             background-image: url("../images/cangchujiqiren.png");
         }
@@ -245,28 +226,9 @@
             background-image: url("../images/chuansuojiqiren.png");
         }
 
-        .prd .img[title='自动仓储系统'] {
-            background-image: url("../images/zidongcangchuxitong.png");
-        }
-
-        .prd .img[title='机器换人系统'] {
-            background-image: url("../images/jiqihuanrenxitong.png");
-        }
-
-        .prd .img[title='输送系统'] {
-            background-image: url("../images/shusongxitong.png");
-        }
-
         .prd .prd-list:hover .prd-msg {
             color: #fff;
             background-color: #7271c8;
-        }
-
-        @media screen and (max-width:767px) {
-            .prd .prd-list:hover .prd-msg {
-                background-color: #2B3B62;
-            }
-
         }
 
         .prd .img:hover {
@@ -307,7 +269,7 @@
             </div>
             <ul class="w-dropdown-menu ">
                 <li class="submenu-dropdown-toggle"><a href="#">智能软件产品</a><span
-                        class="glyphicon glyphicon-menu-down submenu-dropdown-toggle"></span></li>
+                        class="glyphicon glyphicon-menu-down"></span></li>
                 <div class="submenu">
                     <ul>
                         <li><a href="#">MES制造执行系统</a></li>
@@ -326,7 +288,7 @@
                     </ul>
                 </div>
                 <li class="submenu-dropdown-toggle"><a href="">系统产品</a><span
-                        class="glyphicon glyphicon-menu-down submenu-dropdown-toggle"></span></li>
+                        class="glyphicon glyphicon-menu-down"></span></li>
                 <div class="submenu">
                     <ul>
                         <li><a href="#">自动仓储系统</a></li>
@@ -350,51 +312,12 @@
             </ul>
         </div>
     </div>
+
     <!-- menu-list板块 -->
     <div class="w-container">
         <div class="menu-list">
-            <div class="page-direction" data-toggle="dropdown">您当前的位置：<a href="#">产品中心</a></div>
+            <div class="page-direction">您当前的位置：<a href="#">产品中心</a> &gt; 高端装备</div>
             <div class="prd row clearfix">
-                <a class="prd-target" href="#">
-                    <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
-                        <div class="imgBox">
-                            <div class="img" title="制造执行系统"></div>
-                        </div>
-                        <h2 class="prd-msg" title="制造执行系统">制造执行系统</h2>
-                    </div>
-                </a>
-                <a class="prd-target" href="#">
-                    <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
-                        <div class="imgBox">
-                            <div class="img" title="仓储管理系统"></div>
-                        </div>
-                        <h2 class="prd-msg" title="仓储管理系统">仓储管理系统</h2>
-                    </div>
-                </a>
-                <a class="prd-target" href="#">
-                    <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
-                        <div class="imgBox">
-                            <div class="img" title="可视化管理系统"></div>
-                        </div>
-                        <h2 class="prd-msg" title="可视化管理系统">可视化管理系统</h2>
-                    </div>
-                </a>
-                <a class="prd-target" href="#">
-                    <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
-                        <div class="imgBox">
-                            <div class="img" title="及时化管理系统"></div>
-                        </div>
-                        <h2 class="prd-msg" title="及时化管理系统">及时化管理系统</h2>
-                    </div>
-                </a>
-                <a class="prd-target" href="#">
-                    <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
-                        <div class="imgBox">
-                            <div class="img" title="生产运维管理系统"></div>
-                        </div>
-                        <h2 class="prd-msg" title="生产运维管理系统">生产运维管理系统</h2>
-                    </div>
-                </a>
                 <a class="prd-target" href="#">
                     <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
                         <div class="imgBox">
@@ -409,31 +332,6 @@
                             <div class="img" title="穿梭机器人"></div>
                         </div>
                         <h2 class="prd-msg" title="穿梭机器人">穿梭机器人</h2>
-                    </div>
-                </a>
-                <a class="prd-target" href="#">
-                    <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
-                        <div class="imgBox">
-                            <div class="img" title="自动仓储系统"></div>
-                        </div>
-
-                        <h2 class="prd-msg" title="自动仓储系统">自动仓储系统</h2>
-                    </div>
-                </a>
-                <a class="prd-target" href="#">
-                    <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
-                        <div class="imgBox">
-                            <div class="img" title="机器换人系统"></div>
-                        </div>
-                        <h2 class="prd-msg" title="机器换人系统">机器换人系统</h2>
-                    </div>
-                </a>
-                <a class="prd-target" href="#">
-                    <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
-                        <div class="imgBox">
-                            <div class="img" title="输送系统"></div>
-                        </div>
-                        <h2 class="prd-msg" title="输送系统">输送系统</h2>
                     </div>
                 </a>
             </div>
