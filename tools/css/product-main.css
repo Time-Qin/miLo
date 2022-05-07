@@ -10,6 +10,7 @@ body {
     font-family: "微软雅黑", microsoft yahei;
     color      : #333;
     background : #F4F4F4;
+    overflow-y : scroll !important;
 }
 
 a {
@@ -166,8 +167,6 @@ a {
 .menu-list {
     max-width    : 1200px;
     margin       : 1em auto;
-    padding-left : 10px;
-    padding-right: 10px;
 }
 
 .menu-list>.page-direction>a:hover {

@@ -14,8 +14,15 @@
     <link rel="stylesheet" href="../fonts/iconfont.css">
 
     <link rel="stylesheet" href="../tools/css/product-main.css" />
+    <!-- <link rel="stylesheet" href="../tools/css/modal-style.css"> -->
 
     <style>
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            background-color: transparent;
+        }
+
         .prd-msg {
             background-color: #fff;
             max-width: 1200px;
@@ -69,11 +76,49 @@
             }
         }
 
+        /* 模态框 */
+        .row {
+            margin: 0 !important;
+            /* padding: 0 !important; */
+        }
+
+        .modal {
+            position: absolute;
+            height: 421px;
+            width: 572px;
+            margin: 0 auto;
+        }
+
+        .modal_trigger.notClick {
+            pointer-events: none;
+        }
+
+        .modal .closeModal {
+            height: 30px;
+            width: 30px;
+            background: url(../images/close.png);
+            background-size: cover;
+            float: right;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .modal .closeModal:hover {
+            opacity: 1;
+        }
+
+        .modal .modalHeader {
+            padding-bottom: 5px;
+        }
+
+        .modal .modal-dialog {
+            width: 572px;
+            margin: 0px;
+        }
+
         .info-tab {
             max-width: 1200px;
             margin: 1em auto;
-            padding-left: 10px;
-            padding-right: 10px;
         }
 
         .info-tab .info-tab-in {
@@ -220,10 +265,23 @@
             <div class="page-direction" data-toggle="dropdown"><a href="lm-product.html">产品中心</a> &gt; <a
                     href="lm-product-zhineng.html">智能软件产品</a>
                 &gt; 制造执行系统</div>
-            <div class="row prd-msg clearfix">
-                <div class="left col-xs-30 col-sm-15">
+            <div class="row prd-msg clearfix modal_trigger">
+                <div class="left col-xs-30 col-sm-15" data-toggle="modal" data-target="#myModal">
                     <img src='../images/zhizaozhixingxitong.png' />
                 </div>
+
+                <!-- Modal -->
+                <div class="modal Fade in & Scale" id="myModal" tabindex="-1">
+                    <div class="modal-dialog" id="myModal" tabindex="-1">
+                        <div class="modal-content">
+                            <div class="modalHeader">
+                                <img src='../images/zhizaozhixingxitong.png' />
+                            </div>
+                            <div class="closeModal" data-dismiss="modal"></div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="right col-xs-30 col-sm-15">
                     <div class="product-title">
                         <h2>制造执行系统</h2>
@@ -280,6 +338,48 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="../node_modules/bootstrap/js/bootstrap.min.js"></script>
     <script src="../tools/js/product.js"></script>
+    <!-- <script src="../tools/js/modal-script.js"></script> -->
+    <script>
+        $(function () {
+            $('.modal_trigger').click(function () {
+                // 设置top为垂直方向滚动出去的距离+50
+                var width = $(document).scrollTop() + 50;
+                $('.modal').css({
+                    top: width,
+                })
+            });
+
+            function notClick() {
+                if ($(window).width() < 767) {
+                    //当浏览器小于767时，modal_trigger不可以被点击
+                    $('.modal_trigger').addClass('notClick');
+                }
+                else {
+                    $('.modal_trigger').removeClass('notClick');
+                }
+            }
+
+            $(window).load(function () {
+                notClick();
+            })
+
+            $(window).resize(function () {
+                notClick();
+            });
+
+            // 当出现模态框之后，点击不是模态框外面区域也可关闭模态框
+            $(document).click(function () {
+                if ($('.modal-backdrop.in')) {
+                    $('.modal-backdrop.in').click(function () {
+                        console.log('我被点击啦');
+                        $('.closeModal').click();
+                    })
+                }
+            })
+
+        })
+
+    </script>
 </body>
 
 </html>
