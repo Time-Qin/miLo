@@ -1,12 +1,1551 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            padding: 0;
+        }
+
+        .header {
+            width: 100%;
+            transition: all 0.5s;
+        }
+
+        .header.affix {
+            position: fixed;
+            width: 100%;
+            z-index: 99;
+            top: -70px;
+            box-shadow: 0 0 2px 5px rgb(0 0 0/5%);
+        }
+
+        .top_box {
+            width: 100%;
+            height: 70px;
+            background-color: #0e0e0e;
+        }
+
+        .top_box_center {
+            max-width: 1200px;
+            padding: 5px 0 5px 0;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .top_box_center_left {
+            width: 20%;
+            height: 60px;
+            display: inline;
+            color: white;
+            font-size: 13px;
+        }
+
+        .top_box_center_right {
+            width: 200px;
+            float: right;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .top_box_center_right .input-group input {
+            height: 28px;
+            font-size: 13px;
+            color: #666;
+            border-radius: 0;
+            border: 0;
+
+        }
+
+        .top_box_center_right .input-group span {
+            height: 28px;
+            width: 40px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .top_box_center_right .input-group span button {
+            height: 30px;
+            width: 40px;
+            background-color: #7271c8;
+            color: white;
+            font-size: 18px;
+            border-radius: 0;
+            border: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .top_box_center_right .input-group span button:active,
+        .top_box_center_right .input-group span button:focus,
+        .top_box_center_right .input-group span button:hover {
+            background-color: #7271c8;
+            color: white;
+            outline: 0;
+        }
+
+        .ML_navbar {
+            width: 100%;
+            background-color: white;
+        }
+
+        .ML_navbar .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 0;
+        }
+
+        .ML_navbar .navbar .container {
+            height: 110px;
+        }
+
+        .ML_navbar .navbar .container .navbar-header a {
+            display: block;
+            height: 100px;
+            padding: 5px 0 5px 0;
+            line-height: 100px;
+        }
+
+        .ML_navbar .navbar .container .navbar-header a img {
+            max-height: 100px;
+            max-width: 100%;
+        }
+
+        .ML_navbar .navbar .container .collapse .navbar-nav {
+            display: inline-block;
+            height: 100px;
+            margin: 5px 0 5px 0;
+            box-sizing: border-box;
+        }
+
+        .ML_navbar .navbar .container .collapse .navbar-nav>li {
+            position: relative;
+        }
+
+        .ML_navbar .navbar .container .collapse .navbar-nav>li:hover>a {
+            color: #7271c8;
+            background: transparent;
+        }
+
+        .ML_navbar .navbar .container .collapse .navbar-nav>li a {
+            line-height: 100px;
+            text-align: center;
+            padding: 0;
+            margin: 0 23px 0 23px;
+            font-size: 17px;
+            color: #373734;
+        }
+
+        .ML_navbar .navbar .container .collapse .navbar-nav>.active>a {
+            color: #7271c8;
+        }
+
+        .ML_navbar .navbar .container .collapse .navbar-nav>li .submenu {
+            padding: 10px 0 10px 0;
+            border-top: 2px solid #7271c8;
+            background-color: #fff;
+            display: none;
+        }
+
+        .ML_navbar .navbar .container .collapse .navbar-nav>li:hover .submenu {
+            display: block;
+            position: absolute;
+            left: -18px;
+        }
+
+        .ML_navbar .navbar .container .collapse .navbar-nav>li .submenu div {
+            display: inline-block;
+        }
+
+        .ML_navbar .navbar .container .collapse .navbar-nav>li .submenu div a {
+            display: block;
+            width: 151px;
+            line-height: 35px;
+            padding: 0 10px;
+            font-size: 14px;
+            text-decoration: none;
+            margin: 0;
+        }
+
+        .ML_navbar .navbar .container .collapse .navbar-nav>li .submenu div a:hover {
+            background-color: #eee;
+            color: #7271c8;
+        }
+
+        .main {
+            box-sizing: border-box;
+        }
+
+        .ML_banner {
+            width: 100%;
+        }
+
+        .ML_banner .carousel {
+            position: relative;
+
+        }
+
+        .ML_banner .carousel .carousel-indicators li {
+            border: 1px solid #b7b7b7;
+            margin-right: 5px;
+            height: 14px;
+            width: 14px;
+        }
+
+        .ML_banner .carousel .carousel-indicators li:active,
+        .ML_banner .carousel .carousel-indicators li:focus,
+        .ML_banner .carousel .carousel-indicators li:hover {
+            border: -3px slide #7271c8;
+        }
+
+        .mod2 {
+            max-width: 100%;
+            height: 595px;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .mod2_background_white {
+            background: white !important;
+        }
+
+        .mod2 a:hover {
+            text-decoration: none;
+        }
+
+        .mod2_top {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .mod2_top_text {
+            position: relative;
+        }
+
+        .mod2_top_text::before,
+        .mod4_top_text::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            width: 1500px;
+            height: 1.5px;
+            background-color: #e2e1e1;
+            right: 62%;
+        }
+
+        .mod2_top_text::after,
+        .mod4_top_text::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            width: 1500px;
+            height: 1.5px;
+            background-color: #e2e1e1;
+            left: 62%;
+        }
+
+        .mod2_top_text h2,
+        .mod4_top_text h2 {
+            color: #333;
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 38px;
+        }
+
+        .mod2_top_text+p,
+        .mod4_main_two p {
+            color: #888;
+            font-size: 15px;
+            margin-top: 18px;
+            padding-bottom: 20px;
+        }
+
+        .mod2 .mod2_middle,
+        .mod2 .mod2_bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .mod2_middle_table {
+            width: 100%;
+            background-color: #fff;
+            box-sizing: border-box;
+            border: 1px solid #ececec;
+            table-layout: fixed;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        .mod2_middle_table .table_box {
+            width: 100%;
+            background-color: #ececec;
+            text-align: center;
+        }
+
+        .mod2 .table_box_img {
+            overflow: hidden;
+            padding-top: 0;
+        }
+
+        .mod2 .table_box_img:hover {
+            transform: scale(1.1);
+            transition: all 0.5s;
+        }
+
+        .mod2 .table_div {
+            width: auto;
+            height: 40px;
+        }
+
+        .mod2 .table_box_img img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .mod2 .table_box_text {
+            color: #333;
+        }
+
+        .mod2 .table_box_text p {
+            padding-top: 10px;
+            padding-bottom: 12px;
+            line-height: 21px;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .mod3 {
+            background: url("../images/mod3.2.jpg") no-repeat center;
+            background-position: center top !important;
+            padding-top: 106px;
+        }
+
+        .mod3_box {
+            max-width: 1200px;
+            max-height: 382px;
+            margin: 0 auto;
+            padding: 6px;
+            border: 1px solid #e2e1e1;
+            position: relative;
+        }
+
+        /* .mod3_box_bg{
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            background: #ececec;
+            opacity: 1;
+            z-index: 3;
+        } */
+        .mod3_box_main {
+            max-width: 1186px;
+            height: 368px;
+            box-sizing: border-box;
+        }
+        .mod3_box_main .td_top{
+            background-color: #ececec;
+        }
+        .mod3_box_main_left {
+            max-width: 578px;
+            max-height: 368px;
+            display: inline-block;
+        }
+
+        .mod3_box_main_left img {
+            max-width: 578px;
+            max-height: 368px;
+        }
+
+        .mod3_box_main_right {
+            max-width: 608px;
+            max-height: 368px;
+            padding-left: 15px;
+            background-color: #ececec;
+            float: right;
+        }
+
+        .mod3_box_main_right_text {
+            padding-left: 60px;
+            margin-top: 38px;
+            padding-right: 50px;
+        }
+
+        .mod3_box_main_right_text span {
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .mod3_box_main_right_text h2 {
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0;
+            margin-bottom: 25px;
+        }
+
+        .mod3_box_text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .mod3_box_text+a {
+            display: inline-block;
+            color: #7b4eeb;
+            margin-top: 10px;
+            margin-bottom: 100px;
+        }
+
+        .mod4 {
+            width: 100%;
+            background: #f4f4f4;
+        }
+
+        .mod4_main {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mod4_main_content {
+            max-width: 1200px;
+            max-height: 1136px;
+            padding: 20px 0;
+        }
+
+        .mod4_main_one {
+            height: 60px;
+        }
+
+        .mod4_main_two {
+            text-align: center;
+        }
+
+        .mod4_top_text {
+            position: relative;
+
+        }
+
+        .mod4_main_three {
+            height: 13px;
+        }
+
+        .mod4_main_four .col_table,
+        .mod4_main_five .col_table {
+            margin: 0 -15px;
+        }
+
+        .mod4_main_four .col_table table,
+        .mod4_main_five .col_table table {
+            width: 100%;
+            height: 423.2px;
+        }
+
+        .mod4_main_four .div-padding,
+        .mod4_main_five .div-padding {
+            padding: 0 15px;
+        }
+
+        .mod4_main_four_content {
+            background: #fff;
+            text-align: center;
+            padding: 35px 20px 15px;
+        }
+
+        .mod4_img {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .mod4_img img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .mod4_main_four_content p {
+            margin: 0 0 10px;
+            color: rgb(102, 102, 102);
+            text-align: left;
+            line-height: normal;
+        }
+
+        .mod4_main_four_content p>span {
+            color: #000;
+        }
+
+        .mod4_main_four_content p span strong {
+            font-weight: bold;
+        }
+
+        .mod4_main_four_content .p_text span {
+            font-size: 12px;
+            color: rgb(102, 102, 102);
+        }
+
+        .mod4_main_four_content .p_text-2 span {
+            font-size: 14px;
+        }
+
+        .mod4_main_six{
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .mod4_main_six_div1{
+            text-align: center;
+        }
+        .mod4_main_six_div2{
+            
+            display: inline-block;
+            padding: 10.5px 49px;
+            border: 1px solid #ccc;
+        }
+        .mod4_main_six span{
+            color: #666;
+            text-align: center;
+        }
+        .footer {
+            width: 100%;
+            height: 100%;
+            background: #292929;
+            color: #a4a4a4;
+            font-size: 13px;
+        }
+
+        .footer_in {
+            max-width: 1200px;
+            height: 350px;
+            margin: 0 auto;
+        }
+
+        .footer_in .in_box {
+            width: 100%;
+            position: relative;
+            padding: 10px 0 20px 0;
+            margin: 0 -15px;
+        }
+
+        .footer_in .in_box .box_frist {
+            width: 100%;
+            height: 240px;
+            margin: 0 -15px;
+        }
+
+        .footer_in .in_box .box_frist .box_frist_table {
+            table-layout: fixed;
+            width: 100%;
+            margin-right: -15px;
+        }
+
+        .td_top {
+            vertical-align: top !important;
+        }
+
+        .footer_in .in_box .box_frist .box_frist_table .tr_td_div {
+            padding: 0 15px;
+            margin-top: 30px;
+        }
+
+        .footer_in .in_box .box_frist .box_frist_table .tr_td_div table {
+            width: 100%;
+        }
+
+        .footer_in .in_box .box_frist .box_frist_table .td_div {
+            padding: 0 10px;
+        }
+
+        .footer_in .in_box .box_frist .box_frist_table .td_div_div {
+            height: 33px;
+            width: 91px;
+            display: inline-block;
+            border-bottom: 1px dashed #8d8d8d;
+            margin-bottom: 14px;
+            padding-bottom: 7px;
+            color: #fff;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .footer_in .in_box .box_frist .box_frist_table .td_div_div2 {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .footer_in .in_box .box_frist .box_frist_table .td_div_div2 a {
+            color: #a4a4a4;
+        }
+
+        .footer_in .in_box .box_frist .box_frist_table .td_div_div2 a:hover {
+            color: #fff;
+        }
+
+        .footer_in .in_box .box_frist .box_frist_table .div_img {
+            height: 156px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .footer_in .in_box .box_frist .box_frist_table .div_img img {
+            width: 146px;
+            height: 144px;
+        }
+
+        .footer_in .in_box .box_frist .box_frist_table .div_span {
+            font-size: 13px;
+            color: #a4a4a4;
+            text-align: center;
+        }
+
+        .in_box .div_li>hr {
+            width: 100%;
+            height: 1px;
+            background-color: #494949;
+            border: 0;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .in_box .in_box_bottom table {
+            width: 100%;
+        }
+
+        .in_box .in_box_bottom table .td_top>div {
+            height: 40px;
+        }
+
+        .in_box .in_box_bottom table .box_bottom_right {
+            padding: 0 15px;
+            text-align: right;
+        }
+
+        .in_box .in_box_bottom table .box_bottom_right .right_margin {
+            margin: 0 -20px;
+        }
+
+        .in_box .in_box_bottom table .box_bottom_right a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #c9c9c9;
+            border-radius: 30px;
+            line-height: 1;
+            margin: 0 5px 10px;
+            padding: 3px;
+            vertical-align: top;
+        }
+
+        .in_box .in_box_bottom table .box_bottom_right a:hover {
+            background-color: #2b3b62;
+        }
+
+        .in_box .in_box_bottom table .box_bottom_right .social-item:hover .i_item {
+            background-image: url(../images/icon-social-wH.png);
+        }
+
+        .in_box .in_box_bottom table .box_bottom_right a .i_item {
+            background-image: url(../images/icon-social-w.png);
+            vertical-align: middle;
+        }
+
+        .in_box .in_box_bottom table .box_bottom_right .icon-social-facebook {
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            background-position: 0 0;
+        }
+
+        .in_box .in_box_bottom table .box_bottom_right .icon-social-twitter {
+            background-position: -25px 0;
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+        }
+
+        .in_box .in_box_bottom table .box_bottom_right .icon-social-xinlang {
+            background-position: -100px -50px;
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+        }
+
+        .container_bottom {
+            background-color: #000;
+            text-align: center;
+            position: relative;
+        }
+
+        .container_bottom_in {
+            position: relative;
+            padding: 13px;
+        }
+
+        .container_bottom_in a {
+            color: #a4a4a4;
+            text-decoration: none;
+        }
+
+        .container_bottom_in a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <!-- 搜索栏 -->
+            <div class="top_box">
+                <div class="top_box_center clearfix">
+                    <div class="top_box_center_left">
+                        <img src="../images/5df7213cd4f8a.png">
+                        全国服务电话：0510-85911508
+                    </div>
+                    <div class="top_box_center_right">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="搜索内容">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default glyphicon glyphicon-search" type="button"></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 导航条 -->
+            <div class="ML_navbar">
+                <nav class="navbar ">
+                    <div class="container clearfix">
+                        <div class="navbar-header clearfix">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="ML_logo">
+                                <a href="#">
+                                    <img src="../images/5ee9762add34f.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="collapse navbar-collapse pull-right " id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">首页</a></li>
+                                <li><a href="#">解决方案</a></li>
+                                <li>
+                                    <a href="#">产品中心</a>
+                                    <div class="submenu">
+                                        <ul>
+                                            <li>
+                                                <div>
+                                                    <a href="#">智能软件产品</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a href="#">智能软件产品</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a href="#">智能软件产品</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">新闻资讯</a>
+                                    <div class="submenu">
+                                        <ul>
+                                            <li>
+                                                <div>
+                                                    <a href="#">米洛动态</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a href="#">行业资讯</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">服务与支持</a></li>
+                                <li>
+                                    <a href="#">加入我们</a>
+                                    <div class="submenu">
+                                        <ul>
+                                            <li>
+                                                <div>
+                                                    <a href="#">员工风采</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a href="#">企业招聘</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">联系我们</a></li>
+                                <li>
+                                    <a href="#">关于米洛</a>
+                                    <div class="submenu">
+                                        <ul>
+                                            <li>
+                                                <div>
+                                                    <a href="#">公司简介</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a href="#">企业文化</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a href="#">发展历程</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a href="#">创新成果</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a href="#">资质荣誉</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- 主体 -->
+        <div class="main">
+            <!-- 轮播图 -->
+            <section class="ML_banner">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators"></ol>
+                    <div class="carousel-inner"></div>
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </section>
+            <!-- 我们的产品模块 -->
+            <div class="mod2">
+                <div class="mod2_top">
+                    <div class="mod2_top_text">
+                        <h2>我们的产品</h2>
+                    </div>
+                    <p>聚力科技融合制造，引领制造业智能升级</p>
+                </div>
+                <div class="mod2_middle">
+                    <div>
+                        <table class="mod2_middle_table">
+                            <tr>
+                                <td class="td_top" width="33.3%">
+                                    <div class="table_box">
+                                        <div class="table_div"></div>
+                                        <a href="#">
+                                            <div class="table_box_img">
+                                                <img src="../images/mod2.1.png" alt="MES制造执行系统">
+                                            </div>
+                                            <div class="table_box_text">
+                                                <p>MES制造执行系统</p>
+                                            </div>
+                                        </a>
+                                        <div class="table_div"></div>
+                                    </div>
+                                </td>
+                                <td class="td_top " width="33.3%">
+                                    <div class="table_box mod2_background_white">
+                                        <div class="table_div"></div>
+                                        <a href="#">
+                                            <div class="table_box_img">
+                                                <img src="../images/mod2.2.png" alt="MES制造执行系统">
+                                            </div>
+                                            <div class="table_box_text">
+                                                <p>WMS仓储管理子系统</p>
+                                            </div>
+                                        </a>
+                                        <div class="table_div"></div>
+                                    </div>
+                                </td>
+                                <td class="td_top" width="33.3%">
+                                    <div class="table_box">
+                                        <div class="table_div"></div>
+                                        <a href="#">
+                                            <div class="table_box_img">
+                                                <img src="../images/mod2.3.png" alt="MES制造执行系统">
+                                            </div>
+                                            <div class="table_box_text">
+                                                <p>SIM及时化管理子系统</p>
+                                            </div>
+                                        </a>
+                                        <div class="table_div"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="mod2_bottom">
+                    <div>
+                        <table class="mod2_middle_table">
+                            <tr>
+                                <td class="td_top" width="33.3%">
+                                    <div class="table_box mod2_background_white">
+                                        <div class="table_div"></div>
+                                        <a href="#">
+                                            <div class="table_box_img">
+                                                <img src="../images/mod2.4.png" alt="MES制造执行系统">
+                                            </div>
+                                            <div class="table_box_text">
+                                                <p>POM运维管理子系统</p>
+                                            </div>
+                                        </a>
+                                        <div class="table_div"></div>
+                                    </div>
+                                </td>
+                                <td class="td_top " width="33.3%">
+                                    <div class="table_box ">
+                                        <div class="table_div"></div>
+                                        <a href="#">
+                                            <div class="table_box_img">
+                                                <img src="../images/mod2.5.png" alt="MES制造执行系统">
+                                            </div>
+                                            <div class="table_box_text">
+                                                <p>仓储机器人</p>
+                                            </div>
+                                        </a>
+                                        <div class="table_div"></div>
+                                    </div>
+                                </td>
+                                <td class="td_top" width="33.3%">
+                                    <div class="table_box mod2_background_white">
+                                        <div class="table_div"></div>
+                                        <a href="#">
+                                            <div class="table_box_img">
+                                                <img src="../images/mod2.6.png" alt="MES制造执行系统">
+                                            </div>
+                                            <div class="table_box_text">
+                                                <p>穿梭机器人</p>
+                                            </div>
+                                        </a>
+                                        <div class="table_div"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- 关于我们 -->
+            <div class="mod3">
+                <div class="mod3_box">
+                    <div class="mod3_box_bg"></div>
+                    <div class="mod3_box_main ">
+                        <table>
+                            <tr>
+                                <td class="td_top" width="50%">
+                                    <div class="mod3_box_main_left ">
+                                        <img src="../images/mod3.1.jpg" alt="">
+                                    </div>
+                                </td>
+                                <td class="td_top" width="50%">
+                                    <div class="mod3_box_main_right">
+                                        <div class="mod3_box_main_right_text">
+                                            <span>关于我们</span>
+                                            <h2>ABOUT US</h2>
+                                            <div>
+                                                <div class="mod3_box_text">
+                                                    无锡米洛智能工业科技有限公司是离散制造行业制造执行系统（MES）与仓储物流解决方案的卓越供应商。公司座落于中国无锡经开区高新技术产业园，拥有平台级企业信息化与自动化系统研发力量以及专家级顾问资源，建有完善的产品研发制造体系、质量管理体系与项目交付体系...
+                                                </div>
+                                                <a href="">VIEW MORE&nbsp;+</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- 米洛能解决什么 -->
+            <div class="mod4">
+                <div class="mod4_main">
+                    <div class="mod4_main_content">
+                        <div class="mod4_main_one"></div>
+                        <div class="mod4_main_two">
+                            <div class="mod4_top_text">
+                                <h2>MILO米洛能解决什么</h2>
+                            </div>
+                            <p>WHAT ARE WE GOING TO DO</p>
+                        </div>
+                        <div class="mod4_main_three"></div>
+                        <div class="mod4_main_four">
+                            <div class="col_table">
+                                <table>
+                                    <tr>
+                                        <td class="td_top" width="33.33%">
+                                            <div class="div-padding">
+                                                <div>
+                                                    <div>
+                                                        <div class="mod4_main_four_content">
+                                                            <div class="mod4_img">
+                                                                <img src="../images/mod4.1.png" alt="">
+                                                            </div>
+                                                            <p>
+                                                                <span>
+                                                                    <strong>
+                                                                        <span>您是否碰到这样的问题：</span>
+                                                                    </strong>
+                                                                </span>
+                                                                <br>
+                                                                <span class="p_text">
+                                                                    <span>
+                                                                        生产工艺执行不到位，交货总是延期？
+                                                                        <br>
+                                                                        手工排程效率低，计划混乱？
+                                                                        <br>
+                                                                        库存吃掉大量利润，人均产值低？
+                                                                        <br>
+                                                                        生产问题重复出现，产品质量不稳定？
+                                                                        <br>
+                                                                        信息传递不对称，信息孤岛多？
+                                                                        <br>
+                                                                        客户评审忙于人工“造”数据？
+                                                                        <br>
+                                                                    </span>
+                                                                </span>
+                                                                <br>
+                                                                <strong class="p_text-2">
+                                                                    <span>
+                                                                        <br>
+                                                                        <br>
+                                                                        <br>
+                                                                        <br>
+                                                                        那么，选择MILO-IMES制造执行系统
+                                                                        ，上述问题迎刃而解，MILO-IMES将优化您的流程，赋能您的生产执行。
+                                                                    </span>
+                                                                    <br>
+                                                                </strong>
+                                                                <br>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="td_top" width="33.33%">
+                                            <div class="div-padding">
+                                                <div>
+                                                    <div>
+                                                        <div class="mod4_main_four_content">
+                                                            <div class="mod4_img">
+                                                                <img src="../images/mod4.2.png" alt="">
+                                                            </div>
+                                                            <p>
+                                                                <span>
+                                                                    <strong>
+                                                                        <span>您是否碰到这样的问题：</span>
+                                                                    </strong>
+                                                                </span>
+                                                                <br>
+                                                                <span class="p_text">
+                                                                    <span>
+                                                                        库房面积不够用，人工搬运强度大，货物进出效率低？
+                                                                        <br>
+                                                                        人工找货太费劲，找料等不增值行为多？
+                                                                        <br>
+                                                                        作业线下操作，帐卡物不一致？
+                                                                        <br>
+                                                                        生产业务部门抱怨库存不透明？
+                                                                        <br>
+                                                                        仓库管理依赖人员素养？
+                                                                        <br>
+                                                                        防错装置缺失？
+                                                                        <br>
+                                                                        缺料导致断线，生产不连续？
+                                                                        <br>
+                                                                        工位现在物料堆放杂乱？
+                                                                        <br>
+                                                                        小批量多品种影响交货周期？
+                                                                        <br>
+                                                                    </span>
+                                                                </span>
+                                                                <br>
+                                                                <strong class="p_text-2">
+                                                                    <span>
+                                                                        <br>
+                                                                        那么，选择MILO STOROBOT仓储机人系列产品，搭配MILO-IWMS仓储管理系统软件
+                                                                        ，上述问题迎刃而解，MILO-IWMS将为您的仓库管理赋能。
+                                                                    </span>
+                                                                    <br>
+                                                                </strong>
+                                                                <br>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="td_top" width="33.33%">
+                                            <div class="div-padding">
+                                                <div>
+                                                    <div>
+                                                        <div class="mod4_main_four_content">
+                                                            <div class="mod4_img">
+                                                                <img src="../images/mod4.3.png" alt="">
+                                                            </div>
+                                                            <p>
+                                                                <span>
+                                                                    <strong>
+                                                                        <span>您是否碰到这样的问题：</span>
+                                                                    </strong>
+                                                                </span>
+                                                                <br>
+                                                                <span class="p_text">
+                                                                    <span>
+                                                                        已有大量数据，价值在哪里？我将如何让数据来提高生产力？
+                                                                        <br>
+                                                                        难道可视化仅仅是用来接待领导参观的道具吗？
+                                                                        <br>
+                                                                        看板数据为何无人问津？
+                                                                        <br>
+                                                                        为何现场信息更多的依赖层层询问？
+                                                                        <br>
+                                                                        可视化如何推动全员参与制造？
+                                                                        <br>
+                                                                        业务需求变化为何不能与可视化系统同步？
+                                                                        <br>
+                                                                        企业到底如何搭建一个可持续发展的数据价值挖掘体系？
+                                                                        <br>
+                                                                    </span>
+                                                                </span>
+                                                                <br>
+                                                                <strong class="p_text-2">
+                                                                    <span>
+                                                                        <br>
+                                                                        <br>
+                                                                        <br>
+                                                                        那么，选择MILO-VMS可视化管理系统
+                                                                        ，上述问题迎刃而解，MILO-VMS可视化管理系统将为您的工厂可视化管理赋能。
+                                                                    </span>
+                                                                    <br>
+                                                                </strong>
+                                                                <br>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mod4_main_five">
+                            <div class="col_table">
+                                <table>
+                                    <tr>
+                                        <td class="td_top" width="33.33%">
+                                            <div class="div-padding">
+                                                <div>
+                                                    <div>
+                                                        <div class="mod4_main_four_content">
+                                                            <div class="mod4_img">
+                                                                <img src="../images/mod4.4.png" alt="">
+                                                            </div>
+                                                            <p>
+                                                                <span>
+                                                                    <strong>
+                                                                        <span>您是否碰到这样的问题：</span>
+                                                                    </strong>
+                                                                </span>
+                                                                <br>
+                                                                <span class="p_text">
+                                                                    <span>
+                                                                        信息沟通不顺畅，部门协作有点差？
+                                                                        <br>
+                                                                        问题总反复，内耗有点大？
+                                                                        <br>
+                                                                        异常无法及时关闭或不了了之？资源太浪费？
+                                                                        <br>
+                                                                        快速反应会无法持续开展？
+                                                                        <br>
+                                                                        在办公室解决问题，没有去现场问题发现点？
+                                                                        <br>
+                                                                        未系统记录问题总结，无法推动持续改善？
+                                                                        <br>
+                                                                        管理者是否该有一个行之有效的管理工具来了解现场与员工的问题，并快速响应和解决？
+                                                                        <br>
+                                                                    </span>
+                                                                </span>
+                                                                <br>
+                                                                <strong class="p_text-2">
+                                                                    <span>
+                                                                        <br>
+                                                                        <br>
+                                                                        那么，选择MILO-SIM
+                                                                        及时化管理系统，上述问题迎刃而解，MILO-SIM及时化管理系统将为您的及时化管理赋能。
+                                                                    </span>
+                                                                </strong>
+                                                                <br>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="td_top" width="33.33%">
+                                            <div class="div-padding">
+                                                <div>
+                                                    <div>
+                                                        <div class="mod4_main_four_content">
+                                                            <div class="mod4_img">
+                                                                <img src="../images/mod4.5.png" alt="">
+                                                            </div>
+                                                            <p>
+                                                                <span>
+                                                                    <strong>
+                                                                        <span>您是否碰到这样的问题：</span>
+                                                                    </strong>
+                                                                </span>
+                                                                <br>
+                                                                <span class="p_text">
+                                                                    <span>
+                                                                        一线巡检工人采用纸质单据记录巡检，效率低下？
+                                                                        <br>
+                                                                        错误漏检是家常便饭？
+                                                                        <br>
+                                                                        上级部门缺乏有效手段规范巡检，监督管理不到位，只巡不检现象严重？
+                                                                        <br>
+                                                                        纸质数据需要人工录入Excel表格中，共享不便，统计汇总耗时耗力？
+                                                                        <br>
+                                                                        管理层无法及时获知设备运转情况，设备管理现状混乱，给生产管理造成了很大的困扰？
+                                                                        <br>
+                                                                    </span>
+                                                                </span>
+                                                                <br>
+                                                                <strong class="p_text-2">
+                                                                    <span>
+                                                                        <br>
+                                                                        <br>
+                                                                        那么，选择MILO-POM
+                                                                        生产运维系统，上述问题迎刃而解，MILO-POMS生产运维系统将为您的生产运维管理赋能。
+                                                                    </span>
+                                                                </strong>
+                                                                <br>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="td_top" width="33.33%">
+                                            <div class="div-padding">
+                                                <div>
+                                                    <div>
+                                                        <div class="mod4_main_four_content">
+                                                            <div class="mod4_img">
+                                                                <img src="../images/mod4.6.png" alt="">
+                                                            </div>
+                                                            <p>
+                                                                <span>
+                                                                    <strong>
+                                                                        <span>您是否碰到这样的问题：</span>
+                                                                    </strong>
+                                                                </span>
+                                                                <br>
+                                                                <span class="p_text">
+                                                                    <span>
+                                                                        想要长距离的高速运送您的托盘？
+                                                                        <br>
+                                                                        想要利用一套输送设备快速轻松地连接您的仓库？
+                                                                        <br>
+                                                                        想要把货物疾速、高效的送达指定地点？
+                                                                        <br>
+                                                                    </span>
+                                                                </span>
+                                                                <br>
+                                                                <strong class="p_text-2">
+                                                                    <span>
+                                                                        <br>
+                                                                        <br>
+                                                                        <br>
+                                                                        <br>
+                                                                        <br>
+                                                                        <br>
+                                                                        <br>
+                                                                        那么，选择MILO RAILROBOT系列产品
+                                                                        ，上述问题迎刃而解，米洛提供的RAILROBOT产品将会让您的物料运输更高效、更便捷。
+                                                                    </span>
+                                                                </strong>
+                                                                <br>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mod4_main_six">
+                            <div class="mod4_main_six_div1">
+                                <a href="#">
+                                    <div class="mod4_main_six_div2">
+                                        <span>查看更多解决方案</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="footer">
+            <div class="container">
+                <div class="footer_in">
+                    <div class="in_box">
+                        <div class="box_frist">
+                            <table class="box_frist_table">
+                                <tbody>
+                                    <tr>
+                                        <td class="td_top" width="85.6%">
+                                            <div class="tr_td_div">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="td_top" width="20%">
+                                                                <div>
+                                                                    <div class="td_div_div">快捷导航</div>
+                                                                    <div class="td_div_div2">
+                                                                        <a href="">解决方案 </a><br>
+                                                                        <a href="">产品中心 </a><br>
+                                                                        <a href="">新闻资讯 </a><br>
+                                                                        <a href="">服务与支持 </a><br>
+                                                                        <a href="">加入我们 </a><br>
+                                                                        <a href="">联系我们 </a><br>
+                                                                        <a href="">关于米洛 </a><br>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td_top" width="20%">
+                                                                <div>
+                                                                    <div class="td_div_div">产品中心</div>
+                                                                    <div class="td_div_div2">
+                                                                        <a href="">智能软件系统 </a><br>
+                                                                        <a href="">自动化系统产品 </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td_top" width="20%">
+                                                                <div>
+                                                                    <div class="td_div_div">新闻资讯</div>
+                                                                    <div class="td_div_div2">
+                                                                        <a href="">公司新闻 </a><br>
+                                                                        <a href="">行业资讯 </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td_top" width="20%">
+                                                                <div>
+                                                                    <div class="td_div_div">加入我们</div>
+                                                                    <div class="td_div_div2">
+                                                                        <a href="">员工风采 </a><br>
+                                                                        <a href="">企业招聘 </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td_top" width="20%">
+                                                                <div>
+                                                                    <div class="td_div_div">关于米洛</div>
+                                                                    <div class="td_div_div2">
+                                                                        <a href="">公司简介 </a><br>
+                                                                        <a href="">企业文化 </a><br>
+                                                                        <a href="">发展历程 </a><br>
+                                                                        <a href="">创新成果 </a><br>
+                                                                        <a href="">资质荣誉 </a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td class="td_top" width="14.4%">
+                                            <div class="tr_td_div">
+                                                <div class="div_img">
+                                                    <img src="../images/5e8c37d47a529.png" alt="">
+                                                </div>
+                                                <div class="div_span">
+                                                    <span>关注我们</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="div_li">
+                            <hr>
+                        </div>
+                        <div class="in_box_bottom">
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td class="td_top" width="85%">
+                                            <div>
+                                                Copyright © 2019 Goricher All Rights Reserved &nbsp;无锡米洛智能工业科技有限公司
+                                            </div>
+                                        </td>
+                                        <td class="td_top" width="15%">
+                                            <div class="box_bottom_right">
+                                                <div class="right_margin">
+                                                    <a class="social-item" target="_blank" href="http://facebook.com">
+                                                        <i class="i_item icon-social-facebook"></i>
+                                                    </a>
+                                                    <a class="social-item" target="_blank" href="http://twitter.com">
+                                                        <i class="i_item icon-social-twitter"></i>
+                                                    </a>
+                                                    <a class="social-item" target="_blank" href="https://weibo.com">
+                                                        <i class="i_item icon-social-xinlang"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_bottom">
+                    <div class="container_bottom_in">
+                        <a href="https://beian.miit.gov.cn/"> 苏ICP备17009825号-2 </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
 </body>
+<script>
+    $(function () {
+        var data = [
+            {
+                pcUrl: "../images/lun1.jpg",
+            },
+            {
+                pcUrl: "../images/lun2.jpg",
+            },
+            {
+                pcUrl: "../images/lun2.jpg",
+            },
+        ];
+
+        var $ol = $(".ML_banner .carousel-indicators");
+        var $inner = $(".ML_banner .carousel-inner");
+        function render() {
+            console.log('11111111111111')
+            var str = "";
+            data.forEach((item, idx) => {
+                str += `<div class="item ${idx == 0 ? "active" : ""}"><a href="#" class="m_imgBox"><img src="${item.pcUrl}" alt=""></a></div>`;
+            });
+            $inner.html(str);
+
+            var str2 = "";
+            data.forEach((item, idx) => {
+                str2 += `<li data-target="#carousel-example-generic" class="${idx == 0 ? "active" : ""}" data-slide-to="${idx}"></li>`;
+            });
+            $ol.html(str2);
+
+        }
+        render();
+    });
+
+
+
+</script>
+<script>
+
+    $(document).ready(
+        function () {
+            $(".header").affix({
+                offset: {
+                    top: 100,
+                }
+            });
+            //每当加钉子执行的事件
+            $(".header").on("affixed.bs.affix", function () {
+                $("body").css("paddingTop", 180)
+            })
+            //每当取消钉子执行的事件
+            $(".header").on("affixed-top.bs.affix", function () {
+                $("body").css("paddingTop", 0)
+            })
+        }
+    );
+
+</script>
+
 </html>
