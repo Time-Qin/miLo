@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        /* 清除内外边距 */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        p,
+        blockquote,
+        /* structural elements 结构元素 */
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        /* list elements 列表元素 */
+        pre,
+        /* text formatting elements 文本格式元素 */
+        fieldset,
+        button,
+        input,
+        textarea,
+        /* form elements 表单元素 */
+        th,
+        td {
+            /* table elements 表格元素 */
+            margin: 0;
+            padding: 0;
+            font-family: 微软雅黑, 'Microsoft YaHei';
+        }
+
+        /* 图片 */
+        .bannerBox {
+            position: relative;
+            z-index: 3;
+        }
+
+        .banner {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner img {
+            max-width: 100%;
+        }
+
+        /* 帮助 */
+        .w-container {
+            width: 100%;
+        }
+
+        .w-section {
+            width: 100%;
+            background: url(../images/背景.jpg) no-repeat center;
+        }
+
+        .pdBottom-default {
+            padding-bottom: 0 !important;
+        }
+
+        .pdTop-default {
+            padding-top: 0 !important;
+        }
+
+        .w-section .row .wrap-content-in {
+            position: relative;
+            z-index: 3;
+            padding: 20px 0;
+            left: 18%;
+        }
+
+        .w-section .row .wrap-content-in .font1 {
+            font-size: 32px !important;
+            margin-bottom: 0.6em;
+        }
+
+        .w-section .row .wrap-content-in .H-line {
+            width: 120px;
+            height: 2px;
+            background: #7271c8;
+            margin: 0 auto 10px;
+        }
+
+        .w-section .row .wrap-content-in .w-text {
+            font-size: 115%;
+            max-width: 1030px;
+            margin: 35px auto 0px;
+            line-height: 2;
+            text-align: left;
+        }
+
+        .pdTop-medium {
+            padding-top: 20px !important;
+        }
+
+        .pdBottom-medium {
+            padding-bottom: 20px !important;
+        }
+
+        .multi-imgs ul {
+            background: white;
+            overflow: hidden;
+        }
+
+        .multi-imgs ul,
+        .multi-imgs li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .multi-imgs li {
+            width: 14.28%;
+            float: left;
+            text-align: center;
+        }
+
+        .multi-imgs .img {
+            width: 100%;
+            height: 100%;
+
+            /* position: absolute;
+            z-index: 3; */
+        }
+
+        .multi-imgs .img img {
+            width: 75.2279%;
+            height: 100%;
+            left: 12.386%;
+            top: 0%;
+        }
+
+        /* 解决方案 */
+        .w-solution .container .title {
+            padding: 20px 0;
+        }
+
+        .w-title {
+            margin-top: 0;
+            margin-bottom: 15px;
+            position: relative;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .w-title .tith {
+            position: relative;
+            vertical-align: middle;
+            margin-bottom: 10px;
+        }
+
+        .w-title .tith .tith-in {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+
+        .w-title .tith .tith-in::before {
+            right: 100%;
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 1500px;
+            height: 1px;
+            background: #E2E1E1;
+        }
+
+        .w-title .tith .tith-in::after {
+            left: 100%;
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 1500px;
+            height: 1px;
+            background: #E2E1E1;
+        }
+
+        .w-title .tith .tith-in h2 {
+            color: #333;
+            font-size: 26px;
+            padding: 0 0.8em;
+            margin-top: 0px;
+            margin-bottom: 0;
+        }
+
+        .w-title p {
+            font-size: 15px;
+            color: #888;
+            margin: 0 0 10px;
+        }
+
+        .title .row .div-padding {
+            padding: 20px 15px;
+        }
+
+        .title .row .div-padding .w-case {
+            background: #F4F4F4;
+            padding: 25px 18px 15px;
+        }
+
+        .title .row .div-padding .w-case .padv-h {
+            font-size: 18px !important;
+            color: #333;
+            margin: 0 0 18px;
+        }
+        .title .row .div-padding .w-case p{
+            color: #666;
+            height: 20em;
+            line-height: 1.5em;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
+        .title .row .div-padding .w-case .padv-num{
+            line-height: 1;
+            text-align: right;
+            font-size: 108px;
+            font-weight: bold;
+            color: #e3e0f2;
+            margin-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .title .w-button{
+            text-align: center;
+        }
+        .title .w-button .btn-w{
+            display: inline-block;
+            line-height: 1.5;
+            cursor: pointer;
+            color: #fff;
+            background-color: #2b3b62;
+            padding: 0.8em 3em;
+            border-radius: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 图片 -->
+    <section class="bannerBox">
+        <div class="banner" style="height: auto;">
+            <img src="../images/解决方案.jpg" alt="">
+        </div>
+    </section>
+    <!-- 帮助 -->
+    <div class="w-container">
+        <div class="w-section pdTop-default pdBottom-default">
+            <div class="container row" style="max-width: 80%;">
+                <div class="wrap-content-in pdTop-medium pdBottom-medium">
+                    <div style="height: 40px;"></div>
+                    <div style="text-align: center;">
+                        <div class="font1">
+                            <strong>MILO米洛如何提供帮助</strong>
+                        </div>
+                        <div class="H-line"></div>
+                        <div class="w-text">
+                            <span>
+                                &nbsp; &nbsp; &nbsp;
+                                &nbsp;MILO米洛提供的产品与服务能够确保您拥有卓越的生产执行力与订单交付能力。作为厂内仓储物流与生产执行力提效专家，MILO米洛基于精益管理方法、自动化搬运技术与信息化数字技术来定制规划适合您的闭环解决方案。我们的解决方案基于精益改善和评审体系执行度两方面，运用自动化搬运技术、工业互联网信息技术以及系统集成技术，无论您从事汽车或零部件、橡塑制品、电力成套、电器电子、重工机械还是其他工业部件的生产与制造，都能对您的仓储物流和生产制造流程进行优化再造—入库接收、物料存储、半成品暂存、产成品的仓储与移动。我们有先进的流程再造理念，我们更有强大的流程再造落地能力，让仓储物流更智能，让生产制造更透明，为智造赋能。
+                            </span>
+                        </div>
+                    </div>
+                    <div style="height: 40px;"></div>
+                    <div class="li-div">
+                        <div class="multi-imgs">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="../images/EMS系统.png" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="../images/汽车行业.png" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="../images/橡塑制品.png" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="../images/电力成套.png" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="../images/模具行业.png" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="../images/新能源行业.png" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="../images/离散制造.png" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="height: 40px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 解决方案 -->
+    <section class="w-solution">
+        <div class="container">
+            <div class="title">
+                <div style="height: 30px;"></div>
+                <div class="w-title">
+                    <div class="tith">
+                        <div class="tith-in">
+                            <h2>我们的解决方案</h2>
+                        </div>
+                    </div>
+                    <p>Our solution</p>
+                </div>
+                <div style="height: 20px;"></div>
+                <div class="row">
+                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                        <div class="w-case">
+                            <div class="padv-h">
+                                <strong>
+                                    <span>MES制造执行系统软件 </span>
+                                </strong>
+                            </div>
+                            <p>
+                                <strong>提升订单交付能力</strong><br>
+                                <span>帮助客户构建企业级执行平台，实现工厂协同高效化、仓储物流精细化、计划排程智能化，增强企业核心竞争力。</span>
+                                <br>
+                                <br>
+                                <strong>生产管理快速响应</strong><br>
+                                <span>过程数据在线采集，资源数据跨业务共享，KPI数据目视管理，实现生产管理透明化，建立快速交付的管理体系 </span>
+                            </p>
+                            <div class="padv-num">01</div>
+                        </div>
+                    </div>
+
+                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                        <div class="w-case">
+                            <div class="padv-h">
+                                <strong>
+                                    <span>仓储系统解决方案 </span>
+                                </strong>
+                            </div>
+                            <p>
+                                <span>数据驱动，实现货物从静态存储到动态存储，推动库房仓储综合效率上升到一个新水平。</span>
+                                <br>
+                                <br>
+                                <span>加快了货物运转速度，增强了出入库能力，大大提高了周转率。</span>
+                            </p>
+                            <div class="padv-num">02</div>
+                        </div>
+                    </div>
+
+                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                        <div class="w-case">
+                            <div class="padv-h">
+                                <strong>
+                                    <span>可视化管理系统解决方案 </span>
+                                </strong>
+                            </div>
+                            <p>
+                                <strong>数据服务管理</strong><br>
+                                <span>各层级人员“看一眼”就能了解所属组织或其中部分当前状态；<br>
+                                    能够更有效、或者反效果（次品率等）地督促、指引或驱动大家行为；<br>
+                                    暴露问题持续改善；<br>
+                                    促进目标的达成。</span>
+                                <br>
+                                <br>
+                                <strong>数据挖掘更便捷</strong><br>
+                                <span>内置三维度整体规划的数据模型，提供10个可视主题100个标准接口，可视界面数据源、呈现样式、计算公式支持配置；与SIM、邮件、微信、APP的集成实现数据推送的闭环管理。</span>
+                            </p>
+                            <div class="padv-num">03</div>
+                        </div>
+                    </div>
+
+                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                        <div class="w-case">
+                            <div class="padv-h">
+                                <strong>
+                                    <span>及时化管理系统解决方案 </span>
+                                </strong>
+                            </div>
+                            <p>
+                                <span>为问题解决（大问题和小问题）提供（简单、普遍、有效的）系统性方法；<br>
+                                    提高质量指标 – 降低PPM，保修费用；<br>
+                                    确保每个问题都能及时关闭，增加客户满意度；<br>
+                                    使用显示问题信息的目视化方法促进关闭；<br>
+                                    激发全员的潜力、创造力与责任感，为持续改善提供支持；<br>
+                                    防止重复性错误，减少资源浪费；<br>
+                                    建立人人善于解决问题、推动持续改善的文化，问题是积极改善的机会。</span>
+                            </p>
+                            <div class="padv-num">04</div>
+                        </div>
+                    </div>
+
+                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                        <div class="w-case">
+                            <div class="padv-h">
+                                <strong>
+                                    <span>生产运维系统解决方案 </span>
+                                </strong>
+                            </div>
+                            <p>
+                                <span>实现了设备数据采集、设备在线监控、设备数据管理、开机点检管理、设备扫码巡检、故障报修派单、定期自动保养、设备档案管理等，将历史痛点问题一一解决;</span>
+                                <br>
+                                <br>
+                                <span>确保巡检质量，提高巡检效率，实现设备全生命周期的信息化管理。</span>
+                            </p>
+                            <div class="padv-num">05</div>
+                        </div>
+                    </div>
+
+                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                        <div class="w-case">
+                            <div class="padv-h">
+                                <strong>
+                                    <span>穿梭机器人系统解决方案 </span>
+                                </strong>
+                            </div>
+                            <p>
+                                <span>作为灵活、可扩展和模块化解决方案的一部分，可无缝集成到您的自动化系统中以满足您的业务需求。</span>
+                            </p>
+                            <div class="padv-num">06</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 60px;"></div>
+                <div class="w-button">
+                    <a href="#">
+                        <div class="btn-w">
+                            <span class="btn-inner">查看解决方案详情</span>
+                        </div>
+                    </a>
+                </div>
+                <div style="height: 80px;"></div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
