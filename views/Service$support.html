@@ -54,6 +54,46 @@
       text-align: center;
       font-size: 15px;
     }
+    
+    @-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
   </style>
   <body>
     <!-- banner板块图片通栏 -->
@@ -72,7 +112,7 @@
               选择MILO米洛与您合作，会让您的系统在整个生命周期内获得全面支持与服务。凭借我们的服务与支持体系，您可以确信，我们的专业团队将随时为您提供周全服务。
             </p>
           </div>
-          <div class="zj-colDiv row" id="zj-test">
+          <div class="animated fadeInUp row" id="zj-test">
             <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
               <img src="/images/afterTel.png" alt="" />
               <p>售后热线: (+086)15720687925</p>
