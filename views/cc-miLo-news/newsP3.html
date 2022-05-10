@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!--设置IE浏览器的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--设定网页视口大小，即网页宽度默认为设备宽度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>新闻资讯</title>
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+        <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    <link rel="stylesheet" href="/miLo/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            /* width: 100%; */
+        }
+
+        .banner img {
+            width: 100%;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .cc-menu {
+            height: 62px;
+            margin: auto;
+        }
+
+        .cc-menu-list {
+            margin: auto;
+            position: relative;
+            margin: 0px 0px 26px 0px;
+        }
+
+        .cc-menuAll {
+            height: 36px;
+            width: 200px;
+            margin: auto;
+        }
+
+        .cc-menu-list-item {
+            height: 62px;
+            margin: 0px 5px;
+            list-style: none;
+            float: left;
+            text-align: center;
+        }
+
+        .cc-menuL {
+            text-decoration: none;
+            color: rgb(51, 51, 51);
+            font-size: 16px;
+            border: 1px solid rgb(137, 137, 137);
+            height: 36px;
+            line-height: 36px;
+            padding: 5px 11px;
+            box-sizing: border-box;
+        }
+
+        .cc-menuR {
+            text-decoration: none;
+            color: rgb(51, 51, 51);
+            font-size: 16px;
+            border: 1px solid rgb(137, 137, 137);
+            height: 36px;
+            line-height: 36px;
+            padding: 5px 11px;
+            box-sizing: border-box;
+        }
+
+        .cc-newsbd {
+            width: 100%;
+            background-color: rgba(210, 210, 210, 0.3);
+            border-top: 1px solid rgb(210, 210, 210)
+        }
+
+        .cc-main {
+            max-width: 1200px;
+            margin: auto;
+            width: 100%;
+        }
+
+
+        .cc-position {
+            margin-top: 35px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgb(210, 210, 210);
+        }
+
+        .cc-position-text {
+            font-size: 14px;
+            color: rgb(51, 51, 51);
+        }
+
+        .cc-position-a {
+            text-decoration: none;
+            font-size: 14px;
+            color: rgb(51, 51, 51);
+            cursor: pointer;
+        }
+
+        .cc-news-li {
+            width: 100%;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #E8E8E8;
+            list-style: none;
+        }
+
+        .cc-newsL {
+            overflow: hidden;
+            display: inline-block;
+            float: left;
+        }
+
+        .cc-newsL .imgBox {
+            width: 263px;
+            height: 263px;
+        }
+
+        .cc-newsL .imgBox img {
+            width: 100%;
+            max-width: 100%;
+
+        }
+
+        .cc-newsR {
+            /* top: 50%; */
+            margin-left: 263px;
+            padding: 36px 38px;
+            position: absolute;
+            /* left: 0; */
+            /* right: 0; */
+        }
+
+        .cc-date .year {
+            font-size: 34px;
+            color: rgb(88, 88, 88);
+        }
+
+        .day-month {
+            color: rgb(94, 77, 77);
+            font-size: 13px;
+            margin-top: 6.6px;
+            margin-top: 10px;
+        }
+
+        .cc-text {
+            width: 861px;
+            height: 88px;
+            position: relative;
+            margin-left: 123px;
+            margin-top: -78px;
+        }
+
+        .cc-news-h {
+            font-size: 18px;
+            color: rgb(51, 51, 51);
+            margin-bottom: 18px;
+        }
+
+        .cc-news-sum {
+            font-size: 14px;
+            color: rgb(128, 128, 128);
+        }
+
+        .cc-news-page {
+            height: 38px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .cc-news-page>a {
+            text-decoration: none;
+            border: 1px solid rgb(137, 137, 137);
+            color: #666;
+            margin: 0px 3px 7px 3px;
+            padding: 3px 10px;
+            font-size: 14px;
+        }
+
+        /* 767px以下 */
+        @media screen and (max-width:767px) {
+            .cc-newsL .imgBox {
+                width: 28%;
+                height: 0;
+                padding-bottom: 28%;
+            }
+
+            .cc-menu {
+                display: none;
+            }
+
+            .cc-date {
+                display: none;
+            }
+
+            .cc-text {
+                width: 400px;
+                height: 88px;
+                position: relative;
+                margin-top: 10px;
+                margin-left: -20px;
+                word-break: normal;
+            }
+
+            .cc-news-h {
+                font-size: 12px;
+                color: rgb(51, 51, 51);
+                margin-bottom: 18px;
+            }
+
+            .cc-news-sum {
+                width: 300px;
+                font-size: 10px;
+                color: rgb(128, 128, 128);
+            }
+
+            .cc-newsR {
+                margin-left: 28%;
+                padding: 0.5em 1em;
+                height: 0;
+                padding-bottom: 28%;
+            }
+        }
+
+        /* 767px-960px */
+        @media screen and (min-width:767px) and (max-width:960px) {
+            .cc-main {
+                width: 750px;
+            }
+
+
+            .cc-date {
+                display: none;
+            }
+
+            .cc-text {
+                width: 400px;
+                height: 88px;
+                position: relative;
+                margin-top: 60px;
+                margin-left: 10px;
+                word-break: normal;
+            }
+
+            .cc-news-h {
+                font-size: 14px;
+                color: rgb(51, 51, 51);
+                margin-bottom: 18px;
+            }
+
+            .cc-news-sum {
+                width: 500px;
+                font-size: 12px;
+                color: rgb(128, 128, 128);
+            }
+
+
+        }
+
+        @media screen and (max-width:960px) {
+            .cc-newsR {
+                padding: 20px;
+            }
+
+        }
+
+        /* 960px-1200px */
+        @media screen and (min-width:960px) and (max-width:1200px) {
+            .cc-main {
+                width: 960px;
+            }
+
+            .cc-date {
+                width: 100px;
+                height: 90px;
+                margin-right: 30px;
+                margin-top: 50px;
+                position: relative;
+                border-right: 1px solid rgba(210, 210, 210, 0.3);
+            }
+
+            .cc-text {
+                width: 861px;
+                height: 88px;
+                position: relative;
+                margin-left: 123px;
+                margin-top: -78px;
+            }
+
+            .cc-news-h {
+                font-size: 18px;
+                color: rgb(51, 51, 51);
+                margin-bottom: 18px;
+            }
+
+            .cc-news-sum {
+                width: 500px;
+                font-size: 14px;
+                color: rgb(128, 128, 128);
+            }
+        }
+
+        /* 1200px以上 */
+        @media screen and (min-width:1200px) {
+            .cc-main {
+                width: 1200px;
+            }
+
+            .cc-date {
+                width: 100px;
+                height: 90px;
+                margin-right: 30px;
+                margin-top: 50px;
+                position: relative;
+                border-right: 1px solid rgba(210, 210, 210, 0.3);
+            }
+
+            .cc-text {
+                width: 861px;
+                height: 88px;
+                position: relative;
+                margin-left: 123px;
+                margin-top: -78px;
+            }
+
+            .cc-news-h {
+                font-size: 18px;
+                color: rgb(51, 51, 51);
+                margin-bottom: 18px;
+            }
+
+            .cc-news-sum {
+                max-width:645px;
+                font-size: 14px;
+                color: rgb(128, 128, 128);
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="banner-box">
+        <div class="banner">
+            <img src="/miLo/image/1.jpg" />
+        </div>
+    </section>
+    <div class="cc-menu container">
+        <ul class="cc-menu-list">
+            <div class="cc-menuAll">
+                <li class="cc-menu-list-item">
+                    <a href="#" class="cc-menuL">米洛动态</a>
+                </li>
+                <li class="cc-menu-list-item">
+                    <a href="#" class="cc-menuR">行业资讯</a>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <div class="cc-newsbd container">
+        <div class="cc-main">
+            <div class="cc-position">
+                <div class="cc-position-text">您当前的位置：&nbsp;
+                    <a class="cc-position-a">新闻资讯</a>
+                </div>
+            </div>
+            <div class="cc-news-list">
+                <ul class="cc-news-ul">
+                    <li class="cc-news-li clearfix">
+                        <a href="/miLo/miLo-news/news-01.html" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox">
+                                    <img src="/miLo/image/22.png" />
+                                </div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2020</div>
+                                    <div class="day-month">04-18</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="换了机器人不等于建成智能工厂">换了机器人不等于建成智能工厂</div>
+                                    <div class="cc-news-sum">很多人以为花大钱买回一堆数控设备和机器人就建成了智能工厂。这实际上是一种误解。MILO米洛认为，要建成智能工厂</div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cc-news-li clearfix">
+                        <a href="/miLo/miLo-news/news-01.html" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox">
+                                    <img src="/miLo/image/23.jpg" />
+                                </div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2020</div>
+                                    <div class="day-month">04-18</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="信息化和工业化融合发展规划（2016-2020）">信息化和工业化融合发展规划（2016-2020）</div>
+                                    <div class="cc-news-sum">
+                                        “十三五”时期是我国全面建成小康社会的决胜阶段，是适应把握引领经济发展新常态的关键时期，是抢占全球新一轮产业竞争制高点的战略机遇期。
+                                    </div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    
+
+                </ul>
+            </div>
+            <div class="cc-news-page">
+                <a href="#" class="cc-page-first disabled">
+                    <span class="cc-first-text">首页</span>
+                </a>
+                <a href="#" class="cc-page-pre disabled">
+                    <span class="cc-pre-text">&lt;上一页</span>
+                </a>
+                <a title="1" href="/miLo/miLo-news/newsP1.html" class="cur">1</a>
+                <a title="2" href="/miLo/miLo-news/newsP2.html">2</a>
+                <a title="3" href="#">3</a>
+                <a href="#" class="cc-page-next">
+                    <span class="cc-next-text">下一页&gt;</span>
+                </a>
+                <a href="#" class="cc-page-last">
+                    <span class="cc-last-text">尾页</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
