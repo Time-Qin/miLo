@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/fonts/iconfont.css">
 
     <link rel="stylesheet" href="/tools/css/product-main.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
 
     <style>
         input,
@@ -54,8 +55,14 @@
 
         .map {
             width: 100%;
-            height: 255px;
+            height: 250px;
             background-color: #fff;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 250px;
+            border: 0;
         }
 
         .w-title15 {
@@ -181,8 +188,9 @@
             font-weight: normal;
         }
 
-        .my-label .star_note {
+        .star_note {
             color: red;
+            padding: 0 3px;
         }
 
         .my-form-control,
@@ -200,9 +208,37 @@
             height: 8em;
         }
 
-        #canvas {
-            width: auto !important;
-            height: auto !important;
+        .form-code {
+            vertical-align: middle;
+            margin-bottom: 1em;
+        }
+
+        .form-code .my-form-control {
+            width: 100px;
+            margin-right: 8px;
+
+        }
+
+        #verify {
+            height: 2em;
+            cursor: pointer;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .code-img {
+            display: inline-block;
+        }
+
+        .my-btn-default {
+            background: #2B3B62;
+            color: #fff;
+            border: 0;
+            padding: 0.7em 0;
+            min-width: 12em;
+            text-align: center;
+            line-height: 1.5;
+            font-size: 105%;
         }
     </style>
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
@@ -230,7 +266,10 @@
                 <div class="w-text">—听-想-解决，全新全意为您服务—</div>
                 <div class="pad"></div>
                 <!-- map板块 -->
-                <div class="map"></div>
+                <div class="map">
+                    <iframe frameborder="0" allowtransparency="true" scrolling="no" src="tools/map.html">
+                    </iframe>
+                </div>
                 <div class="pad"></div>
                 <!-- title板块 -->
                 <div>
@@ -269,7 +308,7 @@
                 <div class="large-pad"></div>
                 <!-- form板块 -->
                 <div>
-                    <form>
+                    <form id="my-form">
                         <div class="form-group">
                             <label for="name" class="my-label">
                                 <span>姓名</span>
@@ -298,12 +337,12 @@
                             </label>
                             <textarea class="my-form-textarea" id="textarea" name="textarea"></textarea>
                         </div>
-                        <div>
-                            <input type="text" placeholder="验证码" name="captcha" />
-                            <span id='verify'></span>
+                        <div class="form-code">
+                            <input type="text" class="my-form-control" placeholder="验证码" name="captcha" />
+                            <div id='verify' title="点击刷新验证码"></div>
                             <span class="star_note">*</span>
                         </div>
-                        <button type="submit" class="btn btn-default">提交</button>
+                        <button class="my-btn-default" id="btn">提交</button>
                     </form>
 
                 </div>
@@ -320,6 +359,8 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="/node_modules/bootstrap/js/bootstrap.min.js"></script>
     <script src="/tools/js/product.js"></script>
+    <script src="https://www.layuicdn.com/layui/layui.js"></script>
+
     <script>
         function getVerify() {
             $.ajax({
@@ -333,6 +374,41 @@
         getVerify()
         $('#verify').on('click', function () {
             getVerify()
+        })
+
+    </script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                var formData = $("#my-form").serializeArray();
+                var obj = {};
+                formData.forEach((item) => {
+                    obj[item.name] = item.value;
+                });
+
+                $.ajax({
+                    type: "POST",
+                    url: "/connect",
+                    data: JSON.stringify(obj),
+                    contentType: "application/json",
+                    dataType:'json',
+                    success: (res) => {
+                        if (res.code === 2000) {
+                            layer.msg(res.message, { shade: [0.3, '#393D49'], time: 2000 });
+                            setTimeout(() => {
+                                window.location.href = "/connect"
+                            }, 2000);
+                        }
+                        else {
+                            layer.msg(res.message, { shade: [0.3, '#393D49'], time: 2000 });
+                        }
+                    },
+                    err: (res) => {
+                        console.log("22222222");
+                    }
+                })
+                return false;
+            })
         })
     </script>
 

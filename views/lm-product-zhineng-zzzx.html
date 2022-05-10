@@ -62,6 +62,14 @@
                 width: 100%;
             }
 
+            .page-direction {
+                padding-left: 1em;
+            }
+
+            .product-short-sum {
+                border-bottom: 1px solid #ededed;
+            }
+
         }
 
         @media screen and (max-width:960px) {
@@ -96,7 +104,7 @@
         .modal .closeModal {
             height: 30px;
             width: 30px;
-            background: url(../images/close.png);
+            background: url(/images/close.png);
             background-size: cover;
             float: right;
             opacity: 0.7;
@@ -203,7 +211,7 @@
     <!-- banner板块 -->
     <section class="bannerBox">
         <div class="banner">
-            <img src='../images/chanpinzhongxin.jpg' />
+            <img src='/images/chanpinzhongxin.jpg' />
         </div>
     </section>
     <!-- menu板块 -->
@@ -267,7 +275,7 @@
                 &gt; 制造执行系统</div>
             <div class="row prd-msg clearfix modal_trigger">
                 <div class="left col-xs-30 col-sm-15" data-toggle="modal" data-target="#myModal">
-                    <img src='../images/zhizaozhixingxitong.png' />
+                    <img src='/images/zhizaozhixingxitong.png' />
                 </div>
 
                 <!-- Modal -->
@@ -275,7 +283,7 @@
                     <div class="modal-dialog" id="myModal" tabindex="-1">
                         <div class="modal-content">
                             <div class="modalHeader">
-                                <img src='../images/zhizaozhixingxitong.png' />
+                                <img src='/images/zhizaozhixingxitong.png' />
                             </div>
                             <div class="closeModal" data-dismiss="modal"></div>
                         </div>
@@ -371,7 +379,6 @@
             $(document).click(function () {
                 if ($('.modal-backdrop.in')) {
                     $('.modal-backdrop.in').click(function () {
-                        console.log('我被点击啦');
                         $('.closeModal').click();
                     })
                 }
