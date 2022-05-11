@@ -129,7 +129,12 @@
         .cc-newsL .imgBox img {
             width: 100%;
             max-width: 100%;
+            transform: scale(1);
+            transition: transform 0.5s ease 0s;
+        }
 
+        .cc-newsL .imgBox img:hover {
+            transform: scale(1.15);
         }
 
         .cc-newsR {
@@ -207,8 +212,8 @@
                 width: 400px;
                 height: 88px;
                 position: relative;
-                margin-top: 10px;
-                margin-left: -20px;
+                margin-top: 15px;
+                margin-left: -10px;
                 word-break: normal;
             }
 
@@ -230,6 +235,8 @@
                 height: 0;
                 padding-bottom: 28%;
             }
+
+
         }
 
         /* 767px-960px */
@@ -247,7 +254,7 @@
                 width: 400px;
                 height: 88px;
                 position: relative;
-                margin-top: 60px;
+                margin-top: 70px;
                 margin-left: 10px;
                 word-break: normal;
             }
@@ -269,7 +276,7 @@
 
         @media screen and (max-width:960px) {
             .cc-newsR {
-                padding: 20px;
+                padding: 10px;
             }
 
         }
@@ -290,7 +297,7 @@
             }
 
             .cc-text {
-                width: 861px;
+                width: 450px;
                 height: 88px;
                 position: relative;
                 margin-left: 123px;
@@ -304,10 +311,28 @@
             }
 
             .cc-news-sum {
-                width: 500px;
+                width: 400px;
                 font-size: 14px;
                 color: rgb(128, 128, 128);
             }
+
+            .cc-newsR .adore {
+                position: absolute;
+                top: 50%;
+                margin-top: -15px;
+                right: -30px;
+                width: 42px;
+                height: 30px;
+                border-left: 1px solid #CFCFCF;
+                background: url(/miLo/image/news_adore.png) no-repeat -45px center;
+            }
+
+            .cc-newsR .adore:hover {
+                background: url(/miLo/image/news_adore.png) no-repeat 0px center;
+                border-left: 1px solid rgb(128, 128, 128);
+            }
+
+
         }
 
         /* 1200px以上 */
@@ -326,7 +351,7 @@
             }
 
             .cc-text {
-                width: 861px;
+                width: 800px;
                 height: 88px;
                 position: relative;
                 margin-left: 123px;
@@ -340,11 +365,26 @@
             }
 
             .cc-news-sum {
-                max-width:645px;
+                max-width: 645px;
                 font-size: 14px;
                 color: rgb(128, 128, 128);
             }
 
+            .cc-newsR .adore {
+                position: absolute;
+                top: 50%;
+                margin-top: -15px;
+                right: 110px;
+                width: 42px;
+                height: 30px;
+                border-left: 1px solid #CFCFCF;
+                background: url(/miLo/image/news_adore.png) no-repeat -45px center;
+            }
+
+            .cc-newsR .adore:hover {
+                background: url(/miLo/image/news_adore.png) no-repeat 0px center;
+                border-left: 1px solid rgb(128, 128, 128);
+            }
 
         }
     </style>
@@ -353,7 +393,7 @@
 <body>
     <section class="banner-box">
         <div class="banner">
-            <img src="/miLo/image/1.jpg" />
+            <img src="/miLo/image/1.jpg" class="cc-img" />
         </div>
     </section>
     <div class="cc-menu container">
@@ -591,6 +631,34 @@
 
 
 
+    <!-- <script>
+        var img = document.getElementById('img')
+        var s1,s2
+        console.log(img)
+        // 图片放大效果
+        i = 100;
+        img.addEventListener('onmouseover',function(){
+            clearInterval(s1);
+            s1 = setInterval(function(){
+                i+=0.1;
+                img.style.width = (i)+'%';
+                img.style.height = (i)+'%';
+                i = parseFloat(i);
+                if(i>=120) clearInterval(s1);
+            },1);
+        })
+        img.addEventListener('onmouseout',function(){
+            clearInterval(s2);
+            s2 = setInterval(function(){
+                i-=0.1;
+                img.style.width = (i)+'%';
+                img.style.height = (i)+'%';
+                i = parseFloat(i);
+                if(i<=100) clearInterval(s2); 
+            })
+        }) -->
+
+    </script>
 
 
 

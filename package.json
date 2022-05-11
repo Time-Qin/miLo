@@ -1,7 +1,6 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,10 +11,19 @@
   "dependencies": {
     "art-template": "^4.13.2",
     "bootstrap": "^3.3.5",
-    "express": "^4.18.0",
+    "express": "^4.18.1",
     "express-art-template": "^1.0.1",
     "express-session": "^1.17.2",
     "jquery": "^2.2.0",
-    "mongoose": "^6.3.1"
-  }
+    "mongoose": "^6.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Time-Qin/miLo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Time-Qin/miLo/issues"
+  },
+  "homepage": "https://github.com/Time-Qin/miLo#readme",
+  "description": ""
 }
