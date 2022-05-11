@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
+    <title>米洛智能</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -47,6 +52,12 @@
             z-index: 99;
             top: -70px;
             box-shadow: 0 0 2px 5px rgb(0 0 0/5%);
+        }
+
+        @media screen and (max-width:1200px) {
+            .header.affix {
+                top: 0;
+            }
         }
 
         .top_box {
@@ -128,6 +139,7 @@
 
             .ML_navbar .navbar-header {
                 float: none;
+                width: 100%;
             }
 
             #bs-example-navbar-collapse-1 {
@@ -151,10 +163,12 @@
                 display: block;
                 margin: 0 auto 0.5em !important;
             }
+
             .mod3_box_main .td_top {
-            text-align: center;
-        }
-            .mod3_box_main table{
+                text-align: center;
+            }
+
+            .mod3_box_main table {
                 width: 100%;
             }
         }
@@ -190,6 +204,9 @@
             max-width: 1200px;
             margin: 0 auto;
             border: 0;
+        }
+        .col_right{
+            display: none;
         }
 
         .ML_navbar .collapsed,
@@ -541,7 +558,7 @@
 
         .mod4_main_content {
             max-width: 1200px;
-            max-height: 1136px;
+            max-height: 100%;
             padding: 20px 0;
         }
 
@@ -565,6 +582,19 @@
         .mod4_main_four .col_table,
         .mod4_main_five .col_table {
             margin: 0 -15px;
+        }
+
+        @media screen and (max-width:768px) {
+            .col_table td {
+                width: 50% !important;
+                float: left;
+                display: block;
+                margin-bottom: 14px;
+            }
+
+            .mod4_main_content {
+                padding: 20px 14px;
+            }
         }
 
         .mod4_main_four .col_table table,
@@ -654,13 +684,13 @@
 
         .mod5 {
             max-width: 100%;
-            max-height: 670px;
+            max-height: 100%;
             overflow: hidden;
         }
 
         .mod5_content {
             max-width: 1200px;
-            max-height: 670px;
+            max-height: 100%;
             margin: 0 auto;
         }
 
@@ -679,7 +709,7 @@
 
         .mod5_main_midde {
             max-width: 1200px;
-            max-height: 370px;
+            max-height: 100%;
         }
 
         .mod5_midde_box {
@@ -699,6 +729,22 @@
             margin-right: 0;
             float: left;
             margin-bottom: 20px;
+        }
+
+        @media screen and (max-width:767px) {
+            .mod5_midde_box ul li {
+                min-width: 50%;
+                margin-bottom: 14px;
+            }
+
+            .dis_none {
+                display: block !important;
+                width: 100%;
+            }
+
+            .mod5_item {
+                margin: 0 auto !important;
+            }
         }
 
         .mod5_item {
@@ -829,7 +875,7 @@
 
         .mod7 {
             width: 100%;
-            max-height: 777px;
+            max-height: 100%;
             overflow: hidden;
             background-color: #f4f4f4;
         }
@@ -856,6 +902,24 @@
             max-height: 129px;
             float: left;
             text-align: center;
+        }
+
+        @media only screen and (min-width:768px) and (max-width:960px) {
+            .mod7_content ul li {
+                min-width: 33.33%;
+            }
+        }
+
+        @media only screen and (min-width:480px) and (max-width:767px) {
+            .mod7_content ul li {
+                min-width: 50%;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+            .mod7_content ul li {
+                min-width: 50%;
+            }
         }
 
         .mod7_img {
@@ -1074,6 +1138,153 @@
             color: #fff;
             text-decoration: underline;
         }
+
+        .dis_none {
+            display: none;
+            width: 0;
+        }
+
+        .toptel a:hover {
+            text-decoration: none;
+        }
+
+        @media screen and (max-width:767px) {
+            .footer_none {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:960px) {
+            .toptel {
+                position: fixed;
+                cursor: pointer;
+                z-index: 99;
+                width: 56px;
+                height: 56px;
+                right: 14px;
+                line-height: 56px;
+                bottom: 84px;
+                background: rgba(0, 0, 0, 0.3);
+                border-radius: 50%;
+                text-align: center;
+            }
+
+            .toptel a {
+                display: inline-block;
+                font-size: 200%;
+                line-height: 2;
+                color: #fff;
+                vertical-align: middle;
+            }
+        }
+
+        .ML_navbar_mask {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 16;
+            background-color: #000;
+            opacity: 0.3;
+        }
+
+        @media screen and (max-width:1200px) {
+            .left0 {
+                left: 0 !important;
+            }
+
+            .col_right {
+                position: fixed;
+                left: -240px;
+                width: 240px;
+                background-color: #fff;
+                top: 0;
+                bottom: 0;
+                padding: 0;
+                margin-top: 0;
+                z-index: 17;
+                display: block;
+                transition: left 0.5s;
+            }
+
+            .small_manue {
+                text-align: right;
+                background: none;
+                overflow-y: auto;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .small_manue_ul {
+                display: block;
+                list-style: none;
+            }
+
+            .small_manue_ul li {
+                display: block;
+                float: none;
+                text-align: left;
+                margin: 0;
+                border-bottom: 1px solid #f0f0f0;
+                cursor: pointer;
+            }
+
+            .small_manue_ul li a {
+                color: #2b3b62;
+                line-height: 2.5;
+                padding: 0 10px;
+                font-size: 15px;
+                display: block;
+            }
+
+            .small_manue_ul a:active,
+            .small_manue_ul a:focus,
+            .small_manue_ul a:hover {
+                text-decoration: none;
+            }
+
+            .small_manue_li_div {
+                position: relative;
+            }
+
+            .small_manue_li_div i {
+                position: absolute;
+                right: 0;
+                text-align: right;
+                width: 80px;
+                height: 38px;
+                line-height: 38px;
+                margin-right: 11px;
+            }
+            .small_manue_ul li .submenu{
+                border-top: 2px solid #7271cb;
+                top: 0;
+                left: 0;
+                margin-left: 0;
+                padding: 0;
+                display: none;
+                transition: bottom 0.5s;
+            }
+            .small_manue_ul li .submenu ul{
+                display: block;
+            }
+            .small_manue_ul li .submenu ul li div a{
+                color: #666;
+                text-align: left;
+                padding: 0 0 0 21px;
+                font-size: 14px;
+            }
+            .small_manue_ul li .submenu ul li div a:hover{
+                color:#7271c8;
+                background: #f0f0f0;
+            }
+            .border0{
+                border-bottom: 0 !important;
+            }
+        }
     </style>
 </head>
 
@@ -1101,6 +1312,105 @@
             </div>
             <!-- 导航条 -->
             <div class="ML_navbar">
+                <div class="ML_navbar_mask"></div>
+                <div class="col_right">
+                    <div class="small_manue">
+                        <ul class="small_manue_ul clearfix">
+                            <li>
+                                <a href="#">首页</a>
+                            </li>
+                            <li>
+                                <a href="#">解决方案</a>
+                            </li>
+                            <li>
+                                <div class="small_manue_li_div">
+                                    <a href="#">产品中心
+                                        <i class="glyphicon glyphicon-menu-down"></i>
+                                    </a>
+                                </div>
+                                <div class="submenu">
+                                    <ul>
+                                        <li class="small_manue_li_div">
+                                            <div><a href="#">智能软件产品</a></div>
+                                        </li>
+                                        <li class="small_manue_li_div">
+                                            <div><a href="#">高端装备</a></div>
+                                        </li>
+                                        <li class="small_manue_li_div border0">
+                                            <div><a href="#">系统产品</a></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="small_manue_li_div">
+                                    <a href="#">新闻资讯
+                                        <i class="glyphicon glyphicon-menu-down"></i>
+                                    </a>
+                                </div>
+                                <div class="submenu">
+                                    <ul>
+                                        <li class="small_manue_li_div">
+                                            <div><a href="#">米洛动态</a></div>
+                                        </li>
+                                        <li class="small_manue_li_div border0">
+                                            <div><a href="#">行业资讯</a></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">服务与支持</a>
+                            </li>
+                            <li>
+                                <div class="small_manue_li_div">
+                                    <a href="#">加入我们
+                                        <i class="glyphicon glyphicon-menu-down"></i>
+                                    </a>
+                                </div>
+                                <div class="submenu">
+                                    <ul>
+                                        <li class="small_manue_li_div">
+                                            <div><a href="#">员工风采</a></div>
+                                        </li>
+                                        <li class="small_manue_li_div border0">
+                                            <div><a href="#">企业招聘</a></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">联系我们</a>
+                            </li>
+                            <li>
+                                <div class="small_manue_li_div">
+                                    <a href="#">关于米洛
+                                        <i class="glyphicon glyphicon-menu-down"></i>
+                                    </a>
+                                </div>
+                                <div class="submenu">
+                                    <ul>
+                                        <li class="small_manue_li_div">
+                                            <div><a href="#">公司简介</a></div>
+                                        </li>
+                                        <li class="small_manue_li_div">
+                                            <div><a href="#">企业文化</a></div>
+                                        </li>
+                                        <li class="small_manue_li_div">
+                                            <div><a href="#">发展历程</a></div>
+                                        </li>
+                                        <li class="small_manue_li_div">
+                                            <div><a href="#">创新成果</a></div>
+                                        </li>
+                                        <li class="small_manue_li_div border0">
+                                            <div><a href="#">资质荣誉</a></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <nav class="navbar ">
                     <div class="container clearfix">
                         <div class="navbar-header clearfix">
@@ -1232,14 +1542,14 @@
                 </div>
             </section>
             <!-- 我们的产品模块 -->
-            <div class="mod2">
-                <div class="mod2_top">
-                    <div class="mod2_top_text">
-                        <h2>我们的产品</h2>
+            <div class="mod2 ">
+                <div class="mod2_top animate__animated animate__bounceInUp">
+                    <div class="mod2_top_text ">
+                        <h2 class="">我们的产品</h2>
                     </div>
                     <p>聚力科技融合制造，引领制造业智能升级</p>
                 </div>
-                <div class="mod2_middle">
+                <div class="mod2_middle animate__animated animate__bounceInUp">
                     <div>
                         <table class="mod2_middle_table">
                             <tr>
@@ -1289,7 +1599,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="mod2_bottom">
+                <div class="mod2_bottom animate__animated animate__bounceInUp">
                     <div>
                         <table class="mod2_middle_table">
                             <tr>
@@ -1347,13 +1657,13 @@
                     <div class="mod3_box_main ">
                         <table>
                             <tr>
-                                <td class="td_top" width="50%">
-                                    <div class="mod3_box_main_left ">
+                                <td class="td_top " width="50%">
+                                    <div class="mod3_box_main_left animate__animated animate__bounceInLeft">
                                         <img src="../images/mod3.1.jpg" alt="">
                                     </div>
                                 </td>
-                                <td class="td_top" width="50%">
-                                    <div class="mod3_box_main_right">
+                                <td class="td_top " width="50%">
+                                    <div class="mod3_box_main_right animate__animated animate__bounceInRight">
                                         <div class="mod3_box_main_right_text">
                                             <span>关于我们</span>
                                             <h2>ABOUT US</h2>
@@ -1368,14 +1678,12 @@
                                 </td>
                             </tr>
                         </table>
-
-
                     </div>
                 </div>
             </div>
             <!-- 米洛能解决什么 -->
             <div class="mod4">
-                <div class="mod4_top">
+                <div class="mod4_top animate__animated animate__bounceInUp">
                     <div class="mod4_top_text">
                         <h2>MILO米洛能解决什么</h2>
                     </div>
@@ -1385,8 +1693,8 @@
                     <div class="mod4_main_content">
                         <div class="mod4_main_one"></div>
                         <div class="mod4_main_three"></div>
-                        <div class="mod4_main_four">
-                            <div class="col_table">
+                        <div class="mod4_main_four clearfix">
+                            <div class="col_table animate__animated animate__bounceInUp">
                                 <table>
                                     <tr>
                                         <td class="td_top" width="33.33%">
@@ -1547,8 +1855,8 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="mod4_main_five">
-                            <div class="col_table">
+                        <div class="mod4_main_five clearfix">
+                            <div class="col_table animate__animated animate__bounceInUp">
                                 <table>
                                     <tr>
                                         <td class="td_top" width="33.33%">
@@ -1698,7 +2006,7 @@
                         <div class="mod4_main_six">
                             <div class="mod4_main_six_div1">
                                 <a href="#">
-                                    <div class="mod4_main_six_div2">
+                                    <div class="mod4_main_six_div2 animate__animated animate__bounceInUp">
                                         <span>查看更多解决方案</span>
                                     </div>
                                 </a>
@@ -1707,10 +2015,10 @@
                     </div>
                 </div>
             </div>
-            <!-- 米洛能解决什么  -->
+            <!-- 解决方案  -->
             <div class="mod5">
                 <div class="mod5_div"></div>
-                <div class="mod5_top">
+                <div class="mod5_top animate__animated animate__bounceInUp">
                     <div class="mod5_top_text">
                         <h2>解决方案案例</h2>
                     </div>
@@ -1718,7 +2026,7 @@
                 </div>
                 <div class="mod5_content">
                     <div class="mod5_main">
-                        <div class="mod5_main_midde">
+                        <div class="mod5_main_midde animate__animated animate__bounceInUp">
                             <div class="mod5_midde_box">
                                 <ul>
                                     <li>
@@ -1766,6 +2074,21 @@
                                             </div>
                                         </div>
                                     </li>
+                                    <li class="dis_none">
+                                        <div class="mod5_item ">
+                                            <div class="mod5_item_img">
+                                                <a href="#">
+                                                    <img class="mod5_img" src="../images/mod5.4.png">
+                                                </a>
+                                            </div>
+                                            <div class="mod5_item_text">
+                                                <div class="mod5_item_text_a">
+                                                    <a href="">原材料自动仓储项目</a>
+                                                </div>
+                                                <div>解决方案：WMS/WCS+仓储机器人+穿梭机器人</div>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -1793,7 +2116,7 @@
                     <p>NEWS CENTE</p>
                 </div>
                 <div class="mod6_content">
-                    <div class="mod6_main" id="mod6_main">
+                    <div class="mod6_main animate__animated animate__fadeIn" id="mod6_main">
                         <ul id="new_one">
                             <li>
                                 <div class="mod6_item clearfix">
@@ -1891,7 +2214,7 @@
                     <p>ON BEHALF OF CLIENTS</p>
                 </div>
                 <div class="mod7_div1"></div>
-                <div class="mod7_content">
+                <div class="mod7_content animate__animated animate__bounceInUp">
                     <div class="mod7_main clearfix">
                         <ul>
                             <li>
@@ -2105,7 +2428,7 @@
                             <table class="box_frist_table">
                                 <tbody>
                                     <tr>
-                                        <td class="td_top" width="85.6%">
+                                        <td class="td_top footer_none" width="85.6%">
                                             <div class="tr_td_div">
                                                 <table>
                                                     <tbody>
@@ -2189,12 +2512,12 @@
                             <div>
                                 <table>
                                     <tr>
-                                        <td class="td_top" width="85%">
+                                        <td class="td_top " width="85%">
                                             <div>
                                                 Copyright © 2019 Goricher All Rights Reserved &nbsp;无锡米洛智能工业科技有限公司
                                             </div>
                                         </td>
-                                        <td class="td_top" width="15%">
+                                        <td class="td_top footer_none" width="15%">
                                             <div class="box_bottom_right">
                                                 <div class="right_margin">
                                                     <a class="social-item" target="_blank" href="http://facebook.com">
@@ -2223,7 +2546,7 @@
             </div>
         </div>
         <div class="toptel">
-            <a href="#top" class="glyphicon glyphicon-triangle-top"></a>
+            <a href="#top" class="glyphicon glyphicon-arrow-up"></a>
         </div>
     </div>
 
@@ -2321,6 +2644,30 @@
         }
     }
 
+</script>
+<script>
+    $(function () {
+        $(".navbar-toggle").click(function () {
+            $(".ML_navbar_mask ").attr("style", "display:block");
+            $(".col_right").addClass("left0");
+        });
+        $(".ML_navbar_mask").click(function () {
+            $(".ML_navbar_mask ").attr("style", "display:none");
+            $(".col_right").removeClass("left0");
+        });
+        $(".glyphicon.glyphicon-menu-down").click(function () {
+            var that = $(this);
+            if(that.hasClass("glyphicon-menu-down")){
+                that.parent().parent().next().attr("style", "display:block");
+                that.removeClass("glyphicon-menu-down");
+                that.addClass("glyphicon-menu-up");
+            }else{
+                that.removeClass("glyphicon-menu-up");
+                that.addClass("glyphicon-menu-down");
+                that.parent().parent().next().attr("style", "display:none");
+            }
+        })
+    });
 </script>
 
 
