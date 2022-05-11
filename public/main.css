@@ -1,0 +1,119 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+body {
+    font-family: "微软雅黑", microsoft yahei;
+    min-width  : auto;
+    color      : #333;
+    font-size  : 14px;
+}
+
+/* banner 通栏图片样式 */
+.zj-banner img {
+    width: 100%;
+}
+
+/* menu 板块样式 */
+.zj-menu {
+    width              : 100%;
+    background-image   : url("/public/images/02background.jpeg");
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+}
+
+.zj-menu .row {
+    max-width: 1200px;
+    margin   : auto;
+}
+
+.zj-text .font-26 {
+    text-align   : center;
+    font-size    : 26px;
+    font-weight  : bold;
+    padding-top  : 40px;
+    margin-bottom: 10px;
+}
+
+.zj-content-in {
+    max-width : 1200px;
+    margin    : auto;
+    margin-top: 40px;
+}
+
+/* 小屏时-您的满意，是我们永恒的驱动力-  字体变小 */
+@media (max-width: 767px) {
+    .font-26 {
+        font-size: 130% !important;
+    }
+
+    .zj-content-in {
+        padding   : 0 1rem;
+        margin-top: 0;
+    }
+}
+
+.zj-text p {
+    text-align: center;
+}
+
+.zj-content-in .zj-img {
+    /* padding-top: 15px; */
+    padding-bottom: 10px;
+    text-align    : center;
+}
+
+.zj-content-in .zj-img h3 {
+    font-display: block;
+    font-weight : normal;
+    height      : 50px;
+    font-size   : 115%;
+    margin-top  : 0;
+    word-break  : break-all;
+    word-wrap   : break-word;
+    line-height : 1.5;
+}
+
+/* img css3动画效果 */
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity          : 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform        : translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity          : 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform        : translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity          : 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform        : translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity          : 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform        : translate3d(0, 0, 0);
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name        : fadeInUp;
+}
+
+.animated {
+    -webkit-animation-duration : 1.5s;
+    animation-duration         : 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode        : both;
+    animation-play-state       : running;
+}
