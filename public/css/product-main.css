@@ -201,43 +201,43 @@ a {
 }
 
 .prd .img[title='制造执行系统'] {
-    background-image: url("../../images/zhizaozhixingxitong.png");
+    background-image: url("/public/images/zhizaozhixingxitong.png");
 }
 
 .prd .img[title='仓储管理系统'] {
-    background-image: url("../../images/cangchuguanlixitong.png");
+    background-image: url("/public/images/cangchuguanlixitong.png");
 }
 
 .prd .img[title='可视化管理系统'] {
-    background-image: url("../../images/keshihuaguanlixitong.png");
+    background-image: url("/public/images/keshihuaguanlixitong.png");
 }
 
 .prd .img[title='及时化管理系统'] {
-    background-image: url("../../images/jishihuaguanlixitong.png");
+    background-image: url("/public/images/jishihuaguanlixitong.png");
 }
 
 .prd .img[title='生产运维管理系统'] {
-    background-image: url("../../images/shengchanyunweiguanlixitong.png");
+    background-image: url("/public/images/shengchanyunweiguanlixitong.png");
 }
 
 .prd .img[title='仓储机器人'] {
-    background-image: url("../../images/cangchujiqiren.png");
+    background-image: url("/public/images/cangchujiqiren.png");
 }
 
 .prd .img[title='穿梭机器人'] {
-    background-image: url("../../images/chuansuojiqiren.png");
+    background-image: url("/public/images/chuansuojiqiren.png");
 }
 
 .prd .img[title='自动仓储系统'] {
-    background-image: url("../../images/zidongcangchuxitong.png");
+    background-image: url("/public/images/zidongcangchuxitong.png");
 }
 
 .prd .img[title='机器换人系统'] {
-    background-image: url("../../images/jiqihuanrenxitong.png");
+    background-image: url("/public/images/jiqihuanrenxitong.png");
 }
 
 .prd .img[title='输送系统'] {
-    background-image: url("../../images/shusongxitong.png");
+    background-image: url("/public/images/shusongxitong.png");
 }
 
 .prd .prd-list:hover .prd-msg {
