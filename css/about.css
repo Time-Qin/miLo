@@ -494,7 +494,7 @@
     width: 100%;
     vertical-align: middle;
     border: 0;
-    -webkit-box-sizing: border-box;
+    /* -webkit-box-sizing: border-box; */
 }
 
 /* 资质荣誉 */
