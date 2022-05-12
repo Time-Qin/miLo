@@ -1,0 +1,83 @@
+{{extend "./layout/layout.html"}}
+{{block "head"}}
+<title>{{result.title}}</title>
+<link rel="stylesheet" href="../css/detailed-infom.css">
+{{/block}}
+{{block "content"}}
+<div class="body" style="padding-top:178px">
+    <!-- 图片 -->
+    <section class="w-container bannerBox">
+        <div class="banner" style="height: auto;">
+            <img src="../images/解决方案.jpg" alt="">
+        </div>
+    </section>
+    <div class="w-container w-main" style="min-height: 0px; background: #f4f4f4;">
+        <div class="row">
+            <div class="wrap-content-in w-system w-productcom">
+                <div class="w-system-in clearfix">
+                    <!-- 新闻详情 -->
+                    <div class="newsDetail">
+                        <div class="newsDetail-in">
+                            <h1 class="newsTitle" style="font-family: 微软雅黑,'Microsoft YaHei';">{{result.title}}</h1>
+                            <div class="newsST">
+                                <span class="newsSec">栏目：{{result.column}}</span>
+                                <span class="newsTime">发布时间：{{result.time}}</span>
+                            </div>
+                            <div class="newsSummary">解决方案：{{result.solution2}}<br></div>
+                            <div class="newsContent">
+                                <div class="newsContent-in">
+                                    <p>
+                                        <span style="font-family: 微软雅黑,'Microsoft YaHei'; font-size: 16px;">
+                                            <img src="{{result.img2}}" alt="" width="469" height="291"><br>
+                                            {{result.title}}
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span
+                                            style="font-family: 微软雅黑,'Microsoft YaHei'; font-size: 16px;">行业：{{result.industry}}</span>
+                                    </p>
+                                    <p>
+                                        <span
+                                            style="font-family: 微软雅黑,'Microsoft YaHei'; font-size: 16px;">应用场景：{{result.scenario}}
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span
+                                            style="font-family: 微软雅黑,'Microsoft YaHei'; font-size: 16px;">解决方案：{{result.solution2}}</span>
+                                    </p>
+                                    <p>
+                                        <span
+                                            style="font-family: 微软雅黑,'Microsoft YaHei'; font-size: 16px;">项目亮点：{{result.highlights}}</span>
+                                    </p>
+                                    <p>
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="news-others">
+                                <div class="pre-next">
+
+                                    <div class="news-prev">
+                                        上一篇：&nbsp;&nbsp;
+                                        {{if !prev}}没有了
+                                        {{else}}
+                                        <a href="/details/{{prev.defailId}}">{{prev.title}}</a>
+                                        {{/if}}
+                                    </div>
+                                    <div class="news-next">
+                                        下一篇：&nbsp;&nbsp;
+                                        {{if !next}}没有了
+                                        {{else}}
+                                        <a href="/details/{{next.defailId}}">{{next.title}}</a>
+                                        {{/if}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}

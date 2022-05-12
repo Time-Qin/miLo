@@ -31,6 +31,9 @@ var solutionSchema = new mongoose.Schema({
   highlights: {
     type: String,
   },
+  defailId:{
+    type:String
+  }
 });
 
 var Solution = new mongoose.model("solution", solutionSchema, "solutions");
