@@ -102,6 +102,7 @@ a {
 .menu-list {
     max-width: 1200px;
     margin   : 1em auto;
+    overflow: hidden;
 }
 
 .menu-list>.page-direction>a:hover {
@@ -169,6 +170,9 @@ a {
 }
 
 @media screen and (max-width:767px) {
+    .lm-container{
+        padding: 0;
+    }
     .menu-in {
         display: block;
     }
