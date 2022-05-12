@@ -2,27 +2,6 @@ const express = require("express");
 const Solution = require("../model/solution");
 const router = express.Router();
 
-//仅仅只是来到商品页面
-// router.get("/details", async (req, res) => {
-//     // console.log("product")
-//     const { pageindex = 1, limit = 5 } = req.query;
-//     var skip = (pageindex - 1) * limit
-//     let result = await Product.find().skip(skip).limit(limit);
-
-//     let result2 = await Product.aggregate([
-//         {
-//             $group: {
-//                 _id: null,
-//                 count: { $sum: 1 }
-//             }
-//         }
-//     ])
-//     var totalPage = Math.ceil(result2[0].count / limit)
-//     res.render("details.html", {
-//         products: result,
-//         totalPage: totalPage
-//     })
-// })
 
 router.get("/solution", async (req, res) => {
   let result = await Solution.find();
@@ -99,10 +78,5 @@ router.get("/details/:id", async (req, res) => {
   res.render("detailed-infom1.html", { result, prev, next });
 });
 
-// router.get("/topic/:id", async (req, res) => {
-//   let topic = await Topic.findById(req.params.id);
-//   console.log(topic);
-//   res.render("topic/show.html", { topic , user : req.session.user});
-// });
 
 module.exports = router;

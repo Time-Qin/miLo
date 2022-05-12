@@ -197,6 +197,12 @@ img {
         /* border-top-color: #1867ab; */
         border-top-color: #7271c8;
     }
+    .w-com-menu-H>.w-com-menu-in>.ul-parent>li>.div-parent a:focus,
+    .w-com-menu-H>.w-com-menu-in>.ul-parent>li>.div-parent a:hover{
+        display: block;
+        color: #fff;
+        background: #7271c8;
+    }
 }
 
 .w-com-menu-H {

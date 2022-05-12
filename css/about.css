@@ -51,27 +51,23 @@
  }
 
  /* 导航 */
- .ml_about {
-     position: absolute;
-     width: 100%;
-     z-index: 99;
-     background-color: #fff;
-     border-radius: 0;
-     height: 80px;
-     border: 0;
- }
-
  .mynavbar {
-     height: 80px;
+     /* height: 80px; */
+     height: 100%;
      position: relative;
  }
 
- .mynavbar.affix {
-     top: 0;
-     position: fixed;
+ .ml_about {
+     position: absolute;
      width: 100%;
-     z-index: 99;
+     z-index: 2;
+     /* background-color: #fff; */
+
+     /* height: 80px; */
+     /* height: 100%; */
+     border: 0;
  }
+
 
  .ml_about .navbar-brand {
      color: #777;
@@ -90,7 +86,8 @@
  }
 
  .ml_about .navbar-nav {
-     margin-left: 25%;
+     /* margin-left: 25%; */
+     margin-left: 18%;
      margin-top: 26px;
      margin-bottom: 15px;
      position: relative;
@@ -156,8 +153,8 @@
  .ml_about .navbar-nav>.active>a,
  .ml_about .navbar-nav>.active>a:focus,
  .ml_about .navbar-nav>.active>a:hover {
-     color: #555;
-     background-color: #e7e7e7;
+     color: #fff;
+     background-color: #7271c8;
  }
 
  .ml_about .navbar-nav>.disabled>a,
