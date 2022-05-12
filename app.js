@@ -3,8 +3,17 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const mongoose = require("mongoose")
+const icons = require("./model/icons")
 
 const service = require("./router/service")
+
+mongoose.connect("mongodb://127.0.0.1/miluo")
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+    console.log("已经连接数据库");
+});
 
 app.use("/public", express.static(path.join(__dirname, "public")));
 app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
@@ -16,5 +25,11 @@ app.listen(3000,()=>{
     console.log('App listening at port 3000');
 })
 
+app.get("/service",async(req,res)=>{
+  
+ let result = await icons.find();
+ console.log(result);
+ res.render("service.html",{result})
+})
 
 app.use(service)

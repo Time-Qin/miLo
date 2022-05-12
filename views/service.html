@@ -25,22 +25,12 @@
         </div>
         <div style="height: 30px"></div>
         <div id="fadeUp" class="animated fadeInUp row">
+          {{each result}}
           <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
-            <img src="/public/images/afterTel.png" alt="" />
-            <h3>售后热线: (+086)15720687925</h3>
+            <img src="{{$value.icon}}" alt="" />
+            <h3>{{$value.title}}</h3>
           </div>
-          <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
-            <img src="/public/images/wxTel.png" alt="" />
-            <h3>电话: 0510-85911508</h3>
-          </div>
-          <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
-            <img src="/public/images/fax.png" alt="" />
-            <h3>传真: 0510-85911518</h3>
-          </div>
-          <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
-            <img src="/public/images/email.png" alt="" />
-            <h3>邮箱: service@wxmilo.com</h3>
-          </div>
+          {{/each}}
         </div>
         <div style="padding-top: 15px"></div>
       </div>

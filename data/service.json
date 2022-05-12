@@ -1,0 +1,22 @@
+[
+  {
+    "name": "email",
+    "icon": "/public/images/email.png",
+    "title": "邮箱: service@wxmilo.com"
+  },
+  {
+    "name": "fax",
+    "icon": "/public/images/fax.png",
+    "title": "传真: 0510-85911518"
+  },
+  {
+    "name": "wxTel",
+    "icon": "/public/images/wxTel.png",
+    "title": "电话: 0510-85911508"
+  },
+  {
+    "name": "afterTel",
+    "icon": "/public/images/afterTel.png",
+    "title": "售后热线: (+086)15720687925"
+  }
+]
