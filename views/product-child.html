@@ -1,170 +1,156 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+{{extend "./layout/layout.html"}}
 
-<head>
-    <meta charset="utf-8" />
-    <!--设置IE浏览器的渲染模式-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!--设定网页视口大小，即网页宽度默认为设备宽度-->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>制造执行系统</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="/node_modules/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/fonts/iconfont.css">
+{{block "head"}}
+<title>{{product.prdName}}</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="/node_modules/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/fonts/iconfont.css">
+<link rel="stylesheet" href="/public/css/product-main.css" />
+<!-- <link rel="stylesheet" href="../public/css/modal-style.css"> -->
+<link rel="stylesheet" href="/public/css/product-child.css">
+{{/block}}
 
-    <link rel="stylesheet" href="/public/css/product-main.css" />
-    <!-- <link rel="stylesheet" href="../public/css/modal-style.css"> -->
-    <link rel="stylesheet" href="/public/css/product-child.css">
-    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-    <!--[if lt IE 9]>
-      <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-    <!-- banner板块 -->
-    <section class="bannerBox">
-        <div class="banner">
-            <img src='/public/images/chanpinzhongxin.jpg' />
+{{block "content"}}
+<!-- banner板块 -->
+<section class="bannerBox">
+    <div class="banner">
+        <img src='/public/images/chanpinzhongxin.jpg' />
+    </div>
+</section>
+<!-- menu板块 -->
+<div class="w-container">
+    <div class="menu-in">
+        <div class="sys-title w-dropdown-toggle">
+            <div>产品中心</div>
+            <span class="iconfont icon-anniu_xiangxia"></span>
         </div>
-    </section>
-    <!-- menu板块 -->
-    <div class="w-container">
-        <div class="menu-in">
-            <div class="sys-title w-dropdown-toggle">
-                <div>产品中心</div>
-                <span class="iconfont icon-anniu_xiangxia"></span>
+        <ul class="w-dropdown-menu ">
+            <li class="submenu-dropdown-toggle"><a href="/product/type智能软件产品">智能软件产品</a><span
+                    class="glyphicon glyphicon-menu-down"></span></li>
+            <div class="submenu">
+                <ul>
+                    <li><a href="/cate/1">MES制造执行系统</a></li>
+                    <li><a href="/cate/2">MILO-WMS仓储管理系统</a></li>
+                    <li><a href="/cate/3">MILO-VMS可视化管理系统</a></li>
+                    <li><a href="/cate/4">MILO-SIM及时化管理系统</a></li>
+                    <li><a href="/cate/5">MILO-POM生产运维管理系统</a></li>
+                </ul>
             </div>
-            <ul class="w-dropdown-menu ">
-                <li class="submenu-dropdown-toggle"><a href="/product/type智能软件产品">智能软件产品</a><span
-                        class="glyphicon glyphicon-menu-down"></span></li>
-                <div class="submenu">
-                    <ul>
-                        <li><a href="/cate/1">MES制造执行系统</a></li>
-                        <li><a href="/cate/2">MILO-WMS仓储管理系统</a></li>
-                        <li><a href="/cate/3">MILO-VMS可视化管理系统</a></li>
-                        <li><a href="/cate/4">MILO-SIM及时化管理系统</a></li>
-                        <li><a href="/cate/5">MILO-POM生产运维管理系统</a></li>
-                    </ul>
+            <li class="submenu-dropdown-toggle"><a href="/product/type高端装备">高端装备</a><span
+                    class="glyphicon glyphicon-menu-down"></span></li>
+            <div class="submenu">
+                <ul>
+                    <li><a href="/cate/6">STOROBOT仓储机器人</a></li>
+                    <li><a href="/cate/7">RAILROBOT穿梭机器人</a></li>
+                </ul>
+            </div>
+            <li class="submenu-dropdown-toggle"><a href="/product/type系统产品">系统产品</a><span
+                    class="glyphicon glyphicon-menu-down"></span></li>
+            <div class="submenu">
+                <ul>
+                    <li><a href="/cate/8">自动仓储系统</a></li>
+                    <li><a href="/cate/9">机器换人系统</a></li>
+                    <li><a href="/cate/10">输送系统</a></li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <div class="menu">
+        <ul class="ulParent">
+            <li class="liParent">
+                <div class="divParent"><a href="/product/type智能软件产品">智能软件产品</a></div>
+            </li>
+            <li class="liParent">
+                <div class="divParent"><a href="/product/type高端装备">高端装备</a></div>
+            </li>
+            <li class="liParent">
+                <div class="divParent"><a href="/product/type系统产品">系统产品</a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- menu-list-详细板块 -->
+<div class="w-container">
+    <!-- 详细信息 -->
+    <div class="menu-list">
+        <div class="page-direction" data-toggle="dropdown"><a href="/product" onclick="alick(event)">产品中心</a> &gt; <a
+                href="/product/type{{product.type}}" onclick="alick(event)">{{product.type}}</a>
+            &gt; {{product.prdName}}</div>
+        <div class="row prd-msg clearfix modal_trigger">
+            <div class="left col-xs-30 col-sm-15" data-toggle="modal" data-target="#myModal">
+                <img src='{{product.imgSrc}}' />
+            </div>
+
+            <!-- Modal -->
+            <div class="modal Fade" id="myModal" tabindex="-1">
+                <div class="modal-dialog" id="myModal" tabindex="-1">
+                    <div class="modal-content">
+                        <div class="modalHeader">
+                            <img src={{product.imgSrc}} />
+                        </div>
+                        <div class="closeModal" data-dismiss="modal"></div>
+                    </div>
                 </div>
-                <li class="submenu-dropdown-toggle"><a href="/product/type高端装备">高端装备</a><span
-                        class="glyphicon glyphicon-menu-down"></span></li>
-                <div class="submenu">
-                    <ul>
-                        <li><a href="/cate/6">STOROBOT仓储机器人</a></li>
-                        <li><a href="/cate/7">RAILROBOT穿梭机器人</a></li>
-                    </ul>
+            </div>
+
+            <div class="right col-xs-30 col-sm-15">
+                <div class="product-title">
+                    <h2>{{product.prdName}}</h2>
                 </div>
-                <li class="submenu-dropdown-toggle"><a href="/product/type系统产品">系统产品</a><span
-                        class="glyphicon glyphicon-menu-down"></span></li>
-                <div class="submenu">
-                    <ul>
-                        <li><a href="/cate/8">自动仓储系统</a></li>
-                        <li><a href="/cate/9">机器换人系统</a></li>
-                        <li><a href="/cate/10">输送系统</a></li>
-                    </ul>
+                <div class="product-short-sum">
+                    {{each product.des}}
+                    {{$value}}<br>
+                    {{/each}}
                 </div>
-            </ul>
-        </div>
-        <div class="menu">
-            <ul class="ulParent">
-                <li class="liParent">
-                    <div class="divParent"><a href="/product/type智能软件产品">智能软件产品</a></div>
-                </li>
-                <li class="liParent">
-                    <div class="divParent"><a href="/product/type高端装备">高端装备</a></div>
-                </li>
-                <li class="liParent">
-                    <div class="divParent"><a href="/product/type系统产品">系统产品</a></div>
-                </li>
-            </ul>
+            </div>
         </div>
     </div>
-    <!-- menu-list-详细板块 -->
-    <div class="w-container">
-        <!-- 详细信息 -->
-        <div class="menu-list">
-            <div class="page-direction" data-toggle="dropdown"><a href="/product" onclick="alick(event)">产品中心</a> &gt; <a
-                    href="/product/type{{product.type}}" onclick="alick(event)">{{product.type}}</a>
-                &gt; {{product.prdName}}</div>
-            <div class="row prd-msg clearfix modal_trigger">
-                <div class="left col-xs-30 col-sm-15" data-toggle="modal" data-target="#myModal">
-                    <img src='{{product.imgSrc}}' />
+    <!-- 产品详细 -->
+    <div class="info-tab">
+        <div class="info-tab-in">
+            <div class="cur-tab"><a>产品详细</a></div>
+        </div>
+        <div class="product-descons">
+            <div class="descon-item">
+                {{each product.des}}
+                <p><span>{{$value}}
+                    </span></p>
+                {{/each}}
+                <p><a href="#"><em>如果您想了解更多，请联系我们的售前顾问……</em></a></p>
+                <p><br></p>
+            </div>
+        </div>
+        <!-- 其他 -->
+        <div class="news-others">
+            <div class="pre-next">
+                <div class="news-prev">
+                    上一个：
+                    {{if !prev}} 没有了
+                    {{else}}
+                    <a href="/product/{{prev.id}}">{{prev.prdName}}</a>
+                    {{/if}}
                 </div>
+                <div class="news-next">
+                    下一个：
+                    {{if !next}} 没有了
+                    {{else}}
+                    <a href="/product/{{next.id}}">{{next.prdName}}</a>
+                    {{/if}}
 
-                <!-- Modal -->
-                <div class="modal Fade" id="myModal" tabindex="-1">
-                    <div class="modal-dialog" id="myModal" tabindex="-1">
-                        <div class="modal-content">
-                            <div class="modalHeader">
-                                <img src={{product.imgSrc}} />
-                            </div>
-                            <div class="closeModal" data-dismiss="modal"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right col-xs-30 col-sm-15">
-                    <div class="product-title">
-                        <h2>{{product.prdName}}</h2>
-                    </div>
-                    <div class="product-short-sum">
-                        {{each product.des}}
-                        {{$value}}<br>
-                        {{/each}}
-                    </div>
                 </div>
             </div>
         </div>
-        <!-- 产品详细 -->
-        <div class="info-tab">
-            <div class="info-tab-in">
-                <div class="cur-tab"><a>产品详细</a></div>
-            </div>
-            <div class="product-descons">
-                <div class="descon-item">
-                    {{each product.des}}
-                    <p><span>{{$value}}
-                        </span></p>
-                    {{/each}}
-                    <p><a href="#"><em>如果您想了解更多，请联系我们的售前顾问……</em></a></p>
-                    <p><br></p>
-                </div>
-            </div>
-            <!-- 其他 -->
-            <div class="news-others">
-                <div class="pre-next">
-                    <div class="news-prev">
-                        上一个：
-                        {{if !prev}} 没有了
-                        {{else}}
-                        <a href="/product/{{prev.id}}">{{prev.prdName}}</a>
-                        {{/if}}
-                    </div>
-                    <div class="news-next">
-                        下一个：
-                        {{if !next}} 没有了
-                        {{else}}
-                        <a href="/product/{{next.id}}">{{next.prdName}}</a>
-                        {{/if}}
+    </div>
+</div>
+{{/block}}
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-        <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-        <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
-            integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-            crossorigin="anonymous"></script>
-        <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-        <script src="/node_modules/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/public/js/product.js"></script>
-        <!-- <script src="../public/js/modal-script.js"></script> -->
-        <script src="/public/js/product-child.js"></script>
-</body>
-
-</html>
+{{block "script"}}
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="/node_modules/bootstrap/js/bootstrap.min.js"></script>
+<script src="/public/js/product.js"></script>
+<script src="/public/js/product-child.js"></script>
+{{/block}}

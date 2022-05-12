@@ -1,0 +1,223 @@
+input,
+button,
+select,
+textarea {
+    outline: none;
+}
+
+.w-row {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pdBottom {
+    padding-bottom: 40px !important;
+}
+
+.pdTop {
+    padding-top: 40px !important;
+}
+
+.pad {
+    height: 20px;
+}
+
+.large-pad {
+    height: 40px;
+}
+
+.w-text {
+    min-height: 25px;
+    line-height: 1.8;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.map {
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+}
+
+.map iframe {
+    width: 100%;
+    height: 250px;
+    border: 0;
+}
+
+.w-title15 {
+    line-height: 1.5;
+    padding: 0 1em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-left: 5px solid #2B3B62;
+}
+
+.title-in {
+    min-height: 25px;
+}
+
+.w-title15 h2 {
+    font-size: 22px;
+    line-height: 1.1;
+    display: inline-block;
+    font-weight: normal;
+    margin: 0;
+}
+
+.w-text-in {
+    min-height: 25px;
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.div-padding {
+    padding: 0 15px;
+}
+
+.w-text-in span {
+    font-size: 16px;
+    line-height: 2.2;
+}
+
+.w-img-in {
+    text-align: center;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.w-img-in img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width:479px) {
+    .wrap-content {
+        padding: 0.5rem 0.2rem;
+    }
+
+    .pdBottom {
+        padding-bottom: 1.5em !important;
+    }
+
+    .pdTop {
+        padding-top: 1.5em !important;
+    }
+
+    .pad,
+    .large-pad {
+        height: 0.35rem;
+    }
+
+    .w-title15 h2 {
+        font-size: 130%;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .wrap-content {
+        position: relative;
+        z-index: 3;
+        padding: 1em 1em 2em 1em;
+    }
+
+    .w-text {
+        font-size: 130% !important;
+        min-height: 0;
+    }
+
+    .pad,
+    .large-pad {
+        height: 7px;
+    }
+
+    .title-in {
+        min-height: 10px;
+    }
+
+    .left-div,
+    .right-div {
+        margin: 0 auto 0.5em !important;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .div-padding {
+        padding: 0 5px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .wrap-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .w-row {
+        max-width: 100% !important;
+    }
+}
+
+/* form板块 */
+.my-label {
+    font-weight: normal;
+}
+
+.star_note {
+    color: red;
+    padding: 0 3px;
+}
+
+.my-form-control,
+.my-form-textarea {
+    border-radius: 0;
+    border: 1px solid #dadada;
+    padding: 8px 10px;
+    color: #666;
+    min-height: 2.7em;
+    box-shadow: none;
+    width: 100%;
+}
+
+.my-form-textarea {
+    height: 8em;
+}
+
+.form-code {
+    vertical-align: middle;
+    margin-bottom: 1em;
+}
+
+.form-code .my-form-control {
+    width: 100px;
+    margin-right: 8px;
+
+}
+
+#verify {
+    height: 2em;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.code-img {
+    display: inline-block;
+}
+
+.my-btn-default {
+    background: #2B3B62;
+    color: #fff;
+    border: 0;
+    padding: 0.7em 0;
+    min-width: 12em;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 105%;
+}
