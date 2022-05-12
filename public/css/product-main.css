@@ -30,9 +30,10 @@ a {
 
 .lm-container {
     width   : 100%;
-    padding: 0 10px;
+    padding : 0 10px;
     overflow: hidden;
 }
+
 .menu>.ulParent {
     display: none;
 }
@@ -102,7 +103,7 @@ a {
 .menu-list {
     max-width: 1200px;
     margin   : 1em auto;
-    overflow: hidden;
+    overflow : hidden;
 }
 
 .menu-list>.page-direction>a:hover {
@@ -170,10 +171,16 @@ a {
 }
 
 @media screen and (max-width:767px) {
-    .lm-container{
+    .page-direction {
+        padding : 0.2em 0.5em 0.5em;
+    }
+
+    .lm-container {
         padding: 0;
     }
+
     .menu-in {
+        margin-top: 1em;
         display: block;
     }
 
