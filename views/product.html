@@ -82,15 +82,18 @@
         </div>
     </div>
     <!-- menu-list板块 -->
-    <div class="w-container">
+    <div class="lm-container">
         <div class="menu-list">
-            <div class="page-direction" data-toggle="dropdown">您当前的位置：<a href="/product">产品中心</a></div>
+            <div class="page-direction" data-toggle="dropdown">您当前的位置：<a href="/product" onclick="alick(event)">产品中心</a></div>
             <div class="prd row clearfix">
                 {{each products}}
                 <a class="prd-target" href="/product/{{$value.id}}">
-                    <div class="prd-list col-xs-15 col-sm-10  col-lg-6">
+                    <div class="prd-list col-xs-15 col-sm-10  col-md-6">
                         <div class="imgBox">
-                            <div class="img" title={{$value.prdName}}></div>
+                            <div class="img-radio"></div>
+                            <div class="img-in" title={{$value.prdName}}>
+                                <img src='{{$value.imgSrc}}'/>
+                            </div>
                         </div>
                         <h2 class="prd-msg" title={{$value.prdName}}>{{$value.prdName}}</h2>
                     </div>

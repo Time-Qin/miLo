@@ -33,8 +33,8 @@ router.get("/product/:id",async(req,res)=>{
   let nextId=id+1;
   let prev=await Product.findOne({"id":prevId});
   let next=await Product.findOne({"id":nextId});
-  let products={product,prev,next}
-  res.render("product-child.html",{products});
+  // let products={product,prev,next}
+  res.render("product-child.html",{product,prev,next});
 })
 
 router.get("/cate/:id",async(req,res)=>{

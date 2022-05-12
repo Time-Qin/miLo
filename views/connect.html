@@ -376,8 +376,6 @@
             getVerify()
         })
 
-    </script>
-    <script>
         $(function () {
             $('#btn').click(function () {
                 var formData = $("#my-form").serializeArray();
@@ -400,12 +398,10 @@
                             }, 2000);
                         }
                         else {
+                            getVerify()
                             layer.msg(res.message, { shade: [0.3, '#393D49'], time: 2000 });
                         }
                     },
-                    err: (res) => {
-                        console.log("22222222");
-                    }
                 })
                 return false;
             })

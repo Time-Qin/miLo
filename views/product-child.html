@@ -87,20 +87,20 @@
     <div class="w-container">
         <!-- 详细信息 -->
         <div class="menu-list">
-            <div class="page-direction" data-toggle="dropdown"><a href="/product">产品中心</a> &gt; <a
-                    href="/product/type{{products.product.type}}">{{products.product.type}}</a>
-                &gt; {{products.product.prdName}}</div>
+            <div class="page-direction" data-toggle="dropdown"><a href="/product" onclick="alick(event)">产品中心</a> &gt; <a
+                    href="/product/type{{product.type}}" onclick="alick(event)">{{product.type}}</a>
+                &gt; {{product.prdName}}</div>
             <div class="row prd-msg clearfix modal_trigger">
                 <div class="left col-xs-30 col-sm-15" data-toggle="modal" data-target="#myModal">
-                    <img src='{{products.product.imgSrc}}' />
+                    <img src='{{product.imgSrc}}' />
                 </div>
 
                 <!-- Modal -->
-                <div class="modal Fade in & Scale" id="myModal" tabindex="-1">
+                <div class="modal Fade" id="myModal" tabindex="-1">
                     <div class="modal-dialog" id="myModal" tabindex="-1">
                         <div class="modal-content">
                             <div class="modalHeader">
-                                <img src={{products.product.imgSrc}} />
+                                <img src={{product.imgSrc}} />
                             </div>
                             <div class="closeModal" data-dismiss="modal"></div>
                         </div>
@@ -109,10 +109,10 @@
 
                 <div class="right col-xs-30 col-sm-15">
                     <div class="product-title">
-                        <h2>{{products.product.prdName}}</h2>
+                        <h2>{{product.prdName}}</h2>
                     </div>
                     <div class="product-short-sum">
-                        {{each products.product.des}}
+                        {{each product.des}}
                         {{$value}}<br>
                         {{/each}}
                     </div>
@@ -126,7 +126,7 @@
             </div>
             <div class="product-descons">
                 <div class="descon-item">
-                    {{each products.product.des}}
+                    {{each product.des}}
                     <p><span>{{$value}}
                         </span></p>
                     {{/each}}
@@ -139,16 +139,16 @@
                 <div class="pre-next">
                     <div class="news-prev">
                         上一个：
-                        {{if !products.prev}} 没有了
+                        {{if !prev}} 没有了
                         {{else}}
-                        <a href="/product/{{products.prev.id}}">{{products.prev.prdName}}</a>
+                        <a href="/product/{{prev.id}}">{{prev.prdName}}</a>
                         {{/if}}
                     </div>
                     <div class="news-next">
                         下一个：
-                        {{if !products.next}} 没有了
+                        {{if !next}} 没有了
                         {{else}}
-                        <a href="/product/{{products.next.id}}">{{products.next.prdName}}</a>
+                        <a href="/product/{{next.id}}">{{next.prdName}}</a>
                         {{/if}}
 
                     </div>

@@ -52,3 +52,7 @@ $(window).resize(function () {
     closeMenu();
   }
 });
+
+function alick(e){
+  window.location.href = e.target.href
+}
