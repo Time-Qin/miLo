@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <!--设置IE浏览器的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--设定网页视口大小，即网页宽度默认为设备宽度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>联系我们</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/fonts/iconfont.css">
+
+    <link rel="stylesheet" href="/tools/css/product-main.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+
+    <style>
+        input,
+        button,
+        select,
+        textarea {
+            outline: none;
+        }
+
+        .w-row {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pdBottom {
+            padding-bottom: 40px !important;
+        }
+
+        .pdTop {
+            padding-top: 40px !important;
+        }
+
+        .pad {
+            height: 20px;
+        }
+
+        .large-pad {
+            height: 40px;
+        }
+
+        .w-text {
+            min-height: 25px;
+            line-height: 1.8;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .map {
+            width: 100%;
+            height: 250px;
+            background-color: #fff;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 250px;
+            border: 0;
+        }
+
+        .w-title15 {
+            line-height: 1.5;
+            padding: 0 1em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-left: 5px solid #2B3B62;
+        }
+
+        .title-in {
+            min-height: 25px;
+        }
+
+        .w-title15 h2 {
+            font-size: 22px;
+            line-height: 1.1;
+            display: inline-block;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .w-text-in {
+            min-height: 25px;
+        }
+
+        .nopadding {
+            padding: 0 !important;
+        }
+
+        .div-padding {
+            padding: 0 15px;
+        }
+
+        .w-text-in span {
+            font-size: 16px;
+            line-height: 2.2;
+        }
+
+        .w-img-in {
+            text-align: center;
+            line-height: 1.5;
+            overflow: hidden;
+        }
+
+        .w-img-in img {
+            max-width: 100%;
+        }
+
+        @media only screen and (max-width:479px) {
+            .wrap-content {
+                padding: 0.5rem 0.2rem;
+            }
+
+            .pdBottom {
+                padding-bottom: 1.5em !important;
+            }
+
+            .pdTop {
+                padding-top: 1.5em !important;
+            }
+
+            .pad,
+            .large-pad {
+                height: 0.35rem;
+            }
+
+            .w-title15 h2 {
+                font-size: 130%;
+            }
+
+        }
+
+        @media screen and (max-width:767px) {
+            .wrap-content {
+                position: relative;
+                z-index: 3;
+                padding: 1em 1em 2em 1em;
+            }
+
+            .w-text {
+                font-size: 130% !important;
+                min-height: 0;
+            }
+
+            .pad,
+            .large-pad {
+                height: 7px;
+            }
+
+            .title-in {
+                min-height: 10px;
+            }
+
+            .left-div,
+            .right-div {
+                margin: 0 auto 0.5em !important;
+            }
+        }
+
+        @media screen and (max-width:960px) {
+            .div-padding {
+                padding: 0 5px;
+            }
+
+        }
+
+        @media (min-width: 768px) and (max-width: 1200px) {
+            .wrap-content {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        @media screen and (max-width:1200px) {
+            .w-row {
+                max-width: 100% !important;
+            }
+        }
+
+        /* form板块 */
+        .my-label {
+            font-weight: normal;
+        }
+
+        .star_note {
+            color: red;
+            padding: 0 3px;
+        }
+
+        .my-form-control,
+        .my-form-textarea {
+            border-radius: 0;
+            border: 1px solid #dadada;
+            padding: 8px 10px;
+            color: #666;
+            min-height: 2.7em;
+            box-shadow: none;
+            width: 100%;
+        }
+
+        .my-form-textarea {
+            height: 8em;
+        }
+
+        .form-code {
+            vertical-align: middle;
+            margin-bottom: 1em;
+        }
+
+        .form-code .my-form-control {
+            width: 100px;
+            margin-right: 8px;
+
+        }
+
+        #verify {
+            height: 2em;
+            cursor: pointer;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .code-img {
+            display: inline-block;
+        }
+
+        .my-btn-default {
+            background: #2B3B62;
+            color: #fff;
+            border: 0;
+            padding: 0.7em 0;
+            min-width: 12em;
+            text-align: center;
+            line-height: 1.5;
+            font-size: 105%;
+        }
+    </style>
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- banner板块 -->
+    <section class="bannerBox">
+        <div class="banner">
+            <img src='/images/lianxiwomen.jpg' />
+        </div>
+    </section>
+
+    <div class="w-container">
+
+        <div class="w-row">
+            <div class="wrap-content pdBottom  pdTop">
+                <!-- text板块 -->
+                <div class="pad"></div>
+                <div class="w-text">—听-想-解决，全新全意为您服务—</div>
+                <div class="pad"></div>
+                <!-- map板块 -->
+                <div class="map">
+                    <iframe frameborder="0" allowtransparency="true" scrolling="no" src="tools/map.html">
+                    </iframe>
+                </div>
+                <div class="pad"></div>
+                <!-- title板块 -->
+                <div>
+                    <div class="w-title15">
+                        <div class="title-in">
+                            <h2>无锡米洛智能工业科技有限公司</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- 内容板块 -->
+                <div class="clearfix">
+                    <div class="col-xs-30 col-sm-24 nopadding">
+                        <div class="w-text-in div-padding">
+                            <span>
+                                地 址：江苏省无锡市锦溪路100号
+                                <br>
+                                电 话：0510-85911508
+                                <br>
+                                传 真：0510-85911518
+                                <br>
+                                销售热线：(+086)18351582880
+                                <br>
+                                邮箱：sales@wxmilo.com
+                                <br>
+                                网址：www.wxmilo.com
+                                <br>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xs-30 col-sm-6 nopadding">
+                        <div class="w-img-in div-padding">
+                            <img src="../images/erweima.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="large-pad"></div>
+                <!-- form板块 -->
+                <div>
+                    <form id="my-form">
+                        <div class="form-group">
+                            <label for="name" class="my-label">
+                                <span>姓名</span>
+                                <span class="star_note">*</span>
+                            </label>
+                            <input type="text" class="my-form-control" id="name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel" class="my-label">
+                                <span>电话号码</span>
+                                <span class="star_note">*</span>
+                            </label>
+                            <input type="tel" class="my-form-control" id="tel" name="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="emai1" class="my-label">
+                                <span>邮箱</span>
+                                <span class="star_note">*</span>
+                            </label>
+                            <input type="email" class="my-form-control" id="emai1" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="textarea" class="my-label">
+                                <span>留言内容</span>
+                                <span class="star_note">*</span>
+                            </label>
+                            <textarea class="my-form-textarea" id="textarea" name="textarea"></textarea>
+                        </div>
+                        <div class="form-code">
+                            <input type="text" class="my-form-control" placeholder="验证码" name="captcha" />
+                            <div id='verify' title="点击刷新验证码"></div>
+                            <span class="star_note">*</span>
+                        </div>
+                        <button class="my-btn-default" id="btn">提交</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="/node_modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/tools/js/product.js"></script>
+    <script src="https://www.layuicdn.com/layui/layui.js"></script>
+
+    <script>
+        function getVerify() {
+            $.ajax({
+                url: '/verifyCode?t=' + Math.random(),
+                type: 'get',
+                success: function (data) {
+                    $('#verify').html(data);
+                }
+            })
+        }
+        getVerify()
+        $('#verify').on('click', function () {
+            getVerify()
+        })
+
+    </script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                var formData = $("#my-form").serializeArray();
+                var obj = {};
+                formData.forEach((item) => {
+                    obj[item.name] = item.value;
+                });
+
+                $.ajax({
+                    type: "POST",
+                    url: "/connect",
+                    data: JSON.stringify(obj),
+                    contentType: "application/json",
+                    dataType:'json',
+                    success: (res) => {
+                        if (res.code === 2000) {
+                            layer.msg(res.message, { shade: [0.3, '#393D49'], time: 2000 });
+                            setTimeout(() => {
+                                window.location.href = "/connect"
+                            }, 2000);
+                        }
+                        else {
+                            layer.msg(res.message, { shade: [0.3, '#393D49'], time: 2000 });
+                        }
+                    },
+                    err: (res) => {
+                        console.log("22222222");
+                    }
+                })
+                return false;
+            })
+        })
+    </script>
+
+</body>
+
+</html>

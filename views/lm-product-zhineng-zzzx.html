@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <!--设置IE浏览器的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--设定网页视口大小，即网页宽度默认为设备宽度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>制造执行系统</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/fonts/iconfont.css">
+
+    <link rel="stylesheet" href="/tools/css/product-main.css" />
+    <!-- <link rel="stylesheet" href="../tools/css/modal-style.css"> -->
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            background-color: transparent;
+        }
+
+        .prd-msg {
+            background-color: #fff;
+            max-width: 1200px;
+        }
+
+        .prd-msg .left {
+            text-align: center;
+            padding: 0 !important;
+        }
+
+        .prd-msg .left img {
+            max-width: 100%;
+        }
+
+
+        .prd-msg .right .product-title {
+            border-bottom: 1px dashed #BFBFBF;
+            margin-bottom: 1em;
+            padding-bottom: 4px;
+        }
+
+        .prd-msg .right .product-title h2 {
+            text-align: left;
+            color: #2B3B62;
+            background-color: none;
+            font-size: 24px;
+        }
+
+        .prd-msg .right .product-short-sum {
+            font-size: 16px;
+            line-height: 1.8;
+            padding-bottom: 1.5em;
+        }
+
+        @media screen and (max-width:767px) {
+            .prd-msg .left img {
+                width: 100%;
+            }
+
+            .page-direction {
+                padding-left: 1em;
+            }
+
+            .product-short-sum {
+                border-bottom: 1px solid #ededed;
+            }
+
+        }
+
+        @media screen and (max-width:960px) {
+            .prd-msg .right {
+                padding: 20px !important;
+            }
+        }
+
+        @media screen and (min-width:961px) {
+            .prd-msg .right {
+                padding: 30px 40px 0 !important;
+            }
+        }
+
+        /* 模态框 */
+        .row {
+            margin: 0 !important;
+            /* padding: 0 !important; */
+        }
+
+        .modal {
+            position: absolute;
+            height: 421px;
+            width: 572px;
+            margin: 0 auto;
+        }
+
+        .modal_trigger.notClick {
+            pointer-events: none;
+        }
+
+        .modal .closeModal {
+            height: 30px;
+            width: 30px;
+            background: url(/images/close.png);
+            background-size: cover;
+            float: right;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .modal .closeModal:hover {
+            opacity: 1;
+        }
+
+        .modal .modalHeader {
+            padding-bottom: 5px;
+        }
+
+        .modal .modal-dialog {
+            width: 572px;
+            margin: 0px;
+        }
+
+        .info-tab {
+            max-width: 1200px;
+            margin: 1em auto;
+        }
+
+        .info-tab .info-tab-in {
+            background-color: rgb(238, 237, 237);
+        }
+
+        .info-tab .info-tab-in .cur-tab a {
+            display: inline-block;
+            padding: 0.5em 40px 0.5em 45px;
+            font-size: 115%;
+            position: relative;
+            background: #2B3B62;
+            color: #fff;
+        }
+
+        .info-tab .info-tab-in .cur-tab a:hover {
+            text-decoration: none;
+        }
+
+        .info-tab .info-tab-in .cur-tab a:before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 50%;
+            margin-top: -0.55em;
+            height: 1.1em;
+            width: 5px;
+            border-radius: 5px;
+            /* -webkit-border-radius: 5px; */
+            background: #fff;
+        }
+
+        @media screen and (max-width: 960px) {
+            .info-tab .info-tab-in .cur-tab a {
+                padding: 0.3em 2em 0.3em 2.5em;
+            }
+        }
+
+        .product-descons {
+            line-height: 1.8;
+        }
+
+        .product-descons>.descon-item {
+            padding: 25px;
+            background: #fff;
+            display: block;
+        }
+
+        .product-descons>.descon-item>p>span {
+            font-family: 微软雅黑, "Microsoft YaHei";
+            font-size: 16px;
+        }
+
+        .product-descons>.descon-item>p em {
+            font-family: 等线;
+            color: rgb(255, 0, 0);
+            font-size: 14px;
+        }
+
+        .news-others {
+            border-top: 1px solid #DFDFDF;
+            padding-top: 1em;
+            margin-top: 30px;
+            padding-right: 11em;
+            position: relative;
+        }
+
+        .news-others a:hover,
+        a:focus {
+            color: #333;
+        }
+    </style>
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- banner板块 -->
+    <section class="bannerBox">
+        <div class="banner">
+            <img src='/images/chanpinzhongxin.jpg' />
+        </div>
+    </section>
+    <!-- menu板块 -->
+    <div class="w-container">
+        <div class="menu-in">
+            <div class="sys-title w-dropdown-toggle">
+                <div>产品中心</div>
+                <span class="iconfont icon-anniu_xiangxia"></span>
+            </div>
+            <ul class="w-dropdown-menu ">
+                <li class="submenu-dropdown-toggle"><a href="lm-product-zhineng.html">智能软件产品</a><span
+                        class="glyphicon glyphicon-menu-down"></span></li>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">MES制造执行系统</a></li>
+                        <li><a href="#">MILO-WMS仓储管理系统</a></li>
+                        <li><a href="#">MILO-VMS可视化管理系统</a></li>
+                        <li><a href="#">MILO-SIM及时化管理系统</a></li>
+                        <li><a href="#">MILO-POM生产运维管理系统</a></li>
+                    </ul>
+                </div>
+                <li class="submenu-dropdown-toggle"><a href="lm-product-gaoduan.html">高端装备</a><span
+                        class="glyphicon glyphicon-menu-down"></span></li>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">STOROBOT仓储机器人</a></li>
+                        <li><a href="#">RAILROBOT穿梭机器人</a></li>
+                    </ul>
+                </div>
+                <li class="submenu-dropdown-toggle"><a href="lm-product-xitong.html">系统产品</a><span
+                        class="glyphicon glyphicon-menu-down"></span></li>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">自动仓储系统</a></li>
+                        <li><a href="#">机器换人系统</a></li>
+                        <li><a href="#">输送系统</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <div class="menu">
+            <ul class="ulParent">
+                <li class="liParent">
+                    <div class="divParent"><a href="#">智能软件产品</a></div>
+                </li>
+                <li class="liParent">
+                    <div class="divParent"><a href="#">高端装备</a></div>
+                </li>
+                <li class="liParent">
+                    <div class="divParent"><a href="#">系统产品</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- menu-list-详细板块 -->
+    <div class="w-container">
+        <!-- 详细信息 -->
+        <div class="menu-list">
+            <div class="page-direction" data-toggle="dropdown"><a href="lm-product.html">产品中心</a> &gt; <a
+                    href="lm-product-zhineng.html">智能软件产品</a>
+                &gt; 制造执行系统</div>
+            <div class="row prd-msg clearfix modal_trigger">
+                <div class="left col-xs-30 col-sm-15" data-toggle="modal" data-target="#myModal">
+                    <img src='/images/zhizaozhixingxitong.png' />
+                </div>
+
+                <!-- Modal -->
+                <div class="modal Fade in & Scale" id="myModal" tabindex="-1">
+                    <div class="modal-dialog" id="myModal" tabindex="-1">
+                        <div class="modal-content">
+                            <div class="modalHeader">
+                                <img src='/images/zhizaozhixingxitong.png' />
+                            </div>
+                            <div class="closeModal" data-dismiss="modal"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right col-xs-30 col-sm-15">
+                    <div class="product-title">
+                        <h2>制造执行系统</h2>
+                    </div>
+                    <div class="product-short-sum">产品名称：MES制造执行系统
+                        <br>产品编号：2017SR035826
+                        <br>软著登字：第1621110号
+                        <br>产品代号：MILO-iMES
+                        <br>产品类别：智能软件产品
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 产品详细 -->
+        <div class="info-tab">
+            <div class="info-tab-in">
+                <div class="cur-tab"><a>产品详细</a></div>
+            </div>
+            <div class="product-descons">
+                <div class="descon-item">
+                    <p><span>产品名称：MES制造执行系统
+                        </span></p>
+                    <p><span>产品编号：2017SR035826
+                        </span></p>
+                    <p><span>软著登字：第1621110号
+                        </span></p>
+                    <p><span>产品代号：MILO-iMES
+                        </span></p>
+                    <p><span>产品类别：智能软件产品</span>
+                    </p>
+                    <p><a href="#"><em>如果您想了解更多，请联系我们的售前顾问……</em></a></p>
+                    <p><br></p>
+                </div>
+            </div>
+            <!-- 其他 -->
+            <div class="news-others">
+                <div class="pre-next">
+                    <div class="news-prev">
+                        上一个：
+                        没有了 </div>
+                    <div class="news-next">
+                        下一个：
+                        <a href="/product-55147-163433.html">仓储管理系统</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="/node_modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/tools/js/product.js"></script>
+    <!-- <script src="../tools/js/modal-script.js"></script> -->
+    <script>
+        $(function () {
+            $('.modal_trigger').click(function () {
+                // 设置top为垂直方向滚动出去的距离+50
+                var width = $(document).scrollTop() + 50;
+                $('.modal').css({
+                    top: width,
+                })
+            });
+
+            function notClick() {
+                if ($(window).width() < 767) {
+                    //当浏览器小于767时，modal_trigger不可以被点击
+                    $('.modal_trigger').addClass('notClick');
+                }
+                else {
+                    $('.modal_trigger').removeClass('notClick');
+                }
+            }
+
+            $(window).load(function () {
+                notClick();
+            })
+
+            $(window).resize(function () {
+                notClick();
+            });
+
+            // 当出现模态框之后，点击不是模态框外面区域也可关闭模态框
+            $(document).click(function () {
+                if ($('.modal-backdrop.in')) {
+                    $('.modal-backdrop.in').click(function () {
+                        $('.closeModal').click();
+                    })
+                }
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

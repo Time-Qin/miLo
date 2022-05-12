@@ -56,7 +56,7 @@ var ul1 = document.getElementById("new_one");
     ul2.innerHTML = ul1.innerHTML;
     function roll(t) {
 
-        box.scrollTop = 0;
+        box.scrollTop = 1;
         var timer = setInterval(rollStart, t);
         box.onmouseover = function () {
             clearInterval(timer)
@@ -68,7 +68,7 @@ var ul1 = document.getElementById("new_one");
 
     function rollStart() {
         if (box.scrollTop >= ul1.scrollHeight) {
-            box.scrollTop = 0;
+            box.scrollTop = 1;
         } else {
             box.scrollTop += 10;
             box.scrollTop += 10;
