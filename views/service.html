@@ -1,67 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>服务与支持</title>
-  </head>
-  <link
-    rel="stylesheet"
-    href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
-  />
-  <link rel="stylesheet" href="/public/main.css">
-  <body>
-    <!-- banner板块图片通栏 -->
-    <section class="zj-bannerBox">
-      <div class="zj-banner">
-        <img src="/public/images/01banner.jpeg" alt="" />
-      </div>
-    </section>
-    <!--menu板块 -->
-    <div class="zj-container">
-      <div class="zj-menu">
-        <div class="zj-content-in">
-          <div class="zj-text">
-            <div class="font-26">-您的满意，是我们永恒的驱动力-</div>
-            <p>
-              选择MILO米洛与您合作，会让您的系统在整个生命周期内获得全面支持与服务。凭借我们的服务与支持体系，您可以确信，我们的专业团队将随时为您提供周全服务。
-            </p>
-          </div>
-          <div style="height: 30px"></div>
-          <div id="fadeUp" class="animated fadeInUp row">
-            <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
-              <img src="/public/images/afterTel.png" alt="" />
-              <h3>售后热线: (+086)15720687925</h3>
-            </div>
-            <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
-              <img src="/public/images/wxTel.png" alt="" />
-              <h3>电话: 0510-85911508</h3>
-            </div>
-            <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
-              <img src="/public/images/fax.png" alt="" />
-              <h3>传真: 0510-85911518</h3>
-            </div>
-            <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
-              <img src="/public/images/email.png" alt="" />
-              <h3>邮箱: service@wxmilo.com</h3>
-            </div>
-          </div>
-          <div style="padding-top: 15px"></div>
+{{extend "./layout/layout.html"}} {{block "head"}}
+<title>服务与支持</title>
+<link
+  rel="stylesheet"
+  href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="/public/css/main.css" />
+{{/block}} {{block "content"}}
+<div class="zi-main">
+  <!-- banner板块图片通栏 -->
+  <section class="zj-bannerBox">
+    <div class="zj-banner">
+      <img src="/public/images/01banner.jpeg" alt="" />
+    </div>
+  </section>
+  <!--menu板块 -->
+  <div class="zj-container">
+    <div class="zj-menu">
+      <div class="zj-content-in">
+        <div class="zj-text">
+          <div class="font-26">-您的满意，是我们永恒的驱动力-</div>
+          <p>
+            选择MILO米洛与您合作，会让您的系统在整个生命周期内获得全面支持与服务。凭借我们的服务与支持体系，您可以确信，我们的专业团队将随时为您提供周全服务。
+          </p>
         </div>
+        <div style="height: 30px"></div>
+        <div id="fadeUp" class="animated fadeInUp row">
+          <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
+            <img src="/public/images/afterTel.png" alt="" />
+            <h3>售后热线: (+086)15720687925</h3>
+          </div>
+          <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
+            <img src="/public/images/wxTel.png" alt="" />
+            <h3>电话: 0510-85911508</h3>
+          </div>
+          <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
+            <img src="/public/images/fax.png" alt="" />
+            <h3>传真: 0510-85911518</h3>
+          </div>
+          <div class="col-md-3 col-xs-6 col-sm-3 zj-img">
+            <img src="/public/images/email.png" alt="" />
+            <h3>邮箱: service@wxmilo.com</h3>
+          </div>
+        </div>
+        <div style="padding-top: 15px"></div>
       </div>
     </div>
-    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script
-      src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
-      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-      crossorigin="anonymous"
-    ></script>
-    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+  </div>
+</div>
+{{/block}}
