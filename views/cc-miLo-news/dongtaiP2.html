@@ -1,12 +1,12 @@
 {{extend "./layout/layout.html"}}
 {{block "head"}}
-    <title>新闻资讯</title>
+    <title>米洛动态</title>
     <link rel="stylesheet" href="/miLo/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/miLo/views/cc-miLo-news/icon/iconfont.css">
     <link rel="stylesheet" href="/miLo/css/news1.css">
-{{/block}}
+    {{/block}}
 
-{{block "content"}}
+    {{block "content"}}
     <section class="banner-box">
         <div class="banner">
             <img src="/miLo/image/1.jpg" />
@@ -19,10 +19,10 @@
         </div>
         <ul class="cc-dropdown-menu ">
             <li class="submenu-dropdown-toggle">
-                <a href="/miLo/views/cc-miLo-news/dongtaiP1.html">米洛动态</a>
+                <a href=" ">米洛动态</a>
             </li>
             <li class="submenu-dropdown-toggle">
-                <a href="/miLo/views/cc-miLo-news/zixunP1.html">行业资讯</a>
+                <a href=" ">行业资讯</a>
             </li>
         </ul>
     </div>
@@ -30,10 +30,10 @@
         <ul class="cc-menu-list">
             <div class="cc-menuAll">
                 <li class="cc-menu-list-item">
-                    <a href="/miLo/views/cc-miLo-news/dongtaiP1.html" class="cc-menuL">米洛动态</a>
+                    <a href="#" class="cc-menuL">米洛动态</a>
                 </li>
                 <li class="cc-menu-list-item">
-                    <a href="/miLo/views/cc-miLo-news/zixunP1.html" class="cc-menuR">行业资讯</a>
+                    <a href="#" class="cc-menuR">行业资讯</a>
                 </li>
             </div>
         </ul>
@@ -42,7 +42,7 @@
         <div class="cc-main">
             <div class="cc-position">
                 <div class="cc-position-text">您当前的位置：&nbsp;
-                    <a class="cc-position-a">新闻资讯</a>
+                    <a class="cc-position-a">新闻资讯</a>&gt;米洛动态
                 </div>
             </div>
             <div class="cc-news-list">
@@ -199,69 +199,33 @@
                             </div>
                         </a>
                     </li>
-                    <li class="cc-news-li clearfix">
-                        <a href="/miLo/views/cc-miLo-news/news-19.html" class="cc-news-a">
-                            <div class="cc-newsL">
-                                <div class="imgBox"><img src="/miLo/image/20.png" /></div>
-                            </div>
-                            <div class="cc-newsR">
-                                <div class="cc-date">
-                                    <div class="year">2020</div>
-                                    <div class="day-month">04-18</div>
-                                </div>
-                                <div class="cc-text">
-                                    <div class="cc-news-h" title="达摩院公布2020十大科技趋势 工业互联网将迎来超融合">
-                                        达摩院公布2020十大科技趋势 工业互联网将迎来超融合</div>
-                                    <div class="cc-news-sum">达摩院公布2020十大科技趋势 工业互联网将迎来超融合</div>
-                                </div>
-                                <div class="adore"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="cc-news-li clearfix">
-                        <a href="/miLo/views/cc-miLo-news/news-20.html" class="cc-news-a">
-                            <div class="cc-newsL">
-                                <div class="imgBox"><img src="/miLo/image/21.png" /></div>
-                            </div>
-                            <div class="cc-newsR">
-                                <div class="cc-date">
-                                    <div class="year">2020</div>
-                                    <div class="day-month">04-18</div>
-                                </div>
-                                <div class="cc-text">
-                                    <div class="cc-news-h" title="当互联网遇上先进制造业，7张图看懂国务院定下的一个大目标">当互联网遇上先进制造业，7张图看懂国务院定下的一个大目标</div>
-                                    <div class="cc-news-sum">当互联网遇上先进制造业，7张图看懂国务院定下的一个大目标</div>
-                                </div>
-                                <div class="adore"></div>
-                            </div>
-                        </a>
-                    </li>
+                    
 
                 </ul>
             </div>
             <div class="cc-news-page">
-                <a href="/miLo/views/cc-miLo-news/newsP1.html" class="cc-page-first disabled">
+                <a href="/miLo/views/cc-miLo-news/dongtaiP1.html" class="cc-page-first disabled">
                     <span class="cc-first-text">首页</span>
                 </a>
-                <a href="/miLo/views/cc-miLo-news/newsP1.html" class="cc-page-pre disabled">
+                <a href="/miLo/views/cc-miLo-news/dongtaiP1.html" class="cc-page-pre disabled">
                     <span class="cc-pre-text">&lt;上一页</span>
                 </a>
-                <a title="1" href="/miLo/views/cc-miLo-news/newsP1.html" class="cur">1</a>
+                <a title="1" href="/miLo/views/cc-miLo-news/dongtaiP1.html" class="cur">1</a>
                 <a title="2" >2</a>
-                <a title="3" href="/miLo/views/cc-miLo-news/newsP3.html">3</a>
-                <a href="/miLo/views/cc-miLo-news/newsP3.html" class="cc-page-next">
+                <a class="cc-page-next">
                     <span class="cc-next-text">下一页&gt;</span>
                 </a>
-                <a href="/miLo/views/cc-miLo-news/newsP3.html" class="cc-page-last">
+                <a class="cc-page-last">
                     <span class="cc-last-text">尾页</span>
                 </a>
             </div>
         </div>
     </div>
+
+
     {{/block}}
 
     {{block "script"}}
        
         <script src="/miLo/js/news.js"></script>
     {{/block}}
-
