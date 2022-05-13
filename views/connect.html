@@ -1,0 +1,127 @@
+{{extend "./layout/layout.html"}}
+
+{{block "head"}}
+<title>联系我们</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="/node_modules/bootstrap_1/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/fonts/iconfont.css">
+<link rel="stylesheet" href="/public/css/product-main.css" />
+<link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+<link rel="stylesheet" href="/public/css/connect.css" />
+{{/block}}
+
+{{block "content"}}
+<!-- banner板块 -->
+<section class="bannerBox">
+    <div class="banner">
+        <img src='/public/images/lianxiwomen.jpg' />
+    </div>
+</section>
+
+<div class="w-container">
+
+    <div class="w-row">
+        <div class="wrap-content pdBottom  pdTop">
+            <!-- text板块 -->
+            <div class="pad"></div>
+            <div class="w-text">—听-想-解决，全新全意为您服务—</div>
+            <div class="pad"></div>
+            <!-- map板块 -->
+            <div class="map">
+                <iframe frameborder="0" allowtransparency="true" scrolling="no" src="public/map.html">
+                </iframe>
+            </div>
+            <div class="pad"></div>
+            <!-- title板块 -->
+            <div>
+                <div class="w-title15">
+                    <div class="title-in">
+                        <h2>无锡米洛智能工业科技有限公司</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- 内容板块 -->
+            <div class="clearfix">
+                <div class="col-xs-30 col-sm-24 nopadding">
+                    <div class="w-text-in div-padding">
+                        <span>
+                            地 址：江苏省无锡市锦溪路100号
+                            <br>
+                            电 话：0510-85911508
+                            <br>
+                            传 真：0510-85911518
+                            <br>
+                            销售热线：(+086)18351582880
+                            <br>
+                            邮箱：sales@wxmilo.com
+                            <br>
+                            网址：www.wxmilo.com
+                            <br>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-30 col-sm-6 nopadding">
+                    <div class="w-img-in div-padding">
+                        <img src="/public/images/erweima.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="large-pad"></div>
+            <!-- form板块 -->
+            <div>
+                <form id="my-form">
+                    <div class="form-group">
+                        <label for="name" class="my-label">
+                            <span>姓名</span>
+                            <span class="star_note">*</span>
+                        </label>
+                        <input type="text" class="my-form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="my-label">
+                            <span>电话号码</span>
+                            <span class="star_note">*</span>
+                        </label>
+                        <input type="tel" class="my-form-control" id="tel" name="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="emai1" class="my-label">
+                            <span>邮箱</span>
+                            <span class="star_note">*</span>
+                        </label>
+                        <input type="email" class="my-form-control" id="emai1" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="textarea" class="my-label">
+                            <span>留言内容</span>
+                            <span class="star_note">*</span>
+                        </label>
+                        <textarea class="my-form-textarea" id="textarea" name="textarea"></textarea>
+                    </div>
+                    <div class="form-code">
+                        <input type="text" class="my-form-control" placeholder="验证码" name="captcha" />
+                        <div id='verify' title="点击刷新验证码"></div>
+                        <span class="star_note">*</span>
+                    </div>
+                    <button class="my-btn-default" id="btn">提交</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{{/block}}
+
+{{block "script"}}
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="/node_modules/bootstrap_1/bootstrap/js/bootstrap.min.js"></script>
+<script src="/public/js/product.js"></script>
+<script src="https://www.layuicdn.com/layui/layui.js"></script>
+
+<script src="/public/js/connect.js"></script>
+{{/block}}

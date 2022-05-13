@@ -55,7 +55,7 @@ var ul1 = document.getElementById("new_one");
     window.onload = roll(1500);
     ul2.innerHTML = ul1.innerHTML;
     function roll(t) {
-
+        console.log(box.scrollTop);
         box.scrollTop = 1;
         var timer = setInterval(rollStart, t);
         box.onmouseover = function () {

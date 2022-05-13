@@ -1,0 +1,102 @@
+{{extend "./layout/layout.html"}}
+
+{{block "head"}}
+<title>产品中心</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="/node_modules/bootstrap_1/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/fonts/iconfont.css">
+<link rel="stylesheet" href="/public/css/product-main.css" />
+{{/block}}
+
+{{block "content"}}
+<!-- banner板块 -->
+<section class="bannerBox">
+    <div class="banner">
+        <img src='/public/images/chanpinzhongxin.jpg' />
+    </div>
+</section>
+<!-- menu板块 -->
+<div class="w-container">
+    <div class="menu-in">
+        <div class="sys-title w-dropdown-toggle">
+            <div>产品中心</div>
+            <span class="iconfont icon-anniu_xiangxia"></span>
+        </div>
+        <ul class="w-dropdown-menu ">
+            <li class="submenu-dropdown-toggle"><a href="/product/type智能软件产品">智能软件产品</a><span
+                    class="glyphicon glyphicon-menu-down"></span></li>
+            <div class="submenu">
+                <ul>
+                    <li><a href="/cate/1">MES制造执行系统</a></li>
+                    <li><a href="/cate/2">MILO-WMS仓储管理系统</a></li>
+                    <li><a href="/cate/3">MILO-VMS可视化管理系统</a></li>
+                    <li><a href="/cate/4">MILO-SIM及时化管理系统</a></li>
+                    <li><a href="/cate/5">MILO-POM生产运维管理系统</a></li>
+                </ul>
+            </div>
+            <li class="submenu-dropdown-toggle"><a href="/product/type高端装备">高端装备</a><span
+                    class="glyphicon glyphicon-menu-down"></span></li>
+            <div class="submenu">
+                <ul>
+                    <li><a href="/cate/6">STOROBOT仓储机器人</a></li>
+                    <li><a href="/cate/7">RAILROBOT穿梭机器人</a></li>
+                </ul>
+            </div>
+            <li class="submenu-dropdown-toggle"><a href="/product/type系统产品">系统产品</a><span
+                    class="glyphicon glyphicon-menu-down"></span></li>
+            <div class="submenu">
+                <ul>
+                    <li><a href="/cate/8">自动仓储系统</a></li>
+                    <li><a href="/cate/9">机器换人系统</a></li>
+                    <li><a href="/cate/10">输送系统</a></li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <div class="menu">
+        <ul class="ulParent">
+            <li class="liParent">
+                <div class="divParent"><a href="/product/type智能软件产品">智能软件产品</a></div>
+            </li>
+            <li class="liParent">
+                <div class="divParent"><a href="/product/type高端装备">高端装备</a></div>
+            </li>
+            <li class="liParent">
+                <div class="divParent"><a href="/product/type系统产品">系统产品</a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- menu-list板块 -->
+<div class="lm-container">
+    <div class="menu-list">
+        <div class="page-direction" data-toggle="dropdown">您当前的位置：<a href="/product" onclick="alick(event)">产品中心</a>
+        </div>
+        <div class="prd row clearfix">
+            {{each products}}
+            <a class="prd-target" href="/product/{{$value.id}}">
+                <div class="prd-list col-xs-15 col-sm-10  col-md-6">
+                    <div class="imgBox">
+                        <div class="img-radio"></div>
+                        <div class="img-in" title={{$value.prdName}}>
+                            <img src='{{$value.imgSrc}}' />
+                        </div>
+                    </div>
+                    <h2 class="prd-msg" title={{$value.prdName}}>{{$value.prdName}}</h2>
+                </div>
+            </a>
+            {{/each}}
+        </div>
+    </div>
+</div>
+{{/block}}
+
+{{block "script"}}
+   <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+   <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+   integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+   crossorigin="anonymous"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="/node_modules/bootstrap_1/bootstrap/js/bootstrap.min.js"></script>
+<script src="/public/js/product.js"></script>
+{{/block}}
