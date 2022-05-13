@@ -596,87 +596,17 @@
                 <div class="mod6_content">
                     <div class="mod6_main animate__animated animate__fadeIn" id="mod6_main">
                         <ul id="new_one">
+                            {{each result}}
                             <li>
                                 <div class="mod6_item clearfix">
                                     <div class="mod6_item_text">
-                                        <a href="#" target="_blank">【米洛动态】</a>
-                                        <a href="#" target="_blank">2020年度项目复盘总结会</a>
+                                        <a href="#" target="_blank">{{$value.mil}}</a>
+                                        <a href="#" target="_blank">{{$value.new_name}}</a>
                                     </div>
-                                    <div class="mod6_date">2021-02-03</div>
+                                    <div class="mod6_date">{{$value.time}}</div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="mod6_item clearfix">
-                                    <div class="mod6_item_text">
-                                        <a href="#" target="_blank">【米洛动态】</a>
-                                        <a href="#" target="_blank">无锡米洛智能2022新春茶话会</a>
-                                    </div>
-                                    <div class="mod6_date">2022-01-26</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="mod6_item clearfix">
-                                    <div class="mod6_item_text">
-                                        <a href="#" target="_blank">【米洛动态】</a>
-                                        <a href="#" target="_blank">喜报！！高速成长、跳跃发展，无锡米洛入选“瞪羚计划”培育企业，实力登榜</a>
-                                    </div>
-                                    <div class="mod6_date">2020-08-07</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="mod6_item clearfix">
-                                    <div class="mod6_item_text">
-                                        <a href="#" target="_blank">【米洛动态】</a>
-                                        <a href="#" target="_blank">2020年第二季度员工表彰大会</a>
-                                    </div>
-                                    <div class="mod6_date">2020-08-03</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="mod6_item clearfix">
-                                    <div class="mod6_item_text">
-                                        <a href="#" target="_blank">【米洛动态】</a>
-                                        <a href="#" target="_blank">"亲近自然，拥抱金秋"2020无锡米洛秋季户外活动</a>
-                                    </div>
-                                    <div class="mod6_date">2020-10-26</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="mod6_item clearfix">
-                                    <div class="mod6_item_text">
-                                        <a href="#" target="_blank">【米洛动态】</a>
-                                        <a href="#" target="_blank">不负好时光，米洛员工秋日旅行Fun肆玩</a>
-                                    </div>
-                                    <div class="mod6_date">2021-11-02</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="mod6_item clearfix">
-                                    <div class="mod6_item_text">
-                                        <a href="#" target="_blank">【米洛动态】</a>
-                                        <a href="#" target="_blank">经发局领导莅临无锡米洛调研指导工作</a>
-                                    </div>
-                                    <div class="mod6_date">2021-09-10</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="mod6_item clearfix">
-                                    <div class="mod6_item_text">
-                                        <a href="#" target="_blank">【米洛动态】</a>
-                                        <a href="#" target="_blank">2021年半年度工作会暨新晋管理人员聘任仪式</a>
-                                    </div>
-                                    <div class="mod6_date">2021-09-06</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="mod6_item clearfix">
-                                    <div class="mod6_item_text">
-                                        <a href="#" target="_blank">【米洛动态】</a>
-                                        <a href="#" target="_blank">风“羽”同舟，“羽”爱同行无锡米洛第二届羽毛球锦标赛</a>
-                                    </div>
-                                    <div class="mod6_date">2021-07-12</div>
-                                </div>
-                            </li>
+                            {{/each}}
                         </ul>
                         <ul id="new_two"></ul>
                     </div>

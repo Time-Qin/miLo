@@ -1,0 +1,120 @@
+{{extend "./layout/layout.html"}}
+{{block "head"}}
+    <title>新闻资讯</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/views/cc-miLo-news/icon/iconfont.css">
+    <link rel="stylesheet" href="/css/news1.css">
+    {{/block}}
+
+    {{block "content"}}
+    <section class="banner-box">
+        <div class="banner">
+            <img src="/image/1.jpg" />
+        </div>
+    </section>
+    <div class="cc-menu-in">
+        <div class="sys-title cc-dropdown-toggle">
+            <div>新闻资讯</div>
+            <span class="iconfont icon-anniu_xiangxia"></span>
+        </div>
+        <ul class="cc-dropdown-menu ">
+            <li class="submenu-dropdown-toggle">
+                <a href="/dongtaiP1">米洛动态</a>
+            </li>
+            <li class="submenu-dropdown-toggle">
+                <a href="/zixunP1">行业资讯</a>
+            </li>
+        </ul>
+    </div>
+    <div class="cc-menu container">
+        <ul class="cc-menu-list">
+            <div class="cc-menuAll">
+                <li class="cc-menu-list-item">
+                    <a href="/dongtaiP1" class="cc-menuL">米洛动态</a>
+                </li>
+                <li class="cc-menu-list-item">
+                    <a href="/zixunP1" class="cc-menuR">行业资讯</a>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <div class="cc-newsbd container">
+        <div class="cc-main">
+            <div class="cc-position">
+                <div class="cc-position-text">您当前的位置：&nbsp;
+                    <a class="cc-position-a">新闻资讯</a>
+                </div>
+            </div>
+            <div class="cc-news-list">
+                <ul class="cc-news-ul">
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-21" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox">
+                                    <img src="/image/22.png" />
+                                </div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2020</div>
+                                    <div class="day-month">04-18</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="换了机器人不等于建成智能工厂">换了机器人不等于建成智能工厂</div>
+                                    <div class="cc-news-sum">很多人以为花大钱买回一堆数控设备和机器人就建成了智能工厂。这实际上是一种误解。MILO米洛认为，要建成智能工厂</div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-22" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox">
+                                    <img src="/image/23.jpg" />
+                                </div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2020</div>
+                                    <div class="day-month">04-18</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="信息化和工业化融合发展规划（2016-2020）">信息化和工业化融合发展规划（2016-2020）</div>
+                                    <div class="cc-news-sum">
+                                        “十三五”时期是我国全面建成小康社会的决胜阶段，是适应把握引领经济发展新常态的关键时期，是抢占全球新一轮产业竞争制高点的战略机遇期。
+                                    </div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    
+
+                </ul>
+            </div>
+            <div class="cc-news-page">
+                <a href="/newsP1" class="cc-page-first disabled">
+                    <span class="cc-first-text">首页</span>
+                </a>
+                <a href="/newsP2" class="cc-page-pre disabled">
+                    <span class="cc-pre-text">&lt;上一页</span>
+                </a>
+                <a title="1" href="/newsP1" class="cur">1</a>
+                <a title="2" href="/newsP2">2</a>
+                <a title="3" >3</a>
+                <a  class="cc-page-next">
+                    <span class="cc-next-text">下一页&gt;</span>
+                </a>
+                <a  class="cc-page-last">
+                    <span class="cc-last-text">尾页</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    {{/block}}
+
+    {{block "script"}}
+       
+        <script src="/js/news.js"></script>
+    {{/block}}

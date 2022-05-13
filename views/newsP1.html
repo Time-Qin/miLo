@@ -1,0 +1,271 @@
+{{extend "./layout/layout.html"}}
+{{block "head"}}
+    <title>新闻资讯</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/views/cc-miLo-news/icon/iconfont.css">
+    <link rel="stylesheet" href="/css/news1.css">
+    {{/block}}
+
+
+{{block "content"}}
+    <section class="banner-box">
+        <div class="banner">
+            <img src="/image/1.jpg" class="cc-img" />
+        </div>
+    </section>
+    <div class="cc-menu-in">
+        <div class="sys-title cc-dropdown-toggle">
+            <div>新闻资讯</div>
+            <span class="iconfont icon-anniu_xiangxia"></span>
+        </div>
+        <ul class="cc-dropdown-menu ">
+            <li class="submenu-dropdown-toggle">
+                <a href="/dongtaiP1">米洛动态</a>
+            </li>
+            <li class="submenu-dropdown-toggle">
+                <a href="/zixunP1">行业资讯</a>
+            </li>
+        </ul>
+    </div>
+    <div class="cc-menu container">
+        <ul class="cc-menu-list">
+            <div class="cc-menuAll">
+                <li class="cc-menu-list-item">
+                    <a href="/dongtaiP1" class="cc-menuL">米洛动态</a>
+                </li>
+                <li class="cc-menu-list-item">
+                    <a href="/zixunP1" class="cc-menuR">行业资讯</a>
+                </li>
+            </div>
+        </ul>
+    </div>
+
+    <div class="cc-newsbd container">
+        <div class="cc-main">
+            <div class="cc-position">
+                <div class="cc-position-text">您当前的位置：&nbsp;
+                    <a class="cc-position-a" href="/newsP1">新闻资讯</a>
+                </div>
+            </div>
+            <div class="cc-news-list">
+                <ul class="cc-news-ul">
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-01" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox">
+                                    <img src="{{result.img}}" />
+                                </div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">{{result.year}}</div>
+                                    <div class="day-month">{{result.month}}</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="无锡米洛智能2022新春茶话会">{{result.title}}</div>
+                                    <div class="cc-news-sum">{{result.content}}</div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-02" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox">
+                                    <img src="/image/3.png" />
+                                </div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2021</div>
+                                    <div class="day-month">11-02</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="不负好时光，米洛员工秋日旅行Fun肆玩">不负好时光，米洛员工秋日旅行Fun肆玩</div>
+                                    <div class="cc-news-sum">
+                                        都说生活不止眼前的工作，还有诗和远方，努力工作的同时也要学会享受生活，在金秋十月为丰富员工业余文化生活，无锡米洛一年一度的员工旅游再度启程！让我们不负秋日好时光！整装！出发！
+                                    </div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-03" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox"><img src="/image/4.png" /></div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2021</div>
+                                    <div class="day-month">09-10</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="经发局领导莅临无锡米洛调研指导工作">经发局领导莅临无锡米洛调研指导工作</div>
+                                    <div class="cc-news-sum"></div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-04" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox"><img src="/image/5.png" /></div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2021</div>
+                                    <div class="day-month">09-06</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="2021年半年度工作会暨新晋管理人员聘任仪式">2021年半年度工作会暨新晋管理人员聘任仪式</div>
+                                    <div class="cc-news-sum">未来，不管发生了什么，经过了什么，遇见了什么，我们都能不忘初心，坚守我们的目标，朝着我们的方向勇敢向前！</div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-05" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox"><img src="/image/6.jpg" /></div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2021</div>
+                                    <div class="day-month">07-12</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="风“羽”同舟，“羽”爱同行无锡米洛第二届羽毛球锦标赛">风“羽”同舟，“羽”爱同行无锡米洛第二届羽毛球锦标赛
+                                    </div>
+                                    <div class="cc-news-sum">“笃定前行，行稳致远”无锡米洛智能2022新春茶话会圆满举行!</div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-06" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox"><img src="/image/7.png" /></div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2021</div>
+                                    <div class="day-month">02-07</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="无锡米洛智能2021新年茶话会">无锡米洛智能2021新年茶话会</div>
+                                    <div class="cc-news-sum">“不忘初心，逐梦前行”无锡米洛智能2021新年茶话会顺利举行！</div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-07" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox"><img src=" /image/8.png" /></div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2021</div>
+                                    <div class="day-month">02-03</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="2020年度项目复盘总结会">2020年度项目复盘总结会</div>
+                                    <div class="cc-news-sum">工作盘点，为过程喝彩，为结果加薪。</div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-08" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox"><img src=" /image/9.jpg" /></div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2020</div>
+                                    <div class="day-month">10-26</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="&quot;亲近自然，拥抱金秋&quot;2020无锡米洛秋季户外活动">
+                                        &quot;亲近自然，拥抱金秋&quot;2020无锡米洛秋季户外活动</div>
+                                    <div class="cc-news-sum">乘风破浪，一路上有你。</div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-09" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox"><img src="/image/10.png" /></div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2020</div>
+                                    <div class="day-month">08-07</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="喜报！！高速成长、跳跃发展，无锡米洛入选“瞪羚计划”培育企业，实力登榜">
+                                        喜报！！高速成长、跳跃发展，无锡米洛入选“瞪羚计划”培育企业，实力登榜</div>
+                                    <div class="cc-news-sum">加速“奔跑”：始于梦想、基于创新、成与实干</div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cc-news-li clearfix">
+                        <a href="/news-10" class="cc-news-a">
+                            <div class="cc-newsL">
+                                <div class="imgBox"><img src="/image/11.png" /></div>
+                            </div>
+                            <div class="cc-newsR">
+                                <div class="cc-date">
+                                    <div class="year">2020</div>
+                                    <div class="day-month">08-03</div>
+                                </div>
+                                <div class="cc-text">
+                                    <div class="cc-news-h" title="2020年第二季度员工表彰大会">2020年第二季度员工表彰大会</div>
+                                    <div class="cc-news-sum">优秀，只是个称号，奋斗，才是永恒的意义。</div>
+                                </div>
+                                <div class="adore"></div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="cc-news-page">
+                <a href="#" class="cc-page-first disabled">
+                    <span class="cc-first-text">首页</span>
+                </a>
+                <a href="#" class="cc-page-pre disabled">
+                    <span class="cc-pre-text">&lt;上一页</span>
+                </a>
+                <a title="1" href="/newsP1" class="cur">1</a>
+                <a title="2" href="/newsP2">2</a>
+                <a title="3" href="/newsP3">3</a>
+                <a href="/newsP2" class="cc-page-next">
+                    <span class="cc-next-text">下一页&gt;</span>
+                </a>
+                <a href="/newsP3" class="cc-page-last">
+                    <span class="cc-last-text">尾页</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    {{/block}}
+
+    {{block "script"}}
+       
+        <script src="/js/news.js"></script>
+    {{/block}}
+
+
+

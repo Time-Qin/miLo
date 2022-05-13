@@ -1,0 +1,142 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    /* width: 100%; */
+}
+
+.banner img {
+    width: 100%;
+    position: relative;
+    /* margin-bottom: 20px; */
+}
+
+.cc-main {
+    background-color: rgba(210, 210, 210, 0.1);
+    padding-top: 20px;
+    padding: 10px;
+}
+
+.cc-newsDetail {
+    /* width: ; */
+    margin: auto;
+    padding-top: 45px;
+}
+
+.cc-news-top {
+    width: 1200px;
+    border-bottom: 1px solid rgba(137, 137, 137, 0.3);
+    margin: auto;
+
+}
+
+.cc-news-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(43, 59, 98);
+    text-align: left;
+}
+
+.cc-newsST {
+    width: 248px;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    display: inline-block;
+}
+
+.cc-newsST>span {
+    font-size: 12.6px;
+    color: rgb(102, 102, 102);
+}
+
+.cc-newsSec {
+    margin-right: 15px;
+}
+
+.cc-news-content {
+    padding-top: 35px;
+    margin: auto;
+    /* width: 1200px; */
+    font-size: 14px;
+    color: #333;
+    line-height: 28px;
+}
+
+.cc-news-content>p {
+    line-height: 25px;
+}
+
+.cc-news-content>span {
+    line-height: 25px;
+}
+
+.cc-news-others {
+    width: 1200px;
+    height: 71px;
+    margin-top: 30px;
+    padding: 14px 154px 0px 0px;
+    border-top: 1px solid rgba(137, 137, 137, 0.3);
+}
+
+.cc-news-prev {
+    width: 1046px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #333;
+}
+
+.cc-news-prev>a {
+    text-decoration: none;
+    color: #333;
+}
+
+.cc-news-prev>a:hover {
+    text-decoration: underline;
+}
+
+.cc-news-next {
+    width: 1046px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #333;
+}
+
+.cc-news-next>a {
+    text-decoration: none;
+    color: #333;
+}
+
+.cc-news-next>a:hover {
+    text-decoration: underline;
+}
+
+/* 1200px以下 */
+@media screen and (max-width:1200px) {
+    .cc-newsDetail {
+        padding-top: 20px;
+        padding: 10px;
+    }
+
+    .bshare-custom {
+        padding-bottom: 14px;
+        margin-bottom: 14px;
+    }
+}
+
+/* 1200px以上 */
+@media screen and (min-width:1200px) {
+    .cc-newsDetail {
+        width: 1200px;
+        margin: auto;
+    }
+
+    .bshare-custom {
+        float: right;
+        text-align: left;
+    }
+
+}

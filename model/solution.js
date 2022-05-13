@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-var solutionSchema = new mongoose.Schema({
+const solutionSchema = new mongoose.Schema({
   column: {
     type: String,
   },
@@ -36,6 +36,6 @@ var solutionSchema = new mongoose.Schema({
   }
 });
 
-var Solution = new mongoose.model("solution", solutionSchema, "solutions");
+const Solution = mongoose.model("solution", solutionSchema, "solutions");
 
 module.exports = Solution;

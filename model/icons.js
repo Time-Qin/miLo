@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-var iconsSchema = new mongoose.Schema({
+const iconsSchema = new mongoose.Schema({
     name: {
         type: String
     },
@@ -12,6 +12,6 @@ var iconsSchema = new mongoose.Schema({
     }
 })
 
-var Icon = new mongoose.model("icon", iconsSchema, "icons")
+const Icon = mongoose.model("icon", iconsSchema, "icons")
 
 module.exports = Icon;

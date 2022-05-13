@@ -9,6 +9,7 @@ const expressSession = require("express-session");
 const mongoose = require("mongoose");
 const icons = require("./model/icons");
 const service = require("./router/service");
+const da = require("./model/dataa")
 const app = express();
 
 mongoose.connect("mongodb://localhost/miluo");
@@ -28,6 +29,7 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 app.use("/model", express.static(path.join(__dirname, "model")));
 app.use("/css", express.static(path.join(__dirname, "css")));
 app.use("/images", express.static(path.join(__dirname, "images")));
+app.use("/image", express.static(path.join(__dirname, "image")))
 app.use("/js", express.static(path.join(__dirname, "js")));
 app.engine("html", require("express-art-template"));
 app.use(express.static(path.join(__dirname,'public')))
