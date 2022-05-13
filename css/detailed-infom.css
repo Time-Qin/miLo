@@ -1,0 +1,193 @@
+body,
+div,
+span,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+q,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+legend,
+caption,
+tbody,
+tfoot,
+thead,
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.bannerBox {
+    position: relative;
+    z-index: 3;
+}
+
+.banner {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    max-width: 100%;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+.w-header .row,
+.topLogBoxPc .topLogBox-in,
+.w-main .row,
+.w-footer-in {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.w-system {
+    padding: 40px 0;
+}
+
+.w-content-in {
+    padding: 20px 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.newsDetail {
+    line-height: 2;
+}
+
+.newsDetail .newsTitle {
+    font-size: 140%;
+    color: #2b3b62;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.7;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.newsDetail .newsST {
+    color: #666;
+    font-size: 90%;
+    text-align: left;
+    margin-top: 0.8em;
+}
+
+@media (min-width: 1201px) {
+    .newsDetail .newsST {
+        margin-bottom: 14px;
+        float: left;
+    }
+
+    .newsDetail .newsContent {
+        clear: both;
+    }
+}
+
+.newsDetail .newsST>span:first-child {
+    margin-left: 0;
+}
+
+.newsDetail .newsST>span {
+    margin: 0 0.6em;
+    white-space: nowrap;
+}
+
+.newsDetail .newsSummary {
+    display: none;
+    padding: 5px 60px;
+    background: #f2f2f2;
+    margin-top: 15px;
+}
+
+.newsDetail .newsContent {
+    margin: 20px 0;
+    padding: 0 10px;
+    padding-top: 35px;
+    margin-top: 25px;
+    border-top: 1px solid #dfdfdf;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.newsDetail .newsContent p {
+    text-align: justify;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.product-descons img,
+.w-text img,
+.newsContent img {
+    max-width: 100%;
+}
+
+.news-others {
+    margin-top: 30px;
+    padding-right: 11em;
+    position: relative;
+    border-top: 1px solid #dfdfdf;
+    padding-top: 1em;
+}
+
+.pre-next .news-prev,
+.pre-next .news-next {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+    overflow: hidden;
+}
+
+.news-others a {
+    text-decoration: none;
+}
+
+
+a {
+    color: #333;
+    background-color: transparent;
+}

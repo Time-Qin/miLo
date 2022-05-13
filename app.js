@@ -1,6 +1,7 @@
 // 装包 npm install express art-template bootstrap@3.3.5 express-art-template express-session mongoose jquery@2.2.0
 const express = require("express");
 const path = require("path");
+const solution = require("./router/solution");
 const lanmin = require("./router/lanmin");
 const qin = require("./router/index");
 const bodyParser = require("body-parser");
@@ -16,7 +17,6 @@ db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function () {
   console.log("已经连接数据库");
 });
-
 let svgCaptcha = require("svg-captcha");
 // cookie
 let cookoeParser = require("cookie-parser");
@@ -32,6 +32,9 @@ app.use("/js", express.static(path.join(__dirname, "js")));
 app.engine("html", require("express-art-template"));
 app.use(express.static(path.join(__dirname,'public')))
 
+
+
+app.use("/views", express.static(path.join(__dirname, "views")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -51,7 +54,7 @@ app.use(
 app.use(service)
 app.use(lanmin);
 app.use(qin);
-
+app.use(solution);
 app.use((err, req, res, next) => {
   res.json({
     code: 2002,

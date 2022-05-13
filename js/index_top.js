@@ -1,5 +1,5 @@
 $(function () {
-    $(".navbar-toggle").click(function () {
+    $(".ML_navbar .navbar-toggle").click(function () {
         $(".ML_navbar_mask ").attr("style", "display:block");
         $(".col_right").addClass("left0");
     });
