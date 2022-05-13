@@ -20,5 +20,5 @@ var topicSchema = new mongoose.Schema({
         type: String
     }
 })
-
-module.exports = mongoose.model('da', topicSchema, "da")
+var da = new mongoose.model('data', topicSchema, "data")
+module.exports =da;
