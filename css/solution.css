@@ -64,6 +64,9 @@
  .pdTop-default {
      padding-top: 0 !important;
  }
+ .w-solution{
+     overflow: hidden;
+ }
 
  .w-section .row .wrap-content-in {
      margin: auto;

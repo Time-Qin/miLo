@@ -1,5 +1,9 @@
 node_modules/
+<<<<<<< HEAD
 .DS_Store
 public/images
 layout/
 index.html
+=======
+images/
+>>>>>>> guowen

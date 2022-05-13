@@ -11,4 +11,16 @@ const router = express.Router();
 router.get("/index",async (req, res) => {
     res.render("index.html");
   });
+
+  router.get("/gw-index01",async (req, res) => {
+    res.render("gw-index01.html");
+  });
+  router.get("/gw-Employees-work",async (req, res) => {
+    res.render("gw-Employees-work.html");
+  });
+  
+  router.get("/gw-zhaopin",async (req, res) => {
+    res.render("gw-zhaopin.html");
+  });
+
 module.exports = router;

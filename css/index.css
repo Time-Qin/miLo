@@ -203,6 +203,9 @@ ul {
 
 .ML_navbar .navbar .container {
     height: 110px;
+    margin: 0;
+    padding: 0;
+    width: auto;
 }
 
 .ML_navbar .navbar .container .navbar-header a {
