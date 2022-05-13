@@ -6,6 +6,8 @@ const qin = require("./router/index");
 const bodyParser = require("body-parser");
 const expressSession = require("express-session");
 const mongoose = require("mongoose");
+const icons = require("./model/icons");
+const service = require("./router/service");
 const app = express();
 
 mongoose.connect("mongodb://localhost/miluo");
@@ -28,6 +30,7 @@ app.use("/css", express.static(path.join(__dirname, "css")));
 app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/js", express.static(path.join(__dirname, "js")));
 app.engine("html", require("express-art-template"));
+app.use(express.static(path.join(__dirname,'public')))
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -45,6 +48,7 @@ app.use(
   })
 );
 
+app.use(service)
 app.use(lanmin);
 app.use(qin);
 
