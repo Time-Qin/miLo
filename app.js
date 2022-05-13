@@ -16,20 +16,13 @@ db.once('open', function () {
 });
 
 app.use("/public", express.static(path.join(__dirname, "public")));
+app.use("/model", express.static(path.join(__dirname, "model")));
 app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 app.engine('html', require('express-art-template'));
 
+app.use(service)
 
 app.use(express.static(path.join(__dirname,'public')))
 app.listen(3000,()=>{
     console.log('App listening at port 3000');
 })
-
-app.get("/service",async(req,res)=>{
-  
- let result = await icons.find();
- console.log(result);
- res.render("service.html",{result})
-})
-
-app.use(service)
