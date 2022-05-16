@@ -69,18 +69,10 @@ router.get("/details/:id", async (req, res) => {
   var defailId = req.params.id;
   // console.log(defailId);
   let result = await Solution.findOne({ "defailId": defailId });
-  // defailId = parseInt(defailId);
-  // let prevId = defailId - 1;
-  // let nextId = defailId + 1;
 
-  // let prev = await Solution.findOne({ "defailId": prevId });
-  // let next = await Solution.findOne({ "defailId": nextId });
   let prev = await Solution.findOne({ "defailId": { '$lt': defailId } }).sort({defailId: -1})
   let next = await Solution.findOne({ "defailId": { '$gt': defailId } }).sort({defailId: 1})
-  console.log(prev.defailId,"1111111111");
-  console.log(next.defailId,"22222222222");
-  console.log(result.defailId,"3333333333333");
-  // res.render("detailed-infom1.html", { result });
+
   res.render("detailed-infom1.html", { result, prev, next });
 });
 
