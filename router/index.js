@@ -6,12 +6,15 @@ const mongoose = require("mongoose");
 const User = require("../model/user");
 const Product = require("../model/products");
 const News = require("../model/news");
+const Smallimg = require("../model/smallimg");
 const Da = require("../model/dataa")
 const router = express.Router();
 
 router.get("/index",async (req, res) => {
    let result=await News.find();
-    res.render("index.html",{result});
+   let result_img=await Smallimg.find();
+   console.log();
+    res.render("index.html",{result,result_img});
   });
 
   router.get("/gw-index01",async (req, res) => {
