@@ -2,241 +2,408 @@
 {{block "head"}}
 <title>解决方案</title>
 <link rel="stylesheet" href="./css/solution.css">
+<style>
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .bounceInUp {
+        -webkit-animation-name: bounceInUp;
+        animation-name: bounceInUp;
+    }
+
+    .zoomIn {
+        -webkit-animation-name: zoomIn;
+        animation-name: zoomIn;
+    }
+
+    @media screen and (max-width:992px) {
+        .multi-imgs {
+            width: 100%;
+        }
+
+        .multi-imgs li {
+            width: 33.33%;
+        }
+
+    }
+</style>
 {{/block}}
 {{block "content"}}
-    <!-- 图片 -->
-    <section class="bannerBox">
-        <div class="banner" style="height: auto;">
-            <img src="../images/解决方案.jpg" alt="">
-        </div>
-    </section>
-    <!-- 帮助 -->
-    <div class="w-container">
-        <div class="w-section pdTop-default pdBottom-default">
-            <div class="container row" style="max-width: 80%;">
-                <div class="wrap-content-in pdTop-medium pdBottom-medium">
-                    <div style="height: 40px;"></div>
-                    <div style="text-align: center;">
-                        <div class="font1">
-                            <strong>MILO米洛如何提供帮助</strong>
-                        </div>
-                        <div class="H-line"></div>
-                        <div class="w-text">
-                            <span>
-                                &nbsp; &nbsp; &nbsp;
-                                &nbsp;MILO米洛提供的产品与服务能够确保您拥有卓越的生产执行力与订单交付能力。作为厂内仓储物流与生产执行力提效专家，MILO米洛基于精益管理方法、自动化搬运技术与信息化数字技术来定制规划适合您的闭环解决方案。我们的解决方案基于精益改善和评审体系执行度两方面，运用自动化搬运技术、工业互联网信息技术以及系统集成技术，无论您从事汽车或零部件、橡塑制品、电力成套、电器电子、重工机械还是其他工业部件的生产与制造，都能对您的仓储物流和生产制造流程进行优化再造—入库接收、物料存储、半成品暂存、产成品的仓储与移动。我们有先进的流程再造理念，我们更有强大的流程再造落地能力，让仓储物流更智能，让生产制造更透明，为智造赋能。
-                            </span>
-                        </div>
+<!-- 图片 -->
+<section class="bannerBox">
+    <div class="banner" style="height: auto;">
+        <img src="../images/解决方案.jpg" alt="">
+    </div>
+</section>
+<!-- 帮助 -->
+<div class="w-container">
+    <div class="w-section pdTop-default pdBottom-default">
+        <div class="container row" style="max-width: 80%;">
+            <div class="wrap-content-in pdTop-medium pdBottom-medium">
+                <div style="height: 40px;"></div>
+                <div style="text-align: center;" class="animated bounceInUp">
+                    <div class="font1">
+                        <strong>MILO米洛如何提供帮助</strong>
                     </div>
-                    <div style="height: 40px;"></div>
-                    <div class="li-div">
-                        <div class="multi-imgs">
-                            <ul>
-                                <li>
-                                    <div>
-                                        <a href="#">
-                                            <div class="img">
-                                                <img src="../images/EMS系统.png" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <a href="#">
-                                            <div class="img">
-                                                <img src="../images/汽车行业.png" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <a href="#">
-                                            <div class="img">
-                                                <img src="../images/橡塑制品.png" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <a href="#">
-                                            <div class="img">
-                                                <img src="../images/电力成套.png" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <a href="#">
-                                            <div class="img">
-                                                <img src="../images/模具行业.png" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <a href="#">
-                                            <div class="img">
-                                                <img src="../images/新能源行业.png" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <a href="#">
-                                            <div class="img">
-                                                <img src="../images/离散制造.png" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="H-line"></div>
+                    <div class="w-text">
+                        <span>
+                            &nbsp; &nbsp; &nbsp;
+                            &nbsp;MILO米洛提供的产品与服务能够确保您拥有卓越的生产执行力与订单交付能力。作为厂内仓储物流与生产执行力提效专家，MILO米洛基于精益管理方法、自动化搬运技术与信息化数字技术来定制规划适合您的闭环解决方案。我们的解决方案基于精益改善和评审体系执行度两方面，运用自动化搬运技术、工业互联网信息技术以及系统集成技术，无论您从事汽车或零部件、橡塑制品、电力成套、电器电子、重工机械还是其他工业部件的生产与制造，都能对您的仓储物流和生产制造流程进行优化再造—入库接收、物料存储、半成品暂存、产成品的仓储与移动。我们有先进的流程再造理念，我们更有强大的流程再造落地能力，让仓储物流更智能，让生产制造更透明，为智造赋能。
+                        </span>
                     </div>
-                    <div style="height: 40px;"></div>
                 </div>
+                <div style="height: 40px;"></div>
+                <div class="li-div zoomIn animated" data-animate="zoomIn" id="gallery_2ace901688b7ac4c7695d21a2e569d5a">
+                    <div class="multi-imgs">
+                        <ul>
+                            <li style="width:14.28%;" data-ih="145" data-iw="145">
+                                <div class="gallery-img">
+                                    <div class="gallery-mar" style="margin:0px;">
+                                        <a style="cursor:default;" data-title="" class="fancybox-thumbs"
+                                            href="../images/EMS系统.png" data-lightbox="../images/EMS系统.png" title="">
+                                            <div class="gallery-border" style="border-width:0px;padding:0px;">
+                                                <div class="igBox">
+                                                    <div class="gallery-aspectRatio" style="padding: 0px 0px 75%;">
+                                                        <div style="position:absolute; top:0; width:100%; height:100%; left:0; right:0; "
+                                                            class="igSize">
+                                                            <div class="gallery-img-in img">
+                                                                <img src="../images/EMS系统.png" alt=""
+                                                                    style="width: 75.2279%; height: 100%; left: 12.386%; top: 0%;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption gallery-caption" style="height: 0px;">
+                                                <div class="captionbg gallery-captionbg"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="width:14.28%;" data-ih="145" data-iw="145">
+                                <div class="gallery-img">
+                                    <div class="gallery-mar" style="margin:0px;">
+                                        <a style="cursor:default;" data-title="" class="fancybox-thumbs"
+                                            href="../images/EMS系统.png"
+                                            data-lightbox="image-a2ee2885d6967ff7381ad5edc04fc58e" title="">
+                                            <div class="gallery-border" style="border-width:0px;padding:0px;">
+                                                <div class="igBox">
+                                                    <div class="gallery-aspectRatio" style="padding: 0px 0px 75%;">
+                                                        <div style="position:absolute; top:0; width:100%; height:100%; left:0; right:0; "
+                                                            class="igSize">
+                                                            <div class="gallery-img-in img">
+                                                                <img src="../images/EMS系统.png" alt=""
+                                                                    style="width: 75.2279%; height: 100%; left: 12.386%; top: 0%;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption gallery-caption" style="height: 0px;">
+                                                <div class="captionbg gallery-captionbg"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="width:14.28%;" data-ih="145" data-iw="145">
+                                <div class="gallery-img">
+                                    <div class="gallery-mar" style="margin:0px;">
+                                        <a style="cursor:default;" data-title="" class="fancybox-thumbs"
+                                            href="../images/EMS系统.png"
+                                            data-lightbox="image-a2ee2885d6967ff7381ad5edc04fc58e" title="">
+                                            <div class="gallery-border" style="border-width:0px;padding:0px;">
+                                                <div class="igBox">
+                                                    <div class="gallery-aspectRatio" style="padding: 0px 0px 75%;">
+                                                        <div style="position:absolute; top:0; width:100%; height:100%; left:0; right:0; "
+                                                            class="igSize">
+                                                            <div class="gallery-img-in img">
+                                                                <img src="../images/EMS系统.png" alt=""
+                                                                    style="width: 75.2279%; height: 100%; left: 12.386%; top: 0%;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption gallery-caption" style="height: 0px;">
+                                                <div class="captionbg gallery-captionbg"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="width:14.28%;" data-ih="145" data-iw="145">
+                                <div class="gallery-img">
+                                    <div class="gallery-mar" style="margin:0px;">
+                                        <a style="cursor:default;" data-title="" class="fancybox-thumbs"
+                                            href="../images/EMS系统.png"
+                                            data-lightbox="image-a2ee2885d6967ff7381ad5edc04fc58e" title="">
+                                            <div class="gallery-border" style="border-width:0px;padding:0px;">
+                                                <div class="igBox">
+                                                    <div class="gallery-aspectRatio" style="padding: 0px 0px 75%;">
+                                                        <div style="position:absolute; top:0; width:100%; height:100%; left:0; right:0; "
+                                                            class="igSize">
+                                                            <div class="gallery-img-in img">
+                                                                <img src="../images/EMS系统.png" alt=""
+                                                                    style="width: 75.2279%; height: 100%; left: 12.386%; top: 0%;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption gallery-caption" style="height: 0px;">
+                                                <div class="captionbg gallery-captionbg"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="width:14.28%;" data-ih="145" data-iw="145">
+                                <div class="gallery-img">
+                                    <div class="gallery-mar" style="margin:0px;">
+                                        <a style="cursor:default;" data-title="" class="fancybox-thumbs"
+                                            href="../images/EMS系统.png"
+                                            data-lightbox="image-a2ee2885d6967ff7381ad5edc04fc58e" title="">
+                                            <div class="gallery-border" style="border-width:0px;padding:0px;">
+                                                <div class="igBox">
+                                                    <div class="gallery-aspectRatio" style="padding: 0px 0px 75%;">
+                                                        <div style="position:absolute; top:0; width:100%; height:100%; left:0; right:0; "
+                                                            class="igSize">
+                                                            <div class="gallery-img-in img">
+                                                                <img src="../images/EMS系统.png" alt=""
+                                                                    style="width: 75.2279%; height: 100%; left: 12.386%; top: 0%;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption gallery-caption" style="height: 0px;">
+                                                <div class="captionbg gallery-captionbg"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="width:14.28%;" data-ih="145" data-iw="145">
+                                <div class="gallery-img">
+                                    <div class="gallery-mar" style="margin:0px;">
+                                        <a style="cursor:default;" data-title="" class="fancybox-thumbs"
+                                            href="../images/EMS系统.png"
+                                            data-lightbox="image-a2ee2885d6967ff7381ad5edc04fc58e" title="">
+                                            <div class="gallery-border" style="border-width:0px;padding:0px;">
+                                                <div class="igBox">
+                                                    <div class="gallery-aspectRatio" style="padding: 0px 0px 75%;">
+                                                        <div style="position:absolute; top:0; width:100%; height:100%; left:0; right:0; "
+                                                            class="igSize">
+                                                            <div class="gallery-img-in img">
+                                                                <img src="../images/EMS系统.png" alt=""
+                                                                    style="width: 75.2279%; height: 100%; left: 12.386%; top: 0%;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption gallery-caption" style="height: 0px;">
+                                                <div class="captionbg gallery-captionbg"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="width:14.28%;" data-ih="145" data-iw="145">
+                                <div class="gallery-img">
+                                    <div class="gallery-mar" style="margin:0px;">
+                                        <a style="cursor:default;" data-title="" class="fancybox-thumbs"
+                                            href="../images/EMS系统.png"
+                                            data-lightbox="image-a2ee2885d6967ff7381ad5edc04fc58e" title="">
+                                            <div class="gallery-border" style="border-width:0px;padding:0px;">
+                                                <div class="igBox">
+                                                    <div class="gallery-aspectRatio" style="padding: 0px 0px 75%;">
+                                                        <div style="position:absolute; top:0; width:100%; height:100%; left:0; right:0; "
+                                                            class="igSize">
+                                                            <div class="gallery-img-in img">
+                                                                <img src="../images/EMS系统.png" alt=""
+                                                                    style="width: 75.2279%; height: 100%; left: 12.386%; top: 0%;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption gallery-caption" style="height: 0px;">
+                                                <div class="captionbg gallery-captionbg"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="height: 40px;"></div>
             </div>
         </div>
     </div>
-    <!-- 解决方案 -->
-    <section class="w-solution">
-        <div class="container">
-            <div class="title">
-                <div style="height: 30px;"></div>
-                <div class="w-title">
-                    <div class="tith">
-                        <div class="tith-in">
-                            <h2>我们的解决方案</h2>
-                        </div>
-                    </div>
-                    <p>Our solution</p>
-                </div>
-                <div style="height: 20px;"></div>
-                <div class="row">
-                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
-                        <div class="w-case">
-                            <div class="padv-h">
-                                <strong>
-                                    <span>MES制造执行系统软件 </span>
-                                </strong>
-                            </div>
-                            <p>
-                                <strong>提升订单交付能力</strong><br>
-                                <span>帮助客户构建企业级执行平台，实现工厂协同高效化、仓储物流精细化、计划排程智能化，增强企业核心竞争力。</span>
-                                <br>
-                                <br>
-                                <strong>生产管理快速响应</strong><br>
-                                <span>过程数据在线采集，资源数据跨业务共享，KPI数据目视管理，实现生产管理透明化，建立快速交付的管理体系 </span>
-                            </p>
-                            <div class="padv-num">01</div>
-                        </div>
-                    </div>
-
-                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
-                        <div class="w-case">
-                            <div class="padv-h">
-                                <strong>
-                                    <span>仓储系统解决方案 </span>
-                                </strong>
-                            </div>
-                            <p>
-                                <span>数据驱动，实现货物从静态存储到动态存储，推动库房仓储综合效率上升到一个新水平。</span>
-                                <br>
-                                <br>
-                                <span>加快了货物运转速度，增强了出入库能力，大大提高了周转率。</span>
-                            </p>
-                            <div class="padv-num">02</div>
-                        </div>
-                    </div>
-
-                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
-                        <div class="w-case">
-                            <div class="padv-h">
-                                <strong>
-                                    <span>可视化管理系统解决方案 </span>
-                                </strong>
-                            </div>
-                            <p>
-                                <strong>数据服务管理</strong><br>
-                                <span>各层级人员“看一眼”就能了解所属组织或其中部分当前状态；<br>
-                                    能够更有效、或者反效果（次品率等）地督促、指引或驱动大家行为；<br>
-                                    暴露问题持续改善；<br>
-                                    促进目标的达成。</span>
-                                <br>
-                                <br>
-                                <strong>数据挖掘更便捷</strong><br>
-                                <span>内置三维度整体规划的数据模型，提供10个可视主题100个标准接口，可视界面数据源、呈现样式、计算公式支持配置；与SIM、邮件、微信、APP的集成实现数据推送的闭环管理。</span>
-                            </p>
-                            <div class="padv-num">03</div>
-                        </div>
-                    </div>
-
-                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
-                        <div class="w-case">
-                            <div class="padv-h">
-                                <strong>
-                                    <span>及时化管理系统解决方案 </span>
-                                </strong>
-                            </div>
-                            <p>
-                                <span>为问题解决（大问题和小问题）提供（简单、普遍、有效的）系统性方法；<br>
-                                    提高质量指标 – 降低PPM，保修费用；<br>
-                                    确保每个问题都能及时关闭，增加客户满意度；<br>
-                                    使用显示问题信息的目视化方法促进关闭；<br>
-                                    激发全员的潜力、创造力与责任感，为持续改善提供支持；<br>
-                                    防止重复性错误，减少资源浪费；<br>
-                                    建立人人善于解决问题、推动持续改善的文化，问题是积极改善的机会。</span>
-                            </p>
-                            <div class="padv-num">04</div>
-                        </div>
-                    </div>
-
-                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
-                        <div class="w-case">
-                            <div class="padv-h">
-                                <strong>
-                                    <span>生产运维系统解决方案 </span>
-                                </strong>
-                            </div>
-                            <p>
-                                <span>实现了设备数据采集、设备在线监控、设备数据管理、开机点检管理、设备扫码巡检、故障报修派单、定期自动保养、设备档案管理等，将历史痛点问题一一解决;</span>
-                                <br>
-                                <br>
-                                <span>确保巡检质量，提高巡检效率，实现设备全生命周期的信息化管理。</span>
-                            </p>
-                            <div class="padv-num">05</div>
-                        </div>
-                    </div>
-
-                    <div class="div-padding col-md-4 col-sm-4 col-xs-12">
-                        <div class="w-case">
-                            <div class="padv-h">
-                                <strong>
-                                    <span>穿梭机器人系统解决方案 </span>
-                                </strong>
-                            </div>
-                            <p>
-                                <span>作为灵活、可扩展和模块化解决方案的一部分，可无缝集成到您的自动化系统中以满足您的业务需求。</span>
-                            </p>
-                            <div class="padv-num">06</div>
-                        </div>
+</div>
+<!-- 解决方案 -->
+<section class="w-solution">
+    <div class="container">
+        <div class="title">
+            <div style="height: 30px;"></div>
+            <div class="w-title">
+                <div class="tith">
+                    <div class="tith-in">
+                        <h2>我们的解决方案</h2>
                     </div>
                 </div>
-                <div style="height: 60px;"></div>
-                <div class="w-button">
-                    <a href="/details">
-                        <div class="btn-w">
-                            <span class="btn-inner">查看解决方案详情</span>
-                        </div>
-                    </a>
-                </div>
-                <div style="height: 80px;"></div>
+                <p>Our solution</p>
             </div>
+            <div style="height: 20px;"></div>
+            <div class="row">
+                <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-case">
+                        <div class="padv-h">
+                            <strong>
+                                <span>MES制造执行系统软件 </span>
+                            </strong>
+                        </div>
+                        <p>
+                            <strong>提升订单交付能力</strong><br>
+                            <span>帮助客户构建企业级执行平台，实现工厂协同高效化、仓储物流精细化、计划排程智能化，增强企业核心竞争力。</span>
+                            <br>
+                            <br>
+                            <strong>生产管理快速响应</strong><br>
+                            <span>过程数据在线采集，资源数据跨业务共享，KPI数据目视管理，实现生产管理透明化，建立快速交付的管理体系 </span>
+                        </p>
+                        <div class="padv-num">01</div>
+                    </div>
+                </div>
+
+                <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-case">
+                        <div class="padv-h">
+                            <strong>
+                                <span>仓储系统解决方案 </span>
+                            </strong>
+                        </div>
+                        <p>
+                            <span>数据驱动，实现货物从静态存储到动态存储，推动库房仓储综合效率上升到一个新水平。</span>
+                            <br>
+                            <br>
+                            <span>加快了货物运转速度，增强了出入库能力，大大提高了周转率。</span>
+                        </p>
+                        <div class="padv-num">02</div>
+                    </div>
+                </div>
+
+                <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-case">
+                        <div class="padv-h">
+                            <strong>
+                                <span>可视化管理系统解决方案 </span>
+                            </strong>
+                        </div>
+                        <p>
+                            <strong>数据服务管理</strong><br>
+                            <span>各层级人员“看一眼”就能了解所属组织或其中部分当前状态；<br>
+                                能够更有效、或者反效果（次品率等）地督促、指引或驱动大家行为；<br>
+                                暴露问题持续改善；<br>
+                                促进目标的达成。</span>
+                            <br>
+                            <br>
+                            <strong>数据挖掘更便捷</strong><br>
+                            <span>内置三维度整体规划的数据模型，提供10个可视主题100个标准接口，可视界面数据源、呈现样式、计算公式支持配置；与SIM、邮件、微信、APP的集成实现数据推送的闭环管理。</span>
+                        </p>
+                        <div class="padv-num">03</div>
+                    </div>
+                </div>
+
+                <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-case">
+                        <div class="padv-h">
+                            <strong>
+                                <span>及时化管理系统解决方案 </span>
+                            </strong>
+                        </div>
+                        <p>
+                            <span>为问题解决（大问题和小问题）提供（简单、普遍、有效的）系统性方法；<br>
+                                提高质量指标 – 降低PPM，保修费用；<br>
+                                确保每个问题都能及时关闭，增加客户满意度；<br>
+                                使用显示问题信息的目视化方法促进关闭；<br>
+                                激发全员的潜力、创造力与责任感，为持续改善提供支持；<br>
+                                防止重复性错误，减少资源浪费；<br>
+                                建立人人善于解决问题、推动持续改善的文化，问题是积极改善的机会。</span>
+                        </p>
+                        <div class="padv-num">04</div>
+                    </div>
+                </div>
+
+                <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-case">
+                        <div class="padv-h">
+                            <strong>
+                                <span>生产运维系统解决方案 </span>
+                            </strong>
+                        </div>
+                        <p>
+                            <span>实现了设备数据采集、设备在线监控、设备数据管理、开机点检管理、设备扫码巡检、故障报修派单、定期自动保养、设备档案管理等，将历史痛点问题一一解决;</span>
+                            <br>
+                            <br>
+                            <span>确保巡检质量，提高巡检效率，实现设备全生命周期的信息化管理。</span>
+                        </p>
+                        <div class="padv-num">05</div>
+                    </div>
+                </div>
+
+                <div class="div-padding col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-case">
+                        <div class="padv-h">
+                            <strong>
+                                <span>穿梭机器人系统解决方案 </span>
+                            </strong>
+                        </div>
+                        <p>
+                            <span>作为灵活、可扩展和模块化解决方案的一部分，可无缝集成到您的自动化系统中以满足您的业务需求。</span>
+                        </p>
+                        <div class="padv-num">06</div>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 60px;"></div>
+            <div class="w-button">
+                <a href="/details">
+                    <div class="btn-w">
+                        <span class="btn-inner">查看解决方案详情</span>
+                    </div>
+                </a>
+            </div>
+            <div style="height: 80px;"></div>
         </div>
-    </section>
+    </div>
+</section>
+{{/block}}
+
+{{block "script"}}
+<script type="text/javascript">
+    $(function () {
+
+        // 外框
+        $("#gallery_2ace901688b7ac4c7695d21a2e569d5a .gallery-aspectRatio").css('padding', '0px 0px 75%');
+        // 内框
+        $("#gallery_2ace901688b7ac4c7695d21a2e569d5a .igSize").attr('style', 'position:absolute; top:0; width:100%; height:100%; left:0; right:0; ');
+
+        $("#gallery_2ace901688b7ac4c7695d21a2e569d5a").listRow({
+            row: 7,
+            rowList: ".multi-imgs ul>li",
+            rowFind: ".gallery-caption"
+        });
+
+        setImgWidth($("#gallery_2ace901688b7ac4c7695d21a2e569d5a"), "0", "7", "0", "0", $("#gallery_2ace901688b7ac4c7695d21a2e569d5a .multi-imgs>ul>li .igSize").width(), $("#gallery_2ace901688b7ac4c7695d21a2e569d5a .multi-imgs>ul>li .igSize").height(), "1");
+    });
+</script>
 {{/block}}

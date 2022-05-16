@@ -72,11 +72,12 @@
      padding: 20px 0;
      left: 18%;
  }
-
+ 
  .w-section .row .wrap-content-in .font1 {
      font-size: 32px !important;
      margin-bottom: 0.6em;
  }
+
 
  .w-section .row .wrap-content-in .H-line {
      width: 120px;
@@ -101,6 +102,12 @@
      padding-bottom: 20px !important;
  }
 
+ @media (max-width: 160px){
+     .font1{
+         font-size: 6px !important;
+     }
+ }
+
  .multi-imgs ul {
      background: white;
      overflow: hidden;
@@ -114,24 +121,80 @@
  }
 
  .multi-imgs li {
-     width: 14.28%;
      float: left;
      text-align: center;
+ }
+
+ .gallery-img{
+     background: #fff;
+     position: relative;
+     overflow: hidden;
+     /* z-index: 1; */
+ }
+
+ .multi-imgs li .gallery-img a, .multi-imgs li .gallery-img div{
+     overflow: hidden;
+ }
+ .gallery-img a{
+     display: block;
+     text-decoration: none;
+ }
+
+ .gallery-mar{
+     position: relative;
+ }
+
+ .gallery-border{
+     border-color: #666;
+     border-style: solid;
+ }
+
+ .w-multi-imgs .igBox{
+     position: relative;
+ }
+
+ .gallery-aspectRatio{
+     position: relative;
+     overflow: hidden;
+     width: 100%;
+ }
+
+ .w-multi-imgs .igSize{
+     position: absolute;
+     left: 0;
+     top: 0;
+     overflow: hidden;
  }
 
  .multi-imgs .img {
      width: 100%;
      height: 100%;
-
+     position: absolute;
+     left: 0;
+     top: 0;
      /* position: absolute;
      z-index: 3; */
  }
 
- .multi-imgs .img img {
-     width: 75.2279%;
-     height: 100%;
-     left: 12.386%;
-     top: 0%;
+ .gallery-img-in{
+     display: block;
+ }
+
+ .multi-imgs li .gallery-img img{
+     position: absolute;
+ }
+
+ .gallery-img img{
+     max-width: none;
+     border: 0px solid #666;
+ }
+
+ img{
+     vertical-align: middle;
+ }
+ 
+ .caption{
+     position: relative;
  }
 
  /* 解决方案 */
